@@ -1,0 +1,453 @@
+{
+  "theHuman:Slap": {
+    "NAME": "Slap",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theHuman:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. NL [#34eb52]Pacifist[]: Gain !B! thehuman:Peaceful instead."
+  },
+  "theHuman:KungFu": {
+    "NAME": "Kung Fu!",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain 1 thehuman:Healthiness. NL [#a83277]Technique[]: Deal !D! damage to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain 1 thehuman:Healthiness. NL [#a83277]Technique[]: Deal !D! damage to ALL enemies."
+  },
+  "theHuman:Focused": {
+    "NAME": "Focused",
+    "DESCRIPTION": "At the start of your turn, draw a card and gain 3 Block. NL [#2000a7]Lifestyle[]: Gain 5 Block."
+  },
+  "theHuman:Confused": {
+    "NAME": "Confused",
+    "DESCRIPTION": "Discard !M! cards. NL Draw !M! cards. NL Set the cost of a random card in your hand to 0 for this turn."
+  },
+  "theHuman:Scuffle": {
+    "NAME": "Scuffle",
+    "DESCRIPTION": "Deal !D! damage to a random enemy 3 times. NL Deal damage an additional time for each thehuman:Healthiness you have over 15. NL Discard a random card."
+  },
+  "theHuman:NineToFive": {
+    "NAME": "Nine To Five",
+    "DESCRIPTION": "Deal !D! damage and apply 5 Poison and 2 Weak to ALL enemies. NL Add a Tired to your draw pile. NL [#2000a7]Lifestyle[]: Gain 1 Thorns."
+  },
+  "theHuman:Tired": {
+    "NAME": "Tired",
+    "DESCRIPTION": "When drawn, Exhaust a random card in your hand."
+  },
+  "theHuman:BackhandSlap": {
+    "NAME": "Backhand Slap",
+    "DESCRIPTION": "Deal !D! damage and apply !M! thehuman:Injured to an enemy. NL If this card is discarded, deal !D! damage to ALL enemies."
+  },
+  "theHuman:DumpsterDiving": {
+    "NAME": "Dumpster Diving",
+    "DESCRIPTION": "Return !M! cards from your discard pile to your hand. NL Find !theHuman:SecondMagic! thehuman:Junk."
+  },
+  "theHuman:BirthdayCake": {
+    "NAME": "Birthday Cake",
+    "DESCRIPTION": "Add !M! Birthday Presents to your hand."
+  },
+  "theHuman:BirthdayPresent": {
+    "NAME": "Birthday Present",
+    "DESCRIPTION": "thehuman:Uncover 2 cards."
+  },
+  "theHuman:KeepingFit": {
+    "NAME": "Keeping Fit",
+    "DESCRIPTION": "Gain !M! thehuman:Healthiness and !theHuman:SecondMagic! thehuman:Peaceful. NL Draw a card."
+  },
+  "theHuman:Car": {
+    "NAME": "Car",
+    "DESCRIPTION": "Gain !B! Block. NL At the start of your turn, draw a card and gain 1 energy. NL [#2000a7]Lifestyle[]: Gain 10 Block."
+  },
+  "theHuman:SmallRock": {
+    "NAME": "Small Rock",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "theHuman:Dandelion": {
+    "NAME": "Dandelion",
+    "DESCRIPTION": "Draw a card."
+  },
+  "theHuman:SodaCan": {
+    "NAME": "Soda Can",
+    "DESCRIPTION": "Gain 1 Energy."
+  },
+  "theHuman:OldShoes": {
+    "NAME": "Old Shoes",
+    "DESCRIPTION": "Gain !M! Gold."
+  },
+  "theHuman:PlasticBottle": {
+    "NAME": "Plastic Bottle",
+    "DESCRIPTION": "Choose a card from your hand to discard. NL If you do, restore 3 Health."
+  },
+  "theHuman:PaperBag": {
+    "NAME": "Paper Bag",
+    "DESCRIPTION": "thehuman:Uncover a card."
+  },
+  "theHuman:MorningWalk": {
+    "NAME": "Morning Walk",
+    "DESCRIPTION": "Gain !M! thehuman:Healthiness. Find !M! thehuman:Junk."
+  },
+  "theHuman:SuckerPunch": {
+    "NAME": "Sucker Punch",
+    "DESCRIPTION": "When drawn, deal 8 damage to a random enemy. NL Add 2 Slaps to your hand that cost 0, but Purge when used and at the end of your turn. NL [#a83277]Technique[]: Gain !M! Block."
+  },
+  "theHuman:Hobbyist": {
+    "NAME": "Hobbyist",
+    "DESCRIPTION": "Draw !M! cards. NL If your hand has no duplicates, draw triple this amount instead.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL If your hand has no duplicates, draw triple this amount instead and gain 1 energy."
+  },
+  "theHuman:GarbageCollector": {
+    "NAME": "Garbage Collector",
+    "DESCRIPTION": "Whenever you play a thehuman:Junk card, thehuman:Uncover a card."
+  },
+  "theHuman:Consequences": {
+    "NAME": "Consequences",
+    "DESCRIPTION": "Unplayable. NL When this is drawn, shuffle a Doubt, Regret and Shame into your draw pile."
+  },
+  "theHuman:Prank": {
+    "NAME": "Prank",
+    "DESCRIPTION": "Deal !D! damage and Stun an enemy. NL Shuffle a Consequences into your draw pile."
+  },
+  "theHuman:Reading": {
+    "NAME": "Reading",
+    "DESCRIPTION": "Gain 2 thehuman:Healthiness. NL Whenever you play a card that costs 2 or more, add a Deep Thought to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain 2 thehuman:Healthiness. NL Whenever you play a card that costs 2 or more, add a Big Brain to your hand."
+  },
+  "theHuman:DeepThought": {
+    "NAME": "Deep Thought",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! cards."
+  },
+  "theHuman:BigBrain": {
+    "NAME": "Big Brain",
+    "DESCRIPTION": "Set the cost of a random card in your hand to 0 for this turn."
+  },
+  "theHuman:Exercise": {
+    "NAME": "Exercise",
+    "DESCRIPTION": "Exhaust any number of cards. For each card Exhausted this way, gain !M! energy. NL [#34eb52]Pacifist[]: Restore 10 Health."
+  },
+  "theHuman:Revolver": {
+    "NAME": "Revolver",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) a random enemy. NL Return this to your hand. NL thehuman:Inventory."
+  },
+  "theHuman:GlassShard": {
+    "NAME": "Glass Shard",
+    "DESCRIPTION": "Deal !D! damage and apply !M! thehuman:Injured to an enemy."
+  },
+  "theHuman:KnuckleDuster": {
+    "NAME": "Knuckle Duster",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theHuman:Brick": {
+    "NAME": "Brick",
+    "DESCRIPTION": "Deal !D! damage and Stun an enemy. NL Shuffle an Injury into your draw pile."
+  },
+  "theHuman:PepperSpray": {
+    "NAME": "Pepper Spray",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Poison, Weak and Vulnerable to an enemy."
+  },
+  "theHuman:LugerPistol": {
+    "NAME": "Luger Pistol",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Return this to your hand. NL thehuman:Inventory."
+  },
+  "theHuman:MK3A2Grenade": {
+    "NAME": "MK3A2 Grenade",
+    "DESCRIPTION": "Deal !D! damage to all enemies."
+  },
+  "theHuman:OnTheStreets": {
+    "NAME": "On The Streets",
+    "DESCRIPTION": "When drawn, deal !D! damage to a random enemy. NL Add a thehuman:Weapon and !M! thehuman:Junk to your hand. NL thehuman:Uncover a card."
+  },
+  "theHuman:FuriousSlap": {
+    "NAME": "Furious Slap",
+    "DESCRIPTION": "Deal !D! damage and apply !M! thehuman:Injured to an enemy. NL Shuffle a copy of this into your draw pile. NL Draw a card."
+  },
+  "theHuman:Slaptacular": {
+    "NAME": "Slaptacular",
+    "DESCRIPTION": "Deal !D! damage and apply !M! thehuman:Injured to all enemies. NL Replay all Slaps played this combat."
+  },
+  "theHuman:TrashToTreasure": {
+    "NAME": "Trash To Treasure",
+    "DESCRIPTION": "Exhaust all thehuman:Junk in your hand. NL For each thehuman:Junk Exhausted this way, thehuman:Uncover a card."
+  },
+  "theHuman:Recycle": {
+    "NAME": "Recycle",
+    "DESCRIPTION": "Shuffle !M! random thehuman:Junk into your draw pile. NL Shuffle your hand back into your draw pile. NL Then, draw that many cards."
+  },
+  "theHuman:FollowUpSlap": {
+    "NAME": "Follow-Up Slap",
+    "DESCRIPTION": "Deal !D! damage to an enemy twice. NL Your Slaps deal 3 more damage this combat."
+  },
+  "theHuman:CommunityService": {
+    "NAME": "Community Service",
+    "DESCRIPTION": "Whenever you play an Attack, find 1 thehuman:Junk."
+  },
+  "theHuman:SelfDefense": {
+    "NAME": "Self Defense",
+    "DESCRIPTION": "Add 1 Revolver, 1 Pepper Spray, 1 Kung Fu! and 1 Defend to your hand."
+  },
+  "theHuman:Backpack": {
+    "NAME": "Backpack",
+    "DESCRIPTION": "thehuman:Uncover !M! cards."
+  },
+  "theHuman:Aggressiveness": {
+    "NAME": "Aggressiveness",
+    "DESCRIPTION": "At the start of your turn, gain !M! Strength and discard !M! card."
+  },
+  "theHuman:Jab": {
+    "NAME": "Jab",
+    "DESCRIPTION": "Deal !D! damage. NL Draw a card. NL [#a83277]Technique[]: Deal !D! additional damage."
+  },
+  "theHuman:Teatime": {
+    "NAME": "Teatime",
+    "DESCRIPTION": "Gain !M! thehuman:Healthiness. NL Draw 2 cards."
+  },
+  "theHuman:Tinker": {
+    "NAME": "Tinker",
+    "DESCRIPTION": "Find !M! thehuman:Junk."
+  },
+  "theHuman:AK47": {
+    "NAME": "AK-47",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Return this to your hand. NL Can be upgraded any number of times. NL thehuman:Inventory."
+  },
+  "theHuman:EmptyCartridge": {
+    "NAME": "Empty Cartridge",
+    "DESCRIPTION": "Unplayable."
+  },
+  "theHuman:SpringCleaning": {
+    "NAME": "Spring Cleaning",
+    "DESCRIPTION": "Exhaust your discard pile. NL For each card Exhausted this way, deal !D! damage to all enemies. NL [#2000a7]Lifestyle[]: Deal 11 damage to a random enemy."
+  },
+  "theHuman:InThePark": {
+    "NAME": "In The Park",
+    "DESCRIPTION": "Gain !M! thehuman:Healthiness and Regen. NL Find !theHuman:SecondMagic! thehuman:Junk. NL Draw a card."
+  },
+  "theHuman:FrontKick": {
+    "NAME": "Front Kick",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Weak to an enemy. NL Gain !B! Block. NL Draw a card. NL [#a83277]Technique[]: Gain 1 energy."
+  },
+  "theHuman:Detoxification": {
+    "NAME": "Detoxification",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! thehuman:Healthiness. NL Exhaust ALL Status and Curse cards in your hand, draw pile and discard pile."
+  },
+  "theHuman:DesertEagle": {
+    "NAME": "Desert Eagle",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Return this to your hand. NL Can be upgraded any number of times. NL thehuman:Inventory."
+  },
+  "theHuman:DualWielding": {
+    "NAME": "Dual Wielding",
+    "DESCRIPTION": "Whenever you thehuman:Shoot a thehuman:Weapon, thehuman:Shoot ( 10 x 1, 15% ) a random enemy."
+  },
+  "theHuman:Uppercut": {
+    "NAME": "Uppercut",
+    "DESCRIPTION": "When you draw this, deal !D! damage to a random enemy. NL Deal !D! damage to a random enemy. NL [#a83277]Technique[]: Gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "When you draw this, deal !D! damage to a random enemy. NL Deal !D! damage to a random enemy and shuffle this back into your draw pile. NL [#a83277]Technique[]: Gain 1 Strength."
+  },
+  "theHuman:PettyTheft": {
+    "NAME": "Petty Theft",
+    "DESCRIPTION": "Find !M! thehuman:Junk. NL Gain !theHuman:SecondMagic! Gold."
+  },
+  "theHuman:DoItYourself": {
+    "NAME": "Do It Yourself",
+    "DESCRIPTION": "Deal !D! damage to an enemy. NL If you have thehuman:Junk in your hand, gain !M! energy and draw !M! card."
+  },
+  "theHuman:PocketPistol": {
+    "NAME": "Pocket Pistol",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) a random enemy. NL This does not produce Empty Cartridges."
+  },
+  "theHuman:ConcealedCarry": {
+    "NAME": "Concealed Carry",
+    "DESCRIPTION": "Add a Pocket Pistol to your hand."
+  },
+  "theHuman:Disposal": {
+    "NAME": "Disposal",
+    "DESCRIPTION": "Discard any amount of cards. For each card discarded this way, find 1 thehuman:Junk."
+  },
+  "theHuman:Survivalist": {
+    "NAME": "Survivalist",
+    "DESCRIPTION": "Deal !D! damage to all enemies and gain !B! Block multiplied by the number of thehuman:Junk in your hand."
+  },
+  "theHuman:Risktaker": {
+    "NAME": "Risktaker",
+    "DESCRIPTION": "At the start of your turn, thehuman:Uncover a card."
+  },
+  "theHuman:Salvage": {
+    "NAME": "Salvage",
+    "DESCRIPTION": "Shuffle your hand back into your draw pile. NL For each card shuffled this way, return a random card from your discard pile to your hand."
+  },
+  "theHuman:RenewableContract": {
+    "NAME": "Renewable Contract",
+    "DESCRIPTION": "At the start of your turn, choose !M! card from the discard pile and return it to your hand."
+  },
+  "theHuman:Sanitation": {
+    "NAME": "Sanitation",
+    "DESCRIPTION": "Replay all cards that you have Exhausted this combat."
+  },
+  "theHuman:Happiness": {
+    "NAME": "Happiness",
+    "DESCRIPTION": "Gain !M! thehuman:Healthiness and Regen."
+  },
+  "theHuman:Preparation": {
+    "NAME": "Preparation",
+    "DESCRIPTION": "Deal !D! damage to an enemy. NL Next turn, gain !M! Block and draw !theHuman:SecondMagic! cards. NL [#2000a7]Lifestyle[]: Gain 1 Regen."
+  },
+  "theHuman:Refresh": {
+    "NAME": "Refresh",
+    "DESCRIPTION": "Draw a card. NL If this card is discarded, draw !M! cards and restore !M! Health."
+  },
+  "theHuman:CautiousBlow": {
+    "NAME": "Cautious Blow",
+    "DESCRIPTION": "Deal !D! damage to an enemy. NL Gain !B! Block. NL [#a83277]Technique[]: Gain 5 Block."
+  },
+  "theHuman:HeelKick": {
+    "NAME": "Heel Kick",
+    "DESCRIPTION": "Deal !D! damage to an enemy 2 times. NL [#a83277]Technique[]: Deal !D! damage to a random enemy 2 times."
+  },
+  "theHuman:AWP": {
+    "NAME": "AWP",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Next turn, deal 10 damage to the same enemy. NL Return this to your hand. NL Can be upgraded any number of times. NL thehuman:Inventory."
+  },
+  "theHuman:LegalAction": {
+    "NAME": "Legal Action",
+    "DESCRIPTION": "Stun an enemy for 1 turn. NL Gain !B! Block. NL Shuffle a Poverty into your deck."
+  },
+  "theHuman:Poverty": {
+    "NAME": "Poverty",
+    "DESCRIPTION": "Unplayable. NL When you draw this, lose 3 Health."
+  },
+  "theHuman:Angst": {
+    "NAME": "Angst",
+    "DESCRIPTION": "Draw 3 cards. NL If you have more than 5 cards in your hand, discard your hand."
+  },
+  "theHuman:TurboSlap": {
+    "NAME": "Turbo Slap",
+    "DESCRIPTION": "When drawn, deal 4 damage to a random enemy. NL Deal !D! damage to an enemy. NL Draw a card."
+  },
+  "theHuman:LivingItUp": {
+    "NAME": "Living It Up",
+    "DESCRIPTION": "thehuman:Uncover !M! cards. NL [#2000a7]Lifestyle[]: Uncover a card."
+  },
+  "theHuman:Berreta92": {
+    "NAME": "Berreta 92",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Return this to your hand. NL Can be upgraded any number of times. NL thehuman:Inventory."
+  },
+  "theHuman:Glock17": {
+    "NAME": "Glock 17",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Return this to your hand. NL Can be upgraded any number of times. NL thehuman:Inventory."
+  },
+  "theHuman:QuickDraw": {
+    "NAME": "Quick Draw",
+    "DESCRIPTION": "Draw a thehuman:Weapon.",
+    "UPGRADE_DESCRIPTION": "Draw a thehuman:Weapon. NL thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) a random enemy."
+  },
+  "theHuman:DoubleTap": {
+    "NAME": "Double Tap",
+    "DESCRIPTION": "The next time you thehuman:Shoot an enemy, thehuman:Shoot them again with the same thehuman:Weapon.",
+    "UPGRADE_DESCRIPTION": "The next time you thehuman:Shoot an enemy, thehuman:Shoot them again with the same thehuman:Weapon 2 times."
+  },
+  "theHuman:Physiotherapy": {
+    "NAME": "Physiotherapy",
+    "DESCRIPTION": "Exhaust 5 cards. NL Gain !B! Block. NL Gain !M! thehuman:Healthiness."
+  },
+  "theHuman:FitAsAFiddle": {
+    "NAME": "Fit As A Fiddle",
+    "DESCRIPTION": "If you have more than !M! thehuman:Healthiness, take another turn after this one. NL Draw a card. NL Exhaustive 2."
+  },
+  "theHuman:Party": {
+    "NAME": "Party",
+    "DESCRIPTION": "Unplayable. NL Whenever you discard this, gain !M! energy and draw !theHuman:SecondMagic! card."
+  },
+  "theHuman:Superslap": {
+    "NAME": "Superslap",
+    "DESCRIPTION": "Play !M! Slaps with random targets."
+  },
+  "theHuman:Arcade": {
+    "NAME": "Arcade",
+    "DESCRIPTION": "For each energy you have, deal !D! damage to a random enemy and thehuman:Uncover a card."
+  },
+  "theHuman:Ageing": {
+    "NAME": "Ageing",
+    "DESCRIPTION": "Apply 1 *Ageing to all enemies. NL [#34eb52]Pacifist[]: Gain 10 Block."
+  },
+  "theHuman:Ignore": {
+    "NAME": "Ignore",
+    "DESCRIPTION": "Gain !B! Block. NL [#34eb52]Pacifist[]: Gain 12 thehuman:Peaceful."
+  },
+  "theHuman:LayDownArms": {
+    "NAME": "Lay Down Arms",
+    "DESCRIPTION": "Remove all Attacks and this card from your deck permanently. NL Draw a card. NL [#34eb52]Pacifist[]: Draw 5 cards instead.",
+    "UPGRADE_DESCRIPTION": "Remove all Attacks and this card from your deck permanently and gain !M! Regen and Dexterity. NL Draw a card. NL [#34eb52]Pacifist[]: Draw 5 cards instead."
+  },
+  "theHuman:MidlifeCrisis": {
+    "NAME": "Midlife Crisis",
+    "DESCRIPTION": "Apply !M! Weak to an enemy. NL Draw 2 cards. NL [#34eb52]Pacifist[]: Apply 99 Weak instead."
+  },
+  "theHuman:Nap": {
+    "NAME": "Nap",
+    "DESCRIPTION": "Put an enemy to sleep for !M! turns. NL [#34eb52]Pacifist[]: Restore 5 Health."
+  },
+  "theHuman:Discourage": {
+    "NAME": "Discourage",
+    "DESCRIPTION": "Apply 3 Weak to an enemy. NL [#34eb52]Pacifist[]: Also remove all its buffs."
+  },
+  "theHuman:Speedloader": {
+    "NAME": "Speedloader",
+    "DESCRIPTION": "While this is in your hand, whenever you thehuman:Shoot a thehuman:Weapon, thehuman:Shoot (4 x 2, 10% ) a random enemy."
+  },
+  "theHuman:FreedomOfMind": {
+    "NAME": "Freedom Of Mind",
+    "DESCRIPTION": "Whenever you discard a card, deal 4 *Unblockable damage to ALL enemies."
+  },
+  "theHuman:Arsenal": {
+    "NAME": "Arsenal",
+    "DESCRIPTION": "At the start of your turn, add a random thehuman:Weapon to your hand. NL It Purges when used and at the end of your turn."
+  },
+  "theHuman:PrepareHand": {
+    "NAME": "Prepare Hand",
+    "DESCRIPTION": "Draw !M! cards with \"Slap\" in their name."
+  },
+  "theHuman:Dieting": {
+    "NAME": "Dieting",
+    "DESCRIPTION": "Gain !M! thehuman:Healthiness."
+  },
+  "theHuman:CrescentKick": {
+    "NAME": "Crescent Kick",
+    "DESCRIPTION": "For each Attack played this combat, deal !D! damage to an enemy. NL [#a83277]Technique[]: Deal this damage to ALL enemies instead."
+  },
+  "theHuman:Stoicism": {
+    "NAME": "Stoicism",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you discard a card, gain !M! thehuman:Peaceful.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Whenever you discard a card, gain !M! thehuman:Peaceful and thehuman:Healthiness."
+  },
+  "theHuman:TheTrashMonster": {
+    "NAME": "The Trash Monster",
+    "DESCRIPTION": "At the start of your turn, find 1 thehuman:Junk. NL Whenever you play !M! thehuman:Junk, deal 5 damage to a random enemy, and gain 1 Strength and Dexterity."
+  },
+  "theHuman:Renovation": {
+  "NAME": "Renovation",
+  "DESCRIPTION": "Discard your hand. NL Draw !M! cards. NL Discard your hand. NL Draw !theHuman:SecondMagic! cards."
+  },
+  "theHuman:Fuming": {
+    "NAME": "Fuming",
+    "DESCRIPTION": "Whenever you play a card with *\"Slap\" in its name, play it again with random targets.",
+    "UPGRADE_DESCRIPTION": "Draw a card with *\"Slap\" in its name. NL Whenever you play a card with *\"Slap\" in its name, play it again with random targets and draw a card."
+  },
+  "theHuman:FreshlyBrewedCoffee": {
+    "NAME": "Freshly Brewed Coffee",
+    "DESCRIPTION": "Gain !M! Dexterity. NL Restore !theHuman:SecondMagic! Health. NL [#2000a7]Lifestyle[]: Draw a card next turn.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Regen and Dexterity. NL Restore !theHuman:SecondMagic! Health. NL [#2000a7]Lifestyle[]: Draw a card next turn."
+  },
+  "theHuman:GroceryShopping": {
+    "NAME": "Grocery Shopping",
+    "DESCRIPTION": "Scry !M!. NL Draw !theHuman:SecondMagic! Attack, Skill and Power. NL [#2000a7]Lifestyle[]: Draw a card.",
+    "UPGRADE_DESCRIPTION": "Scry !M!. NL Draw !theHuman:SecondMagic! Attack, Skill and Power. NL [#2000a7]Lifestyle[]: Scry !M!."
+  },
+  "theHuman:ImpulsePurchase": {
+    "NAME": "Impulse Purchase",
+    "DESCRIPTION": "Deal !D! damage. NL Find !M! thehuman:Junk."
+  },
+  "theHuman:BackPain": {
+    "NAME": "Back Pain",
+    "DESCRIPTION": "Apply 1 *Ageing and 2 *Injured to ALL enemies."
+  },
+  "theHuman:SilverGeneration": {
+    "NAME": "Silver Generation",
+    "DESCRIPTION": "At the start of your turn, apply 1 *Ageing to ALL enemies. NL Gain !B! thehuman:Peaceful."
+  }
+}

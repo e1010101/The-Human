@@ -1,0 +1,199 @@
+{
+  "theHuman:FocusedPower": {
+    "NAME": "Concentration",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw ",
+      " card and gain ",
+      " cards and gain ",
+      " block."
+    ]
+  },
+  "theHuman:HealthinessPower": {
+    "NAME": "Healthiness",
+    "DESCRIPTIONS": [
+      "You are unhealthy.",
+      "You are healthy.",
+      "You are very healthy.",
+      "You are extremely healthy.",
+      " NL NL Perform one of the following effects at random at the start of your turn: NL Draw a card, gain 1 Energy, gain 5 Block, restore 3 Health.",
+      " NL NL Perform one of the following effects at random at the start of your turn: NL Gain 3 Block, restore 2 Health.",
+      " NL NL Perform one of the following effects at random at the start of your turn: NL Gain 2 Block, restore 1 Health.",
+      " NL NL Perform one of the following effects at random at the start of your turn: NL Exhaust a random card in your hand, lose ",
+      " Health, add a random Curse to your draw pile, gain ",
+      " Weak.",
+      " NL NL Perform one of the following effects at random whenever you play a non-Junk card: NL Deal ",
+      " damage to a random enemy, gain ",
+      " Block.",
+      " NL NL Also perform one of the following: NL Restore 2 Health, 66% chance to draw a card.",
+      " NL NL Perform one of the following effects at random whenever you play a non-Junk card: NL Deal 1 damage to a random enemy, gain 2 Block, restore 1 Health, 50% chance to draw a card.",
+      " NL NL Perform one of the following effects at random whenever you play a non-Junk card: NL Gain 1 Block, 50% chance to restore 1 Health."
+    ]
+  },
+  "theHuman:CarPower": {
+    "NAME": "Mobility",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw ",
+      " card and gain ",
+      " cards and gain",
+      " energy."
+    ]
+  },
+  "theHuman:GarbageCollectorPower": {
+    "NAME": "Garbage Collection",
+    "DESCRIPTIONS": [
+      "Whenever you play a Junk card, Uncover ",
+      " card",
+      " cards."
+    ]
+  },
+  "theHuman:ReadingPower": {
+    "NAME": "Reading",
+    "DESCRIPTIONS": [
+      "Whenever you play a card that costs 2 or more, add ",
+      " Deep Thought to your hand.",
+      " Deep Thoughts to your hand.",
+      " Big Brain to your hand.",
+      " Big Brains to your hand."
+    ]
+  },
+  "theHuman:InjuredPower": {
+    "NAME": "Injured",
+    "DESCRIPTIONS": [
+      "At the start of your turn, lose ",
+      " health."
+    ]
+  },
+  "theHuman:CommunityServicePower": {
+    "NAME": "Community Service",
+    "DESCRIPTIONS": [
+      "Whenever you play an Attack, add ",
+      " Junk to your hand."
+    ]
+  },
+  "theHuman:AggressivenessPower": {
+    "NAME": "Aggressive",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain ",
+      " and discard ",
+      " card.",
+      " cards."
+    ]
+  },
+  "theHuman:DualWieldingPower": {
+    "NAME": "Dual Wielding",
+    "DESCRIPTIONS": [
+      "Whenever you Shoot a Weapon, Shoot ( 10 x ",
+      ", 15 % ) a random enemy."
+    ]
+  },
+  "theHuman:RisktakerPower": {
+    "NAME": "High Risk, High Reward",
+    "DESCRIPTIONS": [
+      "At the start of your turn, Uncover ",
+      " card.",
+      " cards."
+    ]
+  },
+  "theHuman:RenewableContractPower": {
+    "NAME": "Renew",
+    "DESCRIPTIONS": [
+      "At the start of your turn, choose ",
+      " card from the discard pile and return it to your hand.",
+      " cards from the discard pile and return it to your hand."
+    ]
+  },
+  "theHuman:TargetedPower": {
+    "NAME": "Targeted",
+    "DESCRIPTIONS": [
+      "At the start of your turn, lose ",
+      " health."
+    ]
+  },
+  "theHuman:ExtraShotsPower": {
+    "NAME": "Extra Shots",
+    "DESCRIPTIONS": [
+      "When you shoot a weapon, shoot it again at the same target ",
+      " more time.",
+      " more times."
+    ]
+  },
+  "theHuman:TechniquePower": {
+    "NAME": "Technique",
+    "DESCRIPTIONS": [
+      "If the next card you play is a Technique, trigger its Technique effect."
+    ]
+  },
+  "theHuman:AgeingPower": {
+    "NAME": "Ageing",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if you have 12 or more stacks of this, die. NL For each stack of this, damage dealt is reduced by 5%. NL At the end of your turn, gain 1 stack of this."
+    ]
+  },
+  "theHuman:PeacefulPower": {
+    "NAME": "Peaceful",
+    "DESCRIPTIONS": [
+      "Negate ",
+      " damage."
+    ]
+  },
+  "theHuman:SleepPower": {
+    "NAME": "Sleeping",
+    "DESCRIPTIONS": [
+      "Will wake up in ",
+      " turn.",
+      " turns."
+    ]
+  },
+  "theHuman:FreedomOfMindPower": {
+    "NAME": "Freedom Of Mind",
+    "DESCRIPTIONS": [
+      "Whenever you discard a card, deal ",
+      " Unblockable damage to ALL enemies."
+    ]
+  },
+  "theHuman:ArsenalPower": {
+    "NAME": "Arsenal",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random Weapon to your hand that has Shoot. NL It has exhaust.",
+      "At the start of your turn, add ",
+      " random Weapons to your hand that has Shoot. NL It has exhaust."
+    ]
+  },
+  "theHuman:StoicismPower": {
+    "NAME": "Stoic",
+    "DESCRIPTIONS": [
+      "Whenever you discard a card, gain ",
+      " Peaceful.",
+      " Peaceful and Healthiness."
+    ]
+  },
+  "theHuman:TrashMonsterPower": {
+    "NAME": "The All-Consuming",
+    "DESCRIPTIONS": [
+      "At the start of each turn, find ",
+      " Junk. NL Whenever you play ",
+      " Junk, deal ",
+      " damage to a random enemy, and gain ",
+      " Strength and Dexterity."
+    ]
+  },
+  "theHuman:FumingPower": {
+    "NAME": "Fuming",
+    "DESCRIPTIONS": [
+      "Whenever you play a card with \"Slap\" in its name, play it",
+      " again with random targets.",
+      " again with random targets and draw 1 card.",
+      " another",
+      " times with random targets.",
+      " times with random targets and draw",
+      " cards."
+    ]
+  },
+  "theHuman:SilverGenerationPower": {
+    "NAME": "Getting Older",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply ",
+      " Ageing to ALL enemies."
+    ]
+  }
+}

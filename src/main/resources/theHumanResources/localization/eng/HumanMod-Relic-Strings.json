@@ -1,0 +1,12 @@
+{
+  "theHuman:HumanRelic": {
+    "NAME": "Thumbs Up",
+    "FLAVOR": "Hide the pain, Harold!",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b10 #yHealthiness and #b3 #yBlock.",
+      " NL NL Card Rewards have 4 choices instead of 3.",
+      " NL NL There are 4 levels of healthiness: Unhealthy ( < 8 ), Healthy ( 8 - 18 ), Very Healthy ( 18 - 25 ) and Extremely Healthy ( > 25 ).",
+      " NL NL You will obtain positive effects while you are healthy, and negative ones while you are unhealthy."
+    ]
+  }
+}
