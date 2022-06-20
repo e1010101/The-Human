@@ -34,162 +34,172 @@ import static theHuman.HumanMod.*;
 import static theHuman.characters.TheHuman.Enums.COLOR_SKIN;
 
 public class TheHuman extends CustomPlayer {
-	public static final Logger logger = LogManager.getLogger(HumanMod.class.getName());
+    public static final Logger logger =
+        LogManager.getLogger(HumanMod.class.getName());
 
-	public static final int ENERGY_PER_TURN = 3;
+    public static final int ENERGY_PER_TURN = 3;
 
-	public static final int STARTING_HP = 70;
-	public static final int MAX_HP = 70;
-	public static final int STARTING_GOLD = 99;
-	public static final int CARD_DRAW = 5;
-	public static final int ORB_SLOTS = 0;
-	public static final String[] orbTextures = {"theHumanResources/images/char/humanCharacter/orb/layer1.png", "theHumanResources/images/char/humanCharacter/orb/layer2.png", "theHumanResources/images/char/humanCharacter/orb/layer3.png", "theHumanResources/images/char/humanCharacter/orb/layer4.png", "theHumanResources/images/char/humanCharacter/orb/layer5.png", "theHumanResources/images/char/humanCharacter/orb/layer6.png", "theHumanResources/images/char/humanCharacter/orb/layer1d.png", "theHumanResources/images/char/humanCharacter/orb/layer2d.png", "theHumanResources/images/char/humanCharacter/orb/layer3d.png", "theHumanResources/images/char/humanCharacter/orb/layer4d.png", "theHumanResources/images/char/humanCharacter/orb/layer5d.png",};
+    public static final int STARTING_HP = 70;
+    public static final int MAX_HP = 70;
+    public static final int STARTING_GOLD = 99;
+    public static final int CARD_DRAW = 5;
+    public static final int ORB_SLOTS = 0;
+    public static final String[] orbTextures =
+        {"theHumanResources/images/char/humanCharacter/orb/layer1.png",
+         "theHumanResources/images/char/humanCharacter/orb/layer2.png",
+         "theHumanResources/images/char/humanCharacter/orb/layer3.png",
+         "theHumanResources/images/char/humanCharacter/orb/layer4.png",
+         "theHumanResources/images/char/humanCharacter/orb/layer5.png",
+         "theHumanResources/images/char/humanCharacter/orb/layer6.png",
+         "theHumanResources/images/char/humanCharacter/orb/layer1d.png",
+         "theHumanResources/images/char/humanCharacter/orb/layer2d.png",
+         "theHumanResources/images/char/humanCharacter/orb/layer3d.png",
+         "theHumanResources/images/char/humanCharacter/orb/layer4d.png",
+         "theHumanResources/images/char/humanCharacter/orb/layer5d.png",};
 
-	private static final String ID = makeID("HumanCharacter");
-	private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
-	private static final String[] NAMES = characterStrings.NAMES;
-	private static final String[] TEXT = characterStrings.TEXT;
+    private static final String ID = makeID("HumanCharacter");
+    private static final CharacterStrings characterStrings =
+        CardCrawlGame.languagePack.getCharacterString(ID);
+    private static final String[] NAMES = characterStrings.NAMES;
+    private static final String[] TEXT = characterStrings.TEXT;
 
-	public TheHuman(String name, PlayerClass setClass) {
-		super(name, setClass, orbTextures, "theHumanResources/images/char/humanCharacter/orb/vfx.png", null, new SpriterAnimation("theHumanResources/images/char/humanCharacter/Spriter/human.scml"));
+    public TheHuman(String name, PlayerClass setClass) {
+        super(name, setClass, orbTextures,
+              "theHumanResources/images/char/humanCharacter/orb/vfx.png", null,
+              new SpriterAnimation(
+                  "theHumanResources/images/char/humanCharacter/Spriter/human.scml"));
 
-		initializeClass(null,
+        initializeClass(null, THE_DEFAULT_SHOULDER_2, THE_DEFAULT_SHOULDER_1,
+                        THE_DEFAULT_CORPSE, getLoadout(), 20.0F, -10.0F, 220.0F,
+                        290.0F, new EnergyManager(ENERGY_PER_TURN));
 
-						THE_DEFAULT_SHOULDER_2, THE_DEFAULT_SHOULDER_1, THE_DEFAULT_CORPSE, getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
+        loadAnimation(THE_DEFAULT_SKELETON_ATLAS, THE_DEFAULT_SKELETON_JSON,
+                      1.0f);
+        AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
 
-		loadAnimation(THE_DEFAULT_SKELETON_ATLAS, THE_DEFAULT_SKELETON_JSON, 1.0f);
-		AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
-		e.setTime(e.getEndTime() * MathUtils.random());
-
-		dialogX = (drawX + 0.0F * Settings.scale);
-		dialogY = (drawY + 220.0F * Settings.scale);
+        dialogX = (drawX + 0.0F * Settings.scale);
+        dialogY = (drawY + 220.0F * Settings.scale);
 
 
-	}
+    }
 
-	@Override
-	public ArrayList<String> getStartingDeck() {
-		ArrayList<String> retVal = new ArrayList<>();
+    @Override
+    public ArrayList<String> getStartingDeck() {
+        ArrayList<String> retVal = new ArrayList<>();
+        logger.info("Begin loading starter Deck Strings");
+        for (int i = 0; i < 5; i++) {
+            retVal.add(Slap.ID);
+            retVal.add(Defend.ID);
+        }
+        retVal.add(Preparation.ID);
+        retVal.add(Focused.ID);
+        return retVal;
+    }
 
-		logger.info("Begin loading starter Deck Strings");
+    public ArrayList<String> getStartingRelics() {
+        ArrayList<String> retVal = new ArrayList<>();
+        retVal.add(HumanRelic.ID);
+        UnlockTracker.markRelicAsSeen(HumanRelic.ID);
+        return retVal;
+    }
 
-		retVal.add(Slap.ID);
-		retVal.add(Slap.ID);
-		retVal.add(Slap.ID);
-		retVal.add(Slap.ID);
-		retVal.add(Slap.ID);
+    @Override
+    public CharSelectInfo getLoadout() {
+        return new CharSelectInfo(NAMES[0], TEXT[0], STARTING_HP, MAX_HP,
+                                  ORB_SLOTS, STARTING_GOLD, CARD_DRAW, this,
+                                  getStartingRelics(), getStartingDeck(),
+                                  false);
+    }
 
-		retVal.add(Defend.ID);
-		retVal.add(Defend.ID);
-		retVal.add(Defend.ID);
-		retVal.add(Defend.ID);
-		retVal.add(Defend.ID);
+    @Override
+    public String getTitle(AbstractPlayer.PlayerClass playerClass) {
+        return NAMES[1];
+    }
 
-		retVal.add(Preparation.ID);
-		retVal.add(Focused.ID);
+    @Override
+    public AbstractCard.CardColor getCardColor() {
+        return COLOR_SKIN;
+    }
 
-		return retVal;
-	}
+    @Override
+    public Color getCardRenderColor() {
+        return HUMAN_SKIN;
+    }
 
-	public ArrayList<String> getStartingRelics() {
-		ArrayList<String> retVal = new ArrayList<>();
+    @Override
+    public AbstractCard getStartCardForEvent() {
+        return new Slap();
+    }
 
-		retVal.add(HumanRelic.ID);
+    @Override
+    public Color getCardTrailColor() {
+        return HUMAN_SKIN;
+    }
 
-		UnlockTracker.markRelicAsSeen(HumanRelic.ID);
+    @Override
+    public int getAscensionMaxHPLoss() {
+        return 7;
+    }
 
-		return retVal;
-	}
+    @Override
+    public BitmapFont getEnergyNumFont() {
+        return FontHelper.energyNumFontBlue;
+    }
 
-	@Override
-	public CharSelectInfo getLoadout() {
-		return new CharSelectInfo(NAMES[0], TEXT[0], STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, CARD_DRAW, this, getStartingRelics(), getStartingDeck(), false);
-	}
+    @Override
+    public void doCharSelectScreenSelectEffect() {
+        CardCrawlGame.sound.playA("ATTACK_DAGGER_1", 1.25f);
+        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW,
+                                        ScreenShake.ShakeDur.SHORT, false);
+    }
 
-	@Override
-	public String getTitle(AbstractPlayer.PlayerClass playerClass) {
-		return NAMES[1];
-	}
+    @Override
+    public String getCustomModeCharacterButtonSoundKey() {
+        return "ATTACK_DAGGER_1";
+    }
 
-	@Override
-	public AbstractCard.CardColor getCardColor() {
-		return COLOR_SKIN;
-	}
+    @Override
+    public String getLocalizedCharacterName() {
+        return NAMES[0];
+    }
 
-	@Override
-	public Color getCardRenderColor() {
-		return HUMAN_SKIN;
-	}
+    @Override
+    public AbstractPlayer newInstance() {
+        return new TheHuman(name, chosenClass);
+    }
 
-	@Override
-	public AbstractCard getStartCardForEvent() {
-		return new Slap();
-	}
+    @Override
+    public String getSpireHeartText() {
+        return TEXT[1];
+    }
 
-	@Override
-	public Color getCardTrailColor() {
-		return HUMAN_SKIN;
-	}
+    @Override
+    public Color getSlashAttackColor() {
+        return HUMAN_SKIN;
+    }
 
-	@Override
-	public int getAscensionMaxHPLoss() {
-		return 7;
-	}
+    @Override
+    public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
+        return new AbstractGameAction.AttackEffect[]{
+            AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+            AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+            AbstractGameAction.AttackEffect.BLUNT_HEAVY};
+    }
 
-	@Override
-	public BitmapFont getEnergyNumFont() {
-		return FontHelper.energyNumFontBlue;
-	}
+    @Override
+    public String getVampireText() {
+        return TEXT[2];
+    }
 
-	@Override
-	public void doCharSelectScreenSelectEffect() {
-		CardCrawlGame.sound.playA("ATTACK_DAGGER_1", 1.25f);
-		CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, false);
-	}
-
-	@Override
-	public String getCustomModeCharacterButtonSoundKey() {
-		return "ATTACK_DAGGER_1";
-	}
-
-	@Override
-	public String getLocalizedCharacterName() {
-		return NAMES[0];
-	}
-
-	@Override
-	public AbstractPlayer newInstance() {
-		return new TheHuman(name, chosenClass);
-	}
-
-	@Override
-	public String getSpireHeartText() {
-		return TEXT[1];
-	}
-
-	@Override
-	public Color getSlashAttackColor() {
-		return HUMAN_SKIN;
-	}
-
-	@Override
-	public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-		return new AbstractGameAction.AttackEffect[]{AbstractGameAction.AttackEffect.BLUNT_HEAVY, AbstractGameAction.AttackEffect.BLUNT_HEAVY, AbstractGameAction.AttackEffect.BLUNT_HEAVY};
-	}
-
-	@Override
-	public String getVampireText() {
-		return TEXT[2];
-	}
-
-	public static class Enums {
-		@SpireEnum
-		public static AbstractPlayer.PlayerClass THE_HUMAN;
-		@SpireEnum(name = "HUMAN_COLOR")
-		public static AbstractCard.CardColor COLOR_SKIN;
-		@SpireEnum(name = "HUMAN_COLOR")
-		@SuppressWarnings("unused")
-		public static CardLibrary.LibraryType LIBRARY_COLOR_SKIN;
-	}
+    public static class Enums {
+        @SpireEnum
+        public static AbstractPlayer.PlayerClass THE_HUMAN;
+        @SpireEnum(name = "HUMAN_COLOR")
+        public static AbstractCard.CardColor COLOR_SKIN;
+        @SpireEnum(name = "HUMAN_COLOR")
+        @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_COLOR_SKIN;
+    }
 
 }
