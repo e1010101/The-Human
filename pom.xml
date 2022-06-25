@@ -2,9 +2,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>humanmod</groupId>
-    <artifactId>theHuman</artifactId>
+    <artifactId>HumanMod</artifactId>
     <name>The Human</name>
-    <version>1.6</version>
+    <version>1.8</version>
     <description>Adds Harold the Human as a playable character.</description>
 
     <properties>

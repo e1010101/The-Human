@@ -1,6 +1,6 @@
 {
-  "modid": "${project.artifactId}",
-  "name": "${project.name}",
+  "modid": "theHuman",
+  "name": "The Human",
   "author_list": ["Complex"],
   "credits": "Basemod, ModTheSpire",
   "description": "${project.description}",

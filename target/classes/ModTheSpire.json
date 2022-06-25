@@ -4,7 +4,7 @@
   "author_list": ["Complex"],
   "credits": "Basemod, ModTheSpire",
   "description": "Adds Harold the Human as a playable character.",
-  "version": "1.6",
+  "version": "1.7",
   "sts_version": "12-22-2020",
   "mts_version": "3.8.0",
   "dependencies": ["basemod", "stslib"],

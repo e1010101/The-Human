@@ -22,7 +22,8 @@ public class Aggressiveness extends AbstractDynamicCard {
 	private static final CardRarity RARITY = CardRarity.COMMON;
 	private static final CardTarget TARGET = CardTarget.SELF;
 	private static final CardType TYPE = CardType.POWER;
-	private static final int COST = 1;
+	private static final int COST = 2;
+	private static final int UPGRADED_COST = 1;
 
 	public Aggressiveness() {
 		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -34,6 +35,7 @@ public class Aggressiveness extends AbstractDynamicCard {
 		if (!upgraded) {
 			upgradeName();
 			this.isInnate = true;
+			upgradeBaseCost(UPGRADED_COST);
 			initializeDescription();
 		}
 	}

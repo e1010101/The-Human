@@ -27,7 +27,6 @@ C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\AK47.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\Physiotherapy.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\tokens\DeepThought.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\KeepingFit.java
-C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\ReduceCostInHandAction.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\Aggressiveness.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\CommunityService.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\Confused.java
@@ -38,12 +37,14 @@ C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\powers\FreedomO
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\Glock17.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\Tinker.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\tokens\BirthdayPresent.java
+C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\ManOfTomorrow.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\LayDownArmsAction.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\tokens\PlasticBottle.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\ShuffleHandAction.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\PlayGhostCopyOfCardAction.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\powers\InjuredPower.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\FollowUpAction.java
+C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\ReduceCostInGroupAction.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\Teatime.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\tokens\EmptyCartridge.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\LegalAction.java

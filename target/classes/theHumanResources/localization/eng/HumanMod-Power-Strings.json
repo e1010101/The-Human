@@ -147,8 +147,9 @@
   "theHuman:FreedomOfMindPower": {
     "NAME": "Freedom Of Mind",
     "DESCRIPTIONS": [
-      "Whenever you discard a card, deal ",
-      " Unblockable damage to ALL enemies."
+      "At the start of your turn, ",
+      " a card.",
+      " cards."
     ]
   },
   "theHuman:ArsenalPower": {

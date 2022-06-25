@@ -86,7 +86,7 @@
   },
   "theHuman:SuckerPunch": {
     "NAME": "Sucker Punch",
-    "DESCRIPTION": "When drawn, deal 8 damage to a random enemy. NL Add 2 Slaps to your hand that cost 0, but Purge when used and at the end of your turn. NL [#a83277]Technique[]: Gain !M! Block."
+    "DESCRIPTION": "When drawn, deal !M! damage to a random enemy. NL Add 2 Slaps to your hand that cost 0, but Purge when used and at the end of your turn. NL [#a83277]Technique[]: Deal !D! damage to a random enemy."
   },
   "theHuman:Hobbyist": {
     "NAME": "Hobbyist",
@@ -392,7 +392,7 @@
   },
   "theHuman:FreedomOfMind": {
     "NAME": "Freedom Of Mind",
-    "DESCRIPTION": "Whenever you discard a card, deal 4 *Unblockable damage to ALL enemies."
+    "DESCRIPTION": "At the start of your turn, *Fetch 1."
   },
   "theHuman:Arsenal": {
     "NAME": "Arsenal",
@@ -449,5 +449,9 @@
   "theHuman:SilverGeneration": {
     "NAME": "Silver Generation",
     "DESCRIPTION": "At the start of your turn, apply 1 *Ageing to ALL enemies. NL Gain !B! thehuman:Peaceful."
+  },
+  "theHuman:ManOfTomorrow": {
+    "NAME": "Man Of Tomorrow",
+    "DESCRIPTION": "Fetch 1. NL Reduce the cost of ALL cards to 0 this turn."
   }
 }

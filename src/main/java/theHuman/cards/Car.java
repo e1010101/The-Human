@@ -33,7 +33,7 @@ public class Car extends AbstractDynamicCard implements OnShuffleSubscriber {
 	private static final int UPGRADED_COST = 2;
 
 	private static final int BLOCK = 5;
-	private static final int UPGRADE_PLUS_BLOCK = 2;
+	private static final int UPGRADE_PLUS_BLOCK = 5;
 	private static final TooltipInfo toolTipInfo = new TooltipInfo("[#2000a7]Lifestyle", "Whenever you shuffle your draw pile, perform an additional effect.");
 	private static final List<TooltipInfo> customTooltips = Collections.singletonList(toolTipInfo);
 
@@ -53,6 +53,7 @@ public class Car extends AbstractDynamicCard implements OnShuffleSubscriber {
 	public void upgrade() {
 		if (!upgraded) {
 			upgradeName();
+			this.selfRetain = true;
 			upgradeBlock(UPGRADE_PLUS_BLOCK);
 			upgradeBaseCost(UPGRADED_COST);
 			initializeDescription();

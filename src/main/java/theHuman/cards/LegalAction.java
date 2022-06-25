@@ -28,7 +28,7 @@ public class LegalAction extends AbstractDynamicCard {
 	private static final CardType TYPE = CardType.SKILL;
 	private static final int COST = 2;
 
-	private static final int BLOCK = 15;
+	private static final int BLOCK = 6;
 	private static final int UPGRADE_PLUS_BLOCK = 4;
 
 	public LegalAction() {

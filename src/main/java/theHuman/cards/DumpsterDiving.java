@@ -22,7 +22,7 @@ public class DumpsterDiving extends AbstractDynamicCard {
 	private static final CardRarity RARITY = CardRarity.COMMON;
 	private static final CardTarget TARGET = CardTarget.NONE;
 	private static final CardType TYPE = CardType.SKILL;
-	private static final int COST = 2;
+	private static final int COST = 1;
 
 	public DumpsterDiving() {
 		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -34,7 +34,6 @@ public class DumpsterDiving extends AbstractDynamicCard {
 	public void upgrade() {
 		if (!upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
 			upgradeDefaultSecondMagicNumber(1);
 			initializeDescription();
 		}

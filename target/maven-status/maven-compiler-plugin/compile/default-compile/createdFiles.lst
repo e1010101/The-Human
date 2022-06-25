@@ -15,7 +15,6 @@ theHuman\cards\KeepingFit.class
 theHuman\cards\FuriousSlap.class
 theHuman\cards\TurboSlap.class
 theHuman\actions\DrawWeaponAction.class
-theHuman\actions\ReduceCostInHandAction.class
 theHuman\cards\PrepareHand.class
 theHuman\cards\Ageing.class
 theHuman\cards\Defend.class
@@ -137,6 +136,7 @@ theHuman\powers\FreedomOfMindPower.class
 theHuman\cards\tokens\PocketPistol.class
 theHuman\actions\FireGunRandomlyAction.class
 theHuman\characters\TheHuman$Enums.class
+theHuman\cards\ManOfTomorrow.class
 theHuman\actions\UncoverAction.class
 theHuman\patches\ShufflePatch$update.class
 theHuman\powers\SilverGenerationPower.class
@@ -149,6 +149,7 @@ theHuman\cards\RenewableContract.class
 theHuman\powers\AgeingPower.class
 theHuman\cards\InThePark.class
 theHuman\cards\Nap.class
+theHuman\actions\ReduceCostInGroupAction.class
 theHuman\cards\Discourage.class
 theHuman\patches\SoundMasterUpdatePatch$Update$Locator.class
 theHuman\cards\AbstractDynamicCard.class

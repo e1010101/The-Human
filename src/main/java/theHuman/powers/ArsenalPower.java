@@ -54,7 +54,7 @@ public class ArsenalPower extends AbstractPower implements CloneablePowerInterfa
 	}
 
 	@Override
-	public void atStartOfTurn() {
+	public void atStartOfTurnPostDraw() {
 		this.flash();
 		AbstractCard c = HumanUtils.getRandomWeapon();
 		c.setCostForTurn(0);
