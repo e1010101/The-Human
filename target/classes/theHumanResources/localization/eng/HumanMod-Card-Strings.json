@@ -124,7 +124,7 @@
   },
   "theHuman:Revolver": {
     "NAME": "Revolver",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) a random enemy. NL Return this to your hand. NL thehuman:Inventory."
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) a random enemy. NL thehuman:Inventory."
   },
   "theHuman:GlassShard": {
     "NAME": "Glass Shard",
@@ -144,7 +144,7 @@
   },
   "theHuman:LugerPistol": {
     "NAME": "Luger Pistol",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Return this to your hand. NL thehuman:Inventory."
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL thehuman:Inventory."
   },
   "theHuman:MK3A2Grenade": {
     "NAME": "MK3A2 Grenade",
@@ -188,7 +188,7 @@
   },
   "theHuman:Aggressiveness": {
     "NAME": "Aggressiveness",
-    "DESCRIPTION": "At the start of your turn, gain !M! Strength and discard !M! card."
+    "DESCRIPTION": "At the start of your turn, gain !M! Strength and discard !M! card randomly."
   },
   "theHuman:Jab": {
     "NAME": "Jab",
@@ -204,7 +204,15 @@
   },
   "theHuman:AK47": {
     "NAME": "AK-47",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Return this to your hand. NL Can be upgraded any number of times. NL thehuman:Inventory."
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Mastery 13. NL thehuman:Inventory.",
+    "EXTENDED_DESCRIPTION": [
+      "Codename: \"Serpent\"",
+      "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Add a *Pocket *Pistol and a *Flashbang to your hand. NL thehuman:Inventory."
+    ]
+  },
+  "theHuman:Flashbang": {
+    "NAME": "Flashbang",
+    "DESCRIPTION": "Stun an enemy."
   },
   "theHuman:EmptyCartridge": {
     "NAME": "Empty Cartridge",
@@ -228,7 +236,7 @@
   },
   "theHuman:DesertEagle": {
     "NAME": "Desert Eagle",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Return this to your hand. NL Can be upgraded any number of times. NL thehuman:Inventory."
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Can be upgraded any number of times. NL thehuman:Inventory."
   },
   "theHuman:DualWielding": {
     "NAME": "Dual Wielding",
@@ -301,7 +309,7 @@
   },
   "theHuman:AWP": {
     "NAME": "AWP",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Next turn, deal 10 damage to the same enemy. NL Return this to your hand. NL Can be upgraded any number of times. NL thehuman:Inventory."
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Next turn, deal 10 damage to the same enemy. NL Can be upgraded any number of times. NL thehuman:Inventory."
   },
   "theHuman:LegalAction": {
     "NAME": "Legal Action",
@@ -325,11 +333,15 @@
   },
   "theHuman:Berreta92": {
     "NAME": "Berreta 92",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Return this to your hand. NL Can be upgraded any number of times. NL thehuman:Inventory."
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL [#c20000]Mastery 7. NL thehuman:Inventory.",
+    "EXTENDED_DESCRIPTION": [
+      "Goldeneye",
+      "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL thehuman:Shoot ( !D! x !M!, 100% ) a random enemy. NL thehuman:Inventory."
+    ]
   },
   "theHuman:Glock17": {
     "NAME": "Glock 17",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Return this to your hand. NL Can be upgraded any number of times. NL thehuman:Inventory."
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic!% ) an enemy. NL Can be upgraded any number of times. NL thehuman:Inventory."
   },
   "theHuman:QuickDraw": {
     "NAME": "Quick Draw",

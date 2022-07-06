@@ -26,12 +26,12 @@ public class PocketPistol extends AbstractDynamicCard {
 	private static final CardType TYPE = CardType.ATTACK;
 	private static final int COST = 0;
 
-	private static final int DAMAGE = 8;
+	private static final int DAMAGE = 2;
 
 	public PocketPistol() {
 		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 		damage = baseDamage = DAMAGE;
-		magicNumber = baseMagicNumber = 2;
+		magicNumber = baseMagicNumber = 8;
 		defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 3;
 		exhaust = true;
 		cardsToPreview = null;

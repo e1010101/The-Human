@@ -16,7 +16,9 @@
           <root url="jar://C:/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/desktop-1.0.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.ideaLibSources/desktop-1.0-sources.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">

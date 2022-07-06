@@ -60,21 +60,21 @@ public class HumanMod
     private static final String DESCRIPTION =
         "Adds Harold the Human to the game.";
 
-    private static final String ATTACK_DEFAULT_SKIN =
+    public static final String ATTACK_DEFAULT_SKIN =
         "theHumanResources/images/512/bg_attack_default_skin.png";
-    private static final String SKILL_DEFAULT_SKIN =
+    public static final String SKILL_DEFAULT_SKIN =
         "theHumanResources/images/512/bg_skill_default_skin.png";
-    private static final String POWER_DEFAULT_SKIN =
+    public static final String POWER_DEFAULT_SKIN =
         "theHumanResources/images/512/bg_power_default_skin.png";
     private static final String ENERGY_ORB_DEFAULT_SKIN =
         "theHumanResources/images/512/card_human_orb_small.png";
     private static final String CARD_ENERGY_ORB =
         "theHumanResources/images/512/card_small_orb.png";
-    private static final String ATTACK_DEFAULT_SKIN_PORTRAIT =
+    public static final String ATTACK_DEFAULT_SKIN_PORTRAIT =
         "theHumanResources/images/1024/bg_attack_default_skin.png";
-    private static final String SKILL_DEFAULT_SKIN_PORTRAIT =
+    public static final String SKILL_DEFAULT_SKIN_PORTRAIT =
         "theHumanResources/images/1024/bg_skill_default_skin.png";
-    private static final String POWER_DEFAULT_SKIN_PORTRAIT =
+    public static final String POWER_DEFAULT_SKIN_PORTRAIT =
         "theHumanResources/images/1024/bg_power_default_skin.png";
     private static final String ENERGY_ORB_DEFAULT_SKIN_PORTRAIT =
         "theHumanResources/images/1024/card_human_orb.png";

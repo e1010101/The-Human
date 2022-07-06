@@ -1,15 +1,19 @@
 package theHuman.cards.tokens;
 
 import basemod.AutoAdd;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import theHuman.HumanMod;
 import theHuman.actions.FireGunRandomlyAction;
 import theHuman.cards.AbstractShootWeaponCard;
 import theHuman.characters.TheHuman;
+
+import java.util.ArrayList;
 
 import static theHuman.HumanMod.makeCardPath;
 
@@ -28,7 +32,7 @@ public class Revolver extends AbstractShootWeaponCard {
 	private static final int DAMAGE = 9;
 
 	public Revolver() {
-		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET, new ArrayList<>());
 		damage = baseDamage = DAMAGE;
 		magicNumber = baseMagicNumber = 1;
 		defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 8;
@@ -51,5 +55,9 @@ public class Revolver extends AbstractShootWeaponCard {
 	@Override
 	public void triggerWhenDrawn() {
 		selfRetain = true;
+	}
+
+	@Override
+	public void masteryEffect() {
 	}
 }
