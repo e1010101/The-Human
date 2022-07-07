@@ -9,7 +9,7 @@ import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 
 public abstract class AbstractDynamicCard extends AbstractDefaultCard {
 
-	private List<TooltipInfo> customTooltips;
+	protected List<TooltipInfo> customTooltips;
 
 	public AbstractDynamicCard(final String id, final String img, final int cost, final CardType type, final CardColor color, final CardRarity rarity, final CardTarget target) {
 

@@ -204,7 +204,7 @@
   },
   "theHuman:AK47": {
     "NAME": "AK-47",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Mastery 13. NL thehuman:Inventory.",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL [#c20000]Mastery 13. NL thehuman:Inventory.",
     "EXTENDED_DESCRIPTION": [
       "Codename: \"Serpent\"",
       "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Add a *Pocket *Pistol and a *Flashbang to your hand. NL thehuman:Inventory."
@@ -236,7 +236,11 @@
   },
   "theHuman:DesertEagle": {
     "NAME": "Desert Eagle",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Can be upgraded any number of times. NL thehuman:Inventory."
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL [#c20000]Mastery 10. NL Can be upgraded any number of times. NL thehuman:Inventory.",
+    "EXTENDED_DESCRIPTION": [
+      "Codename: \"Unholy\"",
+      "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Exhaust ALL other cards in your hand. NL Take another turn after this one. NL thehuman:Inventory."
+    ]
   },
   "theHuman:DualWielding": {
     "NAME": "Dual Wielding",
@@ -335,7 +339,7 @@
     "NAME": "Berreta 92",
     "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL [#c20000]Mastery 7. NL thehuman:Inventory.",
     "EXTENDED_DESCRIPTION": [
-      "Goldeneye",
+      "Codename: \"Fearless\"",
       "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL thehuman:Shoot ( !D! x !M!, 100% ) a random enemy. NL thehuman:Inventory."
     ]
   },

@@ -1,7 +1,7 @@
 {
   "modid": "theHuman",
   "name": "The Human",
-  "author_list": ["Complex"],
+  "author_list": ["complex"],
   "credits": "Basemod, ModTheSpire",
   "description": "${project.description}",
   "version": "${project.version}",

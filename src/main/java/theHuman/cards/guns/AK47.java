@@ -18,6 +18,7 @@ import theHuman.cards.tokens.Flashbang;
 import theHuman.cards.tokens.PocketPistol;
 import theHuman.characters.TheHuman;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -52,7 +53,7 @@ public class AK47 extends AbstractShootWeaponCard {
 						"[#c20000]Mastery X: Can be upgraded any " +
 						"number of times. NL NL Upon reaching X " +
 						"upgrades, obtain a new form.");
-	private static final List<TooltipInfo> customTooltips =
+	private static final List<TooltipInfo> tooltips =
 		Collections.singletonList(toolTipInfo);
 
 	public AK47() {
@@ -60,7 +61,7 @@ public class AK47 extends AbstractShootWeaponCard {
 	}
 
 	public AK47(int upgrades) {
-		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET, customTooltips);
+		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET, tooltips);
 		damage = baseDamage = DAMAGE;
 		magicNumber = baseMagicNumber = 4;
 		defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 11;
@@ -83,6 +84,7 @@ public class AK47 extends AbstractShootWeaponCard {
 			this.textureImg = MASTERED_IMG;
 			this.loadCardImage(MASTERED_IMG);
 			this.setBackgroundTexture(MASTERED_SMALL, MASTERED_LARGE);
+			this.customTooltips = new ArrayList<>();
 		} else {
 			name = cardStrings.NAME + " + " + timesUpgraded;
 		}
