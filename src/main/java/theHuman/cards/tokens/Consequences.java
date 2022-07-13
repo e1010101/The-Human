@@ -1,7 +1,6 @@
 package theHuman.cards.tokens;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.cards.curses.Regret;
 import com.megacrit.cardcrawl.cards.curses.Shame;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,37 +14,42 @@ import static theHuman.HumanMod.makeCardPath;
 
 public class Consequences extends AbstractDynamicCard {
 
-	public static final String ID = HumanMod.makeID(Consequences.class.getSimpleName());
-	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String DESCRIPTION = cardStrings.NAME;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG = makeCardPath("Consequences.png");
+    public static final String ID =
+        HumanMod.makeID(Consequences.class.getSimpleName());
+    public static final CardStrings cardStrings =
+        CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.NAME;
+    public static final String UPGRADE_DESCRIPTION =
+        cardStrings.UPGRADE_DESCRIPTION;
+    public static final String IMG = makeCardPath("Consequences.png");
 
-	private static final CardRarity RARITY = CardRarity.CURSE;
-	private static final CardTarget TARGET = CardTarget.NONE;
-	private static final CardType TYPE = CardType.CURSE;
+    private static final CardRarity RARITY = CardRarity.CURSE;
+    private static final CardTarget TARGET = CardTarget.NONE;
+    private static final CardType TYPE = CardType.CURSE;
 
-	private static final int COST = -2;
+    private static final int COST = -2;
 
-	public Consequences() {
-		super(ID, IMG, COST, TYPE, CardColor.CURSE, RARITY, TARGET);
-		isEthereal = true;
-	}
+    public Consequences() {
+        super(ID, IMG, COST, TYPE, CardColor.CURSE, RARITY, TARGET);
+        isEthereal = true;
+    }
 
-	@Override
-	public void upgrade() {
-		if (!upgraded) {
-			initializeDescription();
-		}
-	}
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            initializeDescription();
+        }
+    }
 
-	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-	}
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+    }
 
-	@Override
-	public void triggerWhenDrawn() {
-		this.addToBot(new MakeTempCardInDrawPileAction(new Regret(), 1, true, true));
-		this.addToBot(new MakeTempCardInDrawPileAction(new Shame(), 1, true, true));
-	}
+    @Override
+    public void triggerWhenDrawn() {
+        this.addToBot(
+            new MakeTempCardInDrawPileAction(new Regret(), 1, true, true));
+        this.addToBot(
+            new MakeTempCardInDrawPileAction(new Shame(), 1, true, true));
+    }
 }

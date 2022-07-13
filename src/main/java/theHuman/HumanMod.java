@@ -259,6 +259,10 @@ public class HumanMod
                                       getModID() + "Resources/localization/" +
                                       getLanguage() +
                                       "/HumanMod-Orb-Strings.json");
+        BaseMod.loadCustomStringsFile(UIStrings.class,
+                                      getModID() + "Resources/localization/" +
+                                      getLanguage() +
+                                      "/HumanMod-UI-Strings.json");
         logger.info("Done editing strings");
     }
 

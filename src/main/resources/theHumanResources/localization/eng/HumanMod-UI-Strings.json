@@ -1,0 +1,38 @@
+{
+  "theHuman:PacifistWords": {
+    "TEXT": [
+      "Pacifist",
+      "If your hand has no Attacks, perform an additional effect."
+    ]
+  },
+  "theHuman:LifestyleWords": {
+    "TEXT": [
+      "Lifestyle",
+      "Whenever you shuffle your draw pile, perform an additional effect."
+    ]
+  },
+  "theHuman:AgeingWords": {
+    "TEXT": [
+      "Ageing",
+      "At the start of your turn, if your have 12 or more stacks of this, die. NL At the end of your turn, gain a stack of this. NL For each stack of this you have, reduce your damage dealt by 4%."
+    ]
+  },
+  "theHuman:TechniqueWords": {
+    "TEXT": [
+      "Technique",
+      "Whenever you use a [#a83277]Technique[], if the last card you played was also a [#a83277]Technique[], perform an additional effect."
+    ]
+  },
+  "theHuman:MasteryWords": {
+    "TEXT": [
+      "Mastery",
+      "Mastery X: Can be upgraded any number of times. NL NL Upon reaching X upgrades, obtain a new form."
+    ]
+  },
+  "theHuman:Berreta92Words": {
+    "TEXT": [
+      "Positive Effects",
+      "- Strength NL - Dexterity NL - Artifact NL - Buffer NL - Thorns"
+    ]
+  }
+}

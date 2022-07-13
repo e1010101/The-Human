@@ -17,39 +17,45 @@ import static theHuman.HumanMod.makeCardPath;
 
 public class Prank extends AbstractDynamicCard {
 
-	public static final String ID = HumanMod.makeID(Prank.class.getSimpleName());
-	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String DESCRIPTION = cardStrings.NAME;
-	public static final String IMG = makeCardPath("Prank.png");
+    public static final String ID =
+        HumanMod.makeID(Prank.class.getSimpleName());
+    public static final CardStrings cardStrings =
+        CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.NAME;
+    public static final String IMG = makeCardPath("Prank.png");
 
-	public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
-	private static final CardRarity RARITY = CardRarity.RARE;
-	private static final CardTarget TARGET = CardTarget.ENEMY;
-	private static final CardType TYPE = CardType.ATTACK;
-	private static final int COST = 1;
+    public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
+    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final int COST = 1;
 
-	private static final int DAMAGE = 10;
-	private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int DAMAGE = 10;
+    private static final int UPGRADE_PLUS_DMG = 5;
 
-	public Prank() {
-		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-		damage = baseDamage = DAMAGE;
-		cardsToPreview = new Consequences();
-	}
+    public Prank() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        damage = baseDamage = DAMAGE;
+        cardsToPreview = new Consequences();
+    }
 
-	@Override
-	public void upgrade() {
-		if (!upgraded) {
-			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
-			initializeDescription();
-		}
-	}
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(UPGRADE_PLUS_DMG);
+            initializeDescription();
+        }
+    }
 
-	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-		this.addToBot(new StunMonsterAction(m, p));
-		this.addToBot(new MakeTempCardInDrawPileAction(new Consequences(), 1, true, true));
-	}
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(
+            new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                             AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        this.addToBot(new StunMonsterAction(m, p));
+        this.addToBot(
+            new MakeTempCardInDrawPileAction(new Consequences(), 1, true,
+                                             true));
+    }
 }

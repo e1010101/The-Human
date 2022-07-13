@@ -14,39 +14,44 @@ import static theHuman.HumanMod.makeCardPath;
 
 public class Stoicism extends AbstractDynamicCard {
 
-	public static final String ID = HumanMod.makeID(Stoicism.class.getSimpleName());
-	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String DESCRIPTION = cardStrings.NAME;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG = makeCardPath("Stoicism.png");
-	public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
-	private static final CardRarity RARITY = CardRarity.RARE;
-	private static final CardTarget TARGET = CardTarget.SELF;
-	private static final CardType TYPE = CardType.POWER;
-	private static final int COST = 2;
+    public static final String ID =
+        HumanMod.makeID(Stoicism.class.getSimpleName());
+    public static final CardStrings cardStrings =
+        CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.NAME;
+    public static final String UPGRADE_DESCRIPTION =
+        cardStrings.UPGRADE_DESCRIPTION;
+    public static final String IMG = makeCardPath("Stoicism.png");
+    public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
+    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.POWER;
+    private static final int COST = 2;
 
-	private static final int BLOCK = 10;
-	private static final int UPGRADE_PLUS_BLOCK = 4;
+    private static final int BLOCK = 10;
+    private static final int UPGRADE_PLUS_BLOCK = 4;
 
-	public Stoicism() {
-		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-		block = baseBlock = BLOCK;
-		magicNumber = baseMagicNumber = 1;
-	}
+    public Stoicism() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        block = baseBlock = BLOCK;
+        magicNumber = baseMagicNumber = 1;
+    }
 
-	@Override
-	public void upgrade() {
-		if (!upgraded) {
-			upgradeName();
-			upgradeBlock(UPGRADE_PLUS_BLOCK);
-			rawDescription = UPGRADE_DESCRIPTION;
-			initializeDescription();
-		}
-	}
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+        }
+    }
 
-	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		this.addToBot(new GainBlockAction(p, block));
-		this.addToBot(new ApplyPowerAction(p, p, new StoicismPower(p, p, magicNumber, upgraded)));
-	}
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new GainBlockAction(p, block));
+        this.addToBot(new ApplyPowerAction(p, p,
+                                           new StoicismPower(p, p, magicNumber,
+                                                             upgraded)));
+    }
 }

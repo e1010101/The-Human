@@ -39,9 +39,8 @@ public class HumanRelic extends CustomRelic {
 	@Override
 	public void atBattleStartPreDraw() {
 		flash();
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HealthinessPower(AbstractDungeon.player, AbstractDungeon.player, 10)));
-
-		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, 3));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HealthinessPower(AbstractDungeon.player, AbstractDungeon.player, 5)));
+		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, 5));
 	}
 
 	@Override

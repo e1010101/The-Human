@@ -13,45 +13,47 @@ import static theHuman.HumanMod.makeCardPath;
 
 public class Party extends AbstractDynamicCard {
 
-	public static final String ID = HumanMod.makeID(Party.class.getSimpleName());
-	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String DESCRIPTION = cardStrings.NAME;
-	public static final String IMG = makeCardPath("Party.png");
+    public static final String ID =
+        HumanMod.makeID(Party.class.getSimpleName());
+    public static final CardStrings cardStrings =
+        CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.NAME;
+    public static final String IMG = makeCardPath("Party.png");
 
-	public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
-	private static final CardRarity RARITY = CardRarity.UNCOMMON;
-	private static final CardTarget TARGET = CardTarget.NONE;
-	private static final CardType TYPE = CardType.SKILL;
-	private static final int COST = -2;
+    public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.NONE;
+    private static final CardType TYPE = CardType.SKILL;
+    private static final int COST = -2;
 
-	public Party() {
-		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-		this.dontTriggerOnUseCard = true;
-		magicNumber = baseMagicNumber = 1;
-		defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 1;
-	}
+    public Party() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.dontTriggerOnUseCard = true;
+        magicNumber = baseMagicNumber = 1;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 1;
+    }
 
-	@Override
-	public void upgrade() {
-		if (!upgraded) {
-			upgradeName();
-			upgradeMagicNumber(1);
-			initializeDescription();
-		}
-	}
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeMagicNumber(1);
+            initializeDescription();
+        }
+    }
 
-	@Override
-	public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-		return false;
-	}
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
+    }
 
-	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-	}
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+    }
 
-	@Override
-	public void triggerOnManualDiscard() {
-		this.addToBot(new GainEnergyAction(magicNumber));
-		this.addToBot(new DrawCardAction(defaultSecondMagicNumber));
-	}
+    @Override
+    public void triggerOnManualDiscard() {
+        this.addToBot(new GainEnergyAction(magicNumber));
+        this.addToBot(new DrawCardAction(defaultSecondMagicNumber));
+    }
 }

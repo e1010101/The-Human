@@ -1,15 +1,16 @@
 package theHuman.cards.guns;
 
 import basemod.helpers.TooltipInfo;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import theHuman.HumanMod;
@@ -32,11 +33,18 @@ public class DesertEagle extends AbstractShootWeaponCard {
         HumanMod.makeID(DesertEagle.class.getSimpleName());
     public static final CardStrings cardStrings =
         CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final UIStrings uiStrings =
+        CardCrawlGame.languagePack.getUIString(getModID() + ":MasteryWords");
     public static final String DESCRIPTION = cardStrings.NAME;
     public static final String UPGRADE_DESCRIPTION =
         cardStrings.UPGRADE_DESCRIPTION;
+    private static final String MASTERED_NAME =
+        cardStrings.EXTENDED_DESCRIPTION[0];
     public static final String IMG = makeCardPath("DesertEagle.png");
     public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
+    // Credit to Alexander Yartsev for image, https://www.artstation.com/artwork/v1Y12A
+    public static final String MASTERED_IMG =
+        makeCardPath("DesertEagle_Mastered" + ".png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
@@ -45,20 +53,13 @@ public class DesertEagle extends AbstractShootWeaponCard {
     private static final int UPGRADE_PLUS_DMG = 4;
     private static final int UPGRADE_PLUS_SECOND_MAGIC = 4;
     private static final int MASTERY_LEVEL = 10;
-    private static final String MASTERED_NAME =
-        cardStrings.EXTENDED_DESCRIPTION[0];
     private static final String MASTERED_SMALL =
         getModID() + "Resources/images/cards/bonus/circuit.png";
     private static final String MASTERED_LARGE =
         getModID() + "Resources/images/cards/bonus/circuit_p.png";
-    // Credit to Alexander Yartsev for image, https://www.artstation.com/artwork/v1Y12A
-    public static final String MASTERED_IMG =
-        makeCardPath("DesertEagle_Mastered" + ".png");
     private static final TooltipInfo toolTipInfo =
-        new TooltipInfo("[#c20000]Mastery",
-                        "[#c20000]Mastery X: Can be upgraded any " +
-                        "number of times. NL NL Upon reaching X " +
-                        "upgrades, obtain a new form.");
+        new TooltipInfo("[#c20000]" + uiStrings.TEXT[0],
+                        "[#c20000]" + uiStrings.TEXT[1]);
     private static final List<TooltipInfo> tooltips =
         Collections.singletonList(toolTipInfo);
 
@@ -128,7 +129,11 @@ public class DesertEagle extends AbstractShootWeaponCard {
                                                             true));
             }
         }
-        this.addToBot(new SkipEnemiesTurnAction());
+        AbstractMonster m = AbstractDungeon.getRandomMonster();
+        while (m.isDying || m.isDead) {
+            m = AbstractDungeon.getRandomMonster();
+        }
+        this.addToBot(new StunMonsterAction(m, AbstractDungeon.player, 1));
     }
 
     @Override

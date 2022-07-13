@@ -14,33 +14,35 @@ import static theHuman.HumanMod.makeCardPath;
 @AutoAdd.Ignore
 public class EmptyCartridge extends AbstractDynamicCard {
 
-	public static final String ID = HumanMod.makeID(EmptyCartridge.class.getSimpleName());
-	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String DESCRIPTION = cardStrings.NAME;
-	public static final String IMG = makeCardPath("EmptyCartridge.png");
+    public static final String ID =
+        HumanMod.makeID(EmptyCartridge.class.getSimpleName());
+    public static final CardStrings cardStrings =
+        CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.NAME;
+    public static final String IMG = makeCardPath("EmptyCartridge.png");
 
-	private static final CardRarity RARITY = CardRarity.SPECIAL;
-	private static final CardTarget TARGET = CardTarget.NONE;
-	private static final CardType TYPE = CardType.STATUS;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardTarget TARGET = CardTarget.NONE;
+    private static final CardType TYPE = CardType.STATUS;
 
-	private static final int COST = -2;
+    private static final int COST = -2;
 
-	public EmptyCartridge() {
-		super(ID, IMG, COST, TYPE, CardColor.CURSE, RARITY, TARGET);
-		this.dontTriggerOnUseCard = true;
-		this.isEthereal = true;
-	}
+    public EmptyCartridge() {
+        super(ID, IMG, COST, TYPE, CardColor.CURSE, RARITY, TARGET);
+        this.dontTriggerOnUseCard = true;
+        this.isEthereal = true;
+    }
 
-	@Override
-	public void upgrade() {
-		initializeDescription();
-	}
+    @Override
+    public void upgrade() {
+        initializeDescription();
+    }
 
-	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-	}
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+    }
 
-	public void triggerWhenDrawn() {
-		this.addToBot(new SetDontTriggerAction(this, false));
-	}
+    public void triggerWhenDrawn() {
+        this.addToBot(new SetDontTriggerAction(this, false));
+    }
 }

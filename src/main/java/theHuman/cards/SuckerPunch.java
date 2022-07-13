@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHuman.HumanMod;
 import theHuman.actions.GiveTemporaryCopyOfCardAction;
@@ -20,6 +21,7 @@ import theHuman.powers.TechniquePower;
 import java.util.Collections;
 import java.util.List;
 
+import static theHuman.HumanMod.getModID;
 import static theHuman.HumanMod.makeCardPath;
 
 public class SuckerPunch extends AbstractDynamicCard {
@@ -28,9 +30,10 @@ public class SuckerPunch extends AbstractDynamicCard {
         HumanMod.makeID(SuckerPunch.class.getSimpleName());
     public static final CardStrings cardStrings =
         CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final UIStrings uiStrings =
+        CardCrawlGame.languagePack.getUIString(getModID() + ":TechniqueWords");
     public static final String DESCRIPTION = cardStrings.NAME;
     public static final String IMG = makeCardPath("SuckerPunch.png");
-
     public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.NONE;
@@ -40,8 +43,7 @@ public class SuckerPunch extends AbstractDynamicCard {
     private static final int DAMAGE = 10;
     private static final int UPGRADE_PLUS_DMG = 5;
     private static final TooltipInfo toolTipInfo =
-        new TooltipInfo("[#a83277]Technique",
-                        "Whenever you use a Technique, if the last card you played was also a Technique, perform an additional effect.");
+        new TooltipInfo("[#a83277]" + uiStrings.TEXT[0], uiStrings.TEXT[1]);
     private static final List<TooltipInfo> customTooltips =
         Collections.singletonList(toolTipInfo);
 
@@ -49,7 +51,10 @@ public class SuckerPunch extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET, customTooltips);
         damage = baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = 8;
-        cardsToPreview = new Slap();
+        AbstractCard temp = new Slap();
+        temp.cost = 0;
+        temp.purgeOnUse = true;
+        cardsToPreview = temp;
         this.tags.add(HumanMod.HumanCardTags.TECHNIQUE_HUMAN);
     }
 

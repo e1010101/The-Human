@@ -17,41 +17,45 @@ import static theHuman.HumanMod.makeCardPath;
 
 public class LegalAction extends AbstractDynamicCard {
 
-	public static final String ID = HumanMod.makeID(LegalAction.class.getSimpleName());
-	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String DESCRIPTION = cardStrings.NAME;
-	public static final String IMG = makeCardPath("LegalAction.png");
+    public static final String ID =
+        HumanMod.makeID(LegalAction.class.getSimpleName());
+    public static final CardStrings cardStrings =
+        CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.NAME;
+    public static final String IMG = makeCardPath("LegalAction.png");
 
-	public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
-	private static final CardRarity RARITY = CardRarity.UNCOMMON;
-	private static final CardTarget TARGET = CardTarget.ENEMY;
-	private static final CardType TYPE = CardType.SKILL;
-	private static final int COST = 2;
+    public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.SKILL;
+    private static final int COST = 2;
 
-	private static final int BLOCK = 6;
-	private static final int UPGRADE_PLUS_BLOCK = 4;
+    private static final int BLOCK = 6;
+    private static final int UPGRADE_PLUS_BLOCK = 4;
 
-	public LegalAction() {
-		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-		block = baseBlock = BLOCK;
-		magicNumber = baseMagicNumber = 1;
-		cardsToPreview = new Poverty();
-		ExhaustiveVariable.setBaseValue(this, 2);
-	}
+    public LegalAction() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        block = baseBlock = BLOCK;
+        magicNumber = baseMagicNumber = 1;
+        cardsToPreview = new Poverty();
+        ExhaustiveVariable.setBaseValue(this, 2);
+    }
 
-	@Override
-	public void upgrade() {
-		if (!upgraded) {
-			upgradeName();
-			upgradeBlock(UPGRADE_PLUS_BLOCK);
-			initializeDescription();
-		}
-	}
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            initializeDescription();
+        }
+    }
 
-	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		this.addToBot(new ApplyPowerAction(m, m, new StunMonsterPower(m, magicNumber)));
-		this.addToBot(new GainBlockAction(p, p, block));
-		this.addToBot(new MakeTempCardInDrawPileAction(new Poverty(), 1, true, true));
-	}
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(
+            new ApplyPowerAction(m, m, new StunMonsterPower(m, magicNumber)));
+        this.addToBot(new GainBlockAction(p, p, block));
+        this.addToBot(
+            new MakeTempCardInDrawPileAction(new Poverty(), 1, true, true));
+    }
 }

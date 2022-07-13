@@ -18,46 +18,53 @@ import static theHuman.HumanMod.makeCardPath;
 
 public class BackhandSlap extends AbstractDynamicCard {
 
-	public static final String ID = HumanMod.makeID(BackhandSlap.class.getSimpleName());
-	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String DESCRIPTION = cardStrings.NAME;
-	public static final String IMG = makeCardPath("BackhandSlap.png");
+    public static final String ID =
+        HumanMod.makeID(BackhandSlap.class.getSimpleName());
+    public static final CardStrings cardStrings =
+        CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.NAME;
+    public static final String IMG = makeCardPath("BackhandSlap.png");
 
-	public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
-	private static final CardRarity RARITY = CardRarity.COMMON;
-	private static final CardTarget TARGET = CardTarget.ENEMY;
-	private static final CardType TYPE = CardType.ATTACK;
-	private static final int COST = 1;
+    public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final int COST = 1;
 
-	private static final int DAMAGE = 6;
-	private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 6;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
-	public BackhandSlap() {
-		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-		damage = baseDamage = DAMAGE;
-		magicNumber = baseMagicNumber = 2;
-		this.isMultiDamage = true;
-		this.tags.add(HumanMod.HumanCardTags.SLAP_HUMAN);
-	}
+    public BackhandSlap() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        damage = baseDamage = DAMAGE;
+        magicNumber = baseMagicNumber = 2;
+        this.isMultiDamage = true;
+        this.tags.add(HumanMod.HumanCardTags.SLAP_HUMAN);
+    }
 
-	@Override
-	public void upgrade() {
-		if (!upgraded) {
-			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
-			this.selfRetain = true;
-			initializeDescription();
-		}
-	}
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(UPGRADE_PLUS_DMG);
+            this.selfRetain = true;
+            initializeDescription();
+        }
+    }
 
-	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-		this.addToBot(new ApplyPowerAction(m, m, new InjuredPower(m, m, magicNumber)));
-	}
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(
+            new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                             AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        this.addToBot(
+            new ApplyPowerAction(m, m, new InjuredPower(m, m, magicNumber)));
+    }
 
-	@Override
-	public void triggerOnManualDiscard() {
-		this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, damage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-	}
+    @Override
+    public void triggerOnManualDiscard() {
+        this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, damage,
+                                                 damageTypeForTurn,
+                                                 AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+    }
 }

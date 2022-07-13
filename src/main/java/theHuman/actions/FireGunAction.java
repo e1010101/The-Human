@@ -9,31 +9,40 @@ import com.megacrit.cardcrawl.random.Random;
 
 public class FireGunAction extends AbstractGameAction {
 
-	private final int criticalChance;
-	private final Random rand = new Random();
-	private int damage;
-	private int timesToShoot;
+    private final int criticalChance;
+    private final Random rand = new Random();
+    private int damage;
+    private int timesToShoot;
+    private DamageInfo.DamageType type;
 
-	public FireGunAction(AbstractCreature target, int dmg, int critchance, int times) {
-		this.damage = dmg;
-		this.criticalChance = critchance;
-		this.timesToShoot = times;
-		this.target = target;
-	}
+    public FireGunAction(AbstractCreature target, int dmg, int critchance,
+                         int times) {
+        this(target, dmg, critchance, times, DamageInfo.DamageType.NORMAL);
+    }
 
-	@Override
-	public void update() {
-		while (this.timesToShoot > 0) {
-			int storeDamage = damage;
-			damage = calculateDamage(damage, criticalChance);
-			this.addToTop(new DamageAction(this.target, new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL)));
-			damage = storeDamage;
-			this.timesToShoot--;
-		}
-		this.tickDuration();
-	}
+    public FireGunAction(AbstractCreature target, int dmg, int critchance,
+                         int times, DamageInfo.DamageType type) {
+        this.damage = dmg;
+        this.criticalChance = critchance;
+        this.timesToShoot = times;
+        this.target = target;
+        this.type = type;
+    }
 
-	public int calculateDamage(int damage, int critChance) {
-		return (rand.random(100) < critChance) ? damage * 2 : damage;
-	}
+    @Override
+    public void update() {
+        while (this.timesToShoot > 0) {
+            int storeDamage = damage;
+            damage = calculateDamage(damage, criticalChance);
+            this.addToTop(new DamageAction(this.target, new DamageInfo(
+                AbstractDungeon.player, damage, type)));
+            damage = storeDamage;
+            this.timesToShoot--;
+        }
+        this.tickDuration();
+    }
+
+    public int calculateDamage(int damage, int critChance) {
+        return (rand.random(100) < critChance) ? damage * 2 : damage;
+    }
 }

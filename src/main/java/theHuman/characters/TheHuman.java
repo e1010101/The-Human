@@ -90,6 +90,8 @@ public class TheHuman extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
         for (int i = 0; i < 5; i++) {
             retVal.add(Slap.ID);
+        }
+        for (int i = 0; i < 5; i++) {
             retVal.add(Defend.ID);
         }
         retVal.add(Preparation.ID);

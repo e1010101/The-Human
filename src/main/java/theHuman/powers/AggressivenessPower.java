@@ -55,7 +55,7 @@ public class AggressivenessPower extends AbstractPower implements CloneablePower
 	public void atStartOfTurnPostDraw() {
 		this.flash();
 		this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount)));
-		this.addToBot(new DiscardAction(owner, owner, amount, true));
+		this.addToBot(new DiscardAction(owner, owner, amount, false));
 	}
 
 	@Override

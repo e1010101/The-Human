@@ -28,7 +28,7 @@
     "NAMES": [
       "injured"
     ],
-    "DESCRIPTION": "At the start of each turn, lose 2 health for each stack of this applied."
+    "DESCRIPTION": "At the start of each turn, lose 1 to 4 health randomly for each stack of this applied."
   },
   {
     "NAMES": [
@@ -42,7 +42,7 @@
       "technique",
       "techniques"
     ],
-    "DESCRIPTION": "Whenever you use a Technique, if the last card you played was also a Technique, perform an additional effect."
+    "DESCRIPTION": "Whenever you use a [#a83277]Technique, if the last card you played was also a [#a83277]Technique, perform an additional effect."
   },
   {
     "PROPER_NAME": "[#34eb52]Pacifist",
@@ -64,16 +64,16 @@
     "DESCRIPTION": "Return this card to your hand whenever it is played. NL NL This card retains if it was not used this turn. NL NL The cost of this card cannot be reduced below 1."
   },
   {
-    "NAMES": [
-      "injured"
-    ],
-    "DESCRIPTION": "At the start of your turn, lose health equal to the number of stacks of Injured you have, multiplied by 2."
-  },
-  {
     "PROPER_NAME": "[#8A2BE2]Lifestyle",
     "NAMES": [
       "lifestyle"
     ],
     "DESCRIPTION": "Whenever you shuffle your draw pile, perform an additional effect."
+  },
+  {
+    "NAMES": [
+      "unblockable"
+    ],
+    "DESCRIPTION": "Damage of this type cannot be Blocked."
   }
 ]

@@ -5,28 +5,24 @@
       "At the start of your turn, draw ",
       " card and gain ",
       " cards and gain ",
-      " block."
+      " #yBlock."
     ]
   },
   "theHuman:HealthinessPower": {
     "NAME": "Healthiness",
     "DESCRIPTIONS": [
-      "You are unhealthy.",
-      "You are healthy.",
-      "You are very healthy.",
-      "You are extremely healthy.",
-      " NL NL Perform one of the following effects at random at the start of your turn: NL Draw a card, gain 1 Energy, gain 5 Block, restore 3 Health.",
-      " NL NL Perform one of the following effects at random at the start of your turn: NL Gain 3 Block, restore 2 Health.",
-      " NL NL Perform one of the following effects at random at the start of your turn: NL Gain 2 Block, restore 1 Health.",
-      " NL NL Perform one of the following effects at random at the start of your turn: NL Exhaust a random card in your hand, lose ",
-      " Health, add a random Curse to your draw pile, gain ",
-      " Weak.",
+      "You are #yHealthy.",
+      "You are very #yHealthy.",
+      "You are extremely #yHealthy.",
+      " NL NL Perform one of the following effects at random at the start of your turn: NL Draw a card, gain 1 #yEnergy, gain 5 #yBlock, restore 3 #yHealth.",
+      " NL NL Perform one of the following effects at random at the start of your turn: NL Gain 3 #yBlock, restore 2 #yHealth.",
+      " NL NL Perform one of the following effects at random at the start of your turn: NL Gain 2 #yBlock, restore 1 #yHealth.",
       " NL NL Perform one of the following effects at random whenever you play a non-Junk card: NL Deal ",
       " damage to a random enemy, gain ",
-      " Block.",
-      " NL NL Also perform one of the following: NL Restore 2 Health, 66% chance to draw a card.",
-      " NL NL Perform one of the following effects at random whenever you play a non-Junk card: NL Deal 1 damage to a random enemy, gain 2 Block, restore 1 Health, 50% chance to draw a card.",
-      " NL NL Perform one of the following effects at random whenever you play a non-Junk card: NL Gain 1 Block, 50% chance to restore 1 Health."
+      " #yBlock.",
+      " NL NL Also perform one of the following: NL Restore 2 #yHealth, 66% chance to draw a card.",
+      " NL NL Perform one of the following effects at random whenever you play a non-Junk card: NL Deal 1 damage to a random enemy, gain 2 #yBlock, restore 1 #yHealth, 50% chance to draw a card.",
+      " NL NL Perform one of the following effects at random whenever you play a non-Junk card: NL Gain 1 #yBlock, 50% chance to restore 1 #yHealth."
     ]
   },
   "theHuman:CarPower": {
@@ -35,13 +31,13 @@
       "At the start of your turn, draw ",
       " card and gain ",
       " cards and gain",
-      " energy."
+      " #yEnergy."
     ]
   },
   "theHuman:GarbageCollectorPower": {
     "NAME": "Garbage Collection",
     "DESCRIPTIONS": [
-      "Whenever you play a Junk card, Uncover ",
+      "Whenever you play a #yJunk card, #yUncover ",
       " card",
       " cards."
     ]
@@ -50,24 +46,23 @@
     "NAME": "Reading",
     "DESCRIPTIONS": [
       "Whenever you play a card that costs 2 or more, add ",
-      " Deep Thought to your hand.",
-      " Deep Thoughts to your hand.",
-      " Big Brain to your hand.",
-      " Big Brains to your hand."
+      " #yDeep #yThought to your hand.",
+      " #yDeep #yThoughts to your hand.",
+      " #yBig #yBrain to your hand.",
+      " #yBig #yBrains to your hand."
     ]
   },
   "theHuman:InjuredPower": {
     "NAME": "Injured",
     "DESCRIPTIONS": [
-      "At the start of your turn, lose ",
-      " health."
+      "At the start of your turn, for each stack of this, lose between 1 to 4 #yHealth randomly."
     ]
   },
   "theHuman:CommunityServicePower": {
     "NAME": "Community Service",
     "DESCRIPTIONS": [
-      "Whenever you play an Attack, add ",
-      " Junk to your hand."
+      "Whenever you play an #yAttack, add ",
+      " #yJunk to your hand."
     ]
   },
   "theHuman:AggressivenessPower": {
@@ -82,14 +77,14 @@
   "theHuman:DualWieldingPower": {
     "NAME": "Dual Wielding",
     "DESCRIPTIONS": [
-      "Whenever you Shoot a Weapon, Shoot ( 10 x ",
+      "Whenever you #yShoot a #yWeapon, #yShoot ( 10 x ",
       ", 15 % ) a random enemy."
     ]
   },
   "theHuman:RisktakerPower": {
     "NAME": "High Risk, High Reward",
     "DESCRIPTIONS": [
-      "At the start of your turn, Uncover ",
+      "At the start of your turn, #yUncover ",
       " card.",
       " cards."
     ]
@@ -106,7 +101,7 @@
     "NAME": "Targeted",
     "DESCRIPTIONS": [
       "At the start of your turn, lose ",
-      " health."
+      " #yHealth."
     ]
   },
   "theHuman:ExtraShotsPower": {
@@ -120,13 +115,13 @@
   "theHuman:TechniquePower": {
     "NAME": "Technique",
     "DESCRIPTIONS": [
-      "If the next card you play is a Technique, trigger its Technique effect."
+      "If the next card you play is a [#a83277]Technique[], trigger its [#a83277]Technique[] effect."
     ]
   },
   "theHuman:AgeingPower": {
     "NAME": "Ageing",
     "DESCRIPTIONS": [
-      "At the start of your turn, if you have 12 or more stacks of this, die. NL For each stack of this, damage dealt is reduced by 5%. NL At the end of your turn, gain 1 stack of this."
+      "At the start of your turn, if you have 12 or more stacks of this, die. NL For each stack of this, damage dealt is reduced by 4%. NL At the end of your turn, gain 1 stack of this."
     ]
   },
   "theHuman:PeacefulPower": {
@@ -155,27 +150,27 @@
   "theHuman:ArsenalPower": {
     "NAME": "Arsenal",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random Weapon to your hand that has Shoot. NL It has exhaust.",
+      "At the start of your turn, add a random #yWeapon to your hand that has #yShoot. NL It has #yExhaust.",
       "At the start of your turn, add ",
-      " random Weapons to your hand that has Shoot. NL It has exhaust."
+      " random #yWeapons to your hand that has Shoot. NL They have #yExhaust."
     ]
   },
   "theHuman:StoicismPower": {
     "NAME": "Stoic",
     "DESCRIPTIONS": [
       "Whenever you discard a card, gain ",
-      " Peaceful.",
-      " Peaceful and Healthiness."
+      " #yPeaceful.",
+      " #yPeaceful and #yHealthiness."
     ]
   },
   "theHuman:TrashMonsterPower": {
     "NAME": "The All-Consuming",
     "DESCRIPTIONS": [
       "At the start of each turn, find ",
-      " Junk. NL Whenever you play ",
-      " Junk, deal ",
+      " #yJunk. NL Whenever you play ",
+      " #yJunk, deal ",
       " damage to a random enemy, and gain ",
-      " Strength and Dexterity."
+      " #yStrength and #yDexterity."
     ]
   },
   "theHuman:FumingPower": {
@@ -194,7 +189,7 @@
     "NAME": "Getting Older",
     "DESCRIPTIONS": [
       "At the start of your turn, apply ",
-      " Ageing to ALL enemies."
+      " #yAgeing to ALL enemies."
     ]
   }
 }

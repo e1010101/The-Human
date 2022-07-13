@@ -68,6 +68,7 @@ C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\Ignore.ja
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\DrawWeaponAction.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\tokens\PepperSpray.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\Exercise.java
+C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\effects\CustomSmallLaserEffect.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\FollowUpSlap.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\FuriousSlap.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\tokens\Poverty.java
@@ -136,6 +137,7 @@ C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\MidlifeCr
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\BackhandSlap.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\powers\AgeingPower.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\tokens\OldShoes.java
+C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\DiscardForTempStrengthAction.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\Slaptacular.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\guns\Speedloader.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\Sanitation.java
@@ -177,9 +179,11 @@ C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\Refresh.j
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\tokens\Tired.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\InThePark.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\TransformJunkAction.java
+C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\FireGunRandomlyActionWithEffect.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\RemoveAllBuffsAction.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\powers\CommunityServicePower.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\FindGoodWeaponAction.java
+C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\effects\CustomSparksEffect.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\util\TextureLoader.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\cards\MorningWalk.java
 C:\Users\Owner\Documents\GitHub\The-Human\src\main\java\theHuman\actions\RandomCardFromDiscardAction.java

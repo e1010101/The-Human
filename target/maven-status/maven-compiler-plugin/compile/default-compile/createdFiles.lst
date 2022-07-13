@@ -83,6 +83,7 @@ theHuman\cards\tokens\PepperSpray.class
 theHuman\cards\Arsenal.class
 theHuman\cards\SelfDefense.class
 theHuman\actions\PlayGhostCopyOfCardAction.class
+theHuman\actions\FireGunRandomlyActionWithEffect.class
 theHuman\cards\guns\AWP.class
 theHuman\actions\ExerciseAction.class
 theHuman\powers\FocusedPower.class
@@ -148,7 +149,9 @@ theHuman\cards\RenewableContract.class
 theHuman\powers\AgeingPower.class
 theHuman\cards\InThePark.class
 theHuman\cards\Nap.class
+theHuman\effects\CustomSparksEffect.class
 theHuman\actions\ReduceCostInGroupAction.class
+theHuman\effects\CustomSmallLaserEffect.class
 theHuman\cards\Discourage.class
 theHuman\cards\tokens\Flashbang.class
 theHuman\patches\SoundMasterUpdatePatch$Update$Locator.class
@@ -182,6 +185,7 @@ theHuman\actions\UpgradeSlapsAction.class
 theHuman\cards\PettyTheft.class
 theHuman\patches\subscribers\OnShuffleSubscriber.class
 theHuman\cards\Superslap.class
+theHuman\actions\DiscardForTempStrengthAction.class
 theHuman\cards\tokens\Revolver.class
 theHuman\cards\Aggressiveness.class
 theHuman\cards\OnTheStreets.class

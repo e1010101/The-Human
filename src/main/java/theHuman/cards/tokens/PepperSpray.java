@@ -21,39 +21,48 @@ import static theHuman.HumanMod.makeCardPath;
 @AutoAdd.Ignore
 public class PepperSpray extends AbstractDynamicCard {
 
-	public static final String ID = HumanMod.makeID(PepperSpray.class.getSimpleName());
-	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String DESCRIPTION = cardStrings.NAME;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG = makeCardPath("PepperSpray.png");
+    public static final String ID =
+        HumanMod.makeID(PepperSpray.class.getSimpleName());
+    public static final CardStrings cardStrings =
+        CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.NAME;
+    public static final String UPGRADE_DESCRIPTION =
+        cardStrings.UPGRADE_DESCRIPTION;
+    public static final String IMG = makeCardPath("PepperSpray.png");
 
-	public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
-	private static final CardRarity RARITY = CardRarity.SPECIAL;
-	private static final CardTarget TARGET = CardTarget.ENEMY;
-	private static final CardType TYPE = CardType.ATTACK;
-	private static final int COST = 0;
+    public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
+    private static final int COST = 0;
 
-	private static final int DAMAGE = 3;
+    private static final int DAMAGE = 3;
 
-	public PepperSpray() {
-		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-		damage = baseDamage = DAMAGE;
-		magicNumber = baseMagicNumber = 6;
-		this.tags.add(HumanMod.HumanCardTags.WEAPON_HUMAN);
-	}
+    public PepperSpray() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        damage = baseDamage = DAMAGE;
+        magicNumber = baseMagicNumber = 6;
+        this.tags.add(HumanMod.HumanCardTags.WEAPON_HUMAN);
+    }
 
-	@Override
-	public void upgrade() {
-		if (!upgraded) {
-			initializeDescription();
-		}
-	}
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            initializeDescription();
+        }
+    }
 
-	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
-		this.addToBot(new ApplyPowerAction(m, m, new PoisonPower(m, m, magicNumber)));
-		this.addToBot(new ApplyPowerAction(m, m, new WeakPower(m, magicNumber, false)));
-		this.addToBot(new ApplyPowerAction(m, m, new VulnerablePower(m, magicNumber, false)));
-	}
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(
+            new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                             AbstractGameAction.AttackEffect.POISON));
+        this.addToBot(
+            new ApplyPowerAction(m, m, new PoisonPower(m, m, magicNumber)));
+        this.addToBot(
+            new ApplyPowerAction(m, m, new WeakPower(m, magicNumber, false)));
+        this.addToBot(new ApplyPowerAction(m, m,
+                                           new VulnerablePower(m, magicNumber,
+                                                               false)));
+    }
 }

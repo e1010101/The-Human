@@ -12,30 +12,33 @@ import static theHuman.HumanMod.makeCardPath;
 
 public class Tired extends AbstractDynamicCard {
 
-	public static final String ID = HumanMod.makeID(Tired.class.getSimpleName());
-	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String DESCRIPTION = cardStrings.NAME;
-	public static final String IMG = makeCardPath("Tired.png");
+    public static final String ID =
+        HumanMod.makeID(Tired.class.getSimpleName());
+    public static final CardStrings cardStrings =
+        CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.NAME;
+    public static final String IMG = makeCardPath("Tired.png");
 
-	private static final CardRarity RARITY = CardRarity.CURSE;
-	private static final CardTarget TARGET = CardTarget.NONE;
-	private static final CardType TYPE = CardType.CURSE;
-	private static final int COST = -2;
+    private static final CardRarity RARITY = CardRarity.CURSE;
+    private static final CardTarget TARGET = CardTarget.NONE;
+    private static final CardType TYPE = CardType.CURSE;
+    private static final int COST = -2;
 
-	public Tired() {
-		super(ID, IMG, COST, TYPE, CardColor.CURSE, RARITY, TARGET);
-		isEthereal = true;
-	}
+    public Tired() {
+        super(ID, IMG, COST, TYPE, CardColor.CURSE, RARITY, TARGET);
+        isEthereal = true;
+    }
 
-	@Override
-	public void upgrade() {
-		initializeDescription();
-	}
+    @Override
+    public void upgrade() {
+        initializeDescription();
+    }
 
-	public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-	}
+    public void use(AbstractPlayer abstractPlayer,
+                    AbstractMonster abstractMonster) {
+    }
 
-	public void triggerWhenDrawn() {
-		this.addToBot(new ExhaustAction(1, true, false));
-	}
+    public void triggerWhenDrawn() {
+        this.addToBot(new ExhaustAction(1, true, false));
+    }
 }

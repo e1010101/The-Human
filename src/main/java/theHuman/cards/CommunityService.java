@@ -13,35 +13,38 @@ import static theHuman.HumanMod.makeCardPath;
 
 public class CommunityService extends AbstractDynamicCard {
 
-	public static final String ID = HumanMod.makeID(CommunityService.class.getSimpleName());
-	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String DESCRIPTION = cardStrings.NAME;
-	public static final String IMG = makeCardPath("CommunityService.png");
+    public static final String ID =
+        HumanMod.makeID(CommunityService.class.getSimpleName());
+    public static final CardStrings cardStrings =
+        CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.NAME;
+    public static final String IMG = makeCardPath("CommunityService.png");
 
-	public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
-	private static final CardRarity RARITY = CardRarity.COMMON;
-	private static final CardTarget TARGET = CardTarget.SELF;
-	private static final CardType TYPE = CardType.POWER;
-	private static final int COST = 3;
-	private static final int UPGRADED_COST = 2;
+    public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.POWER;
+    private static final int COST = 3;
+    private static final int UPGRADED_COST = 2;
 
-	public CommunityService() {
-		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-		magicNumber = baseMagicNumber = 1;
-	}
+    public CommunityService() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        magicNumber = baseMagicNumber = 1;
+    }
 
-	@Override
-	public void upgrade() {
-		if (!upgraded) {
-			upgradeName();
-			this.isInnate = true;
-			upgradeBaseCost(UPGRADED_COST);
-			initializeDescription();
-		}
-	}
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            this.isInnate = true;
+            upgradeBaseCost(UPGRADED_COST);
+            initializeDescription();
+        }
+    }
 
-	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		this.addToBot(new ApplyPowerAction(p, p, new CommunityServicePower(p, p, magicNumber)));
-	}
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new ApplyPowerAction(p, p, new CommunityServicePower(p, p,
+                                                                           magicNumber)));
+    }
 }
