@@ -25,12 +25,11 @@ public class InThePark extends AbstractDynamicCard
         HumanMod.makeID(InThePark.class.getSimpleName());
     public static final CardStrings cardStrings =
         CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final UIStrings uiStrings =
-        CardCrawlGame.languagePack.getUIString(getModID() + ":LifestyleWords");
     public static final String DESCRIPTION = cardStrings.NAME;
     public static final String IMG = makeCardPath("InThePark.png");
-
     public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
+    private static final UIStrings uiStrings =
+        CardCrawlGame.languagePack.getUIString(getModID() + ":LifestyleWords");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardType TYPE = CardType.SKILL;

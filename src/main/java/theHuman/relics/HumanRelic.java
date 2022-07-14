@@ -14,38 +14,45 @@ import static theHuman.HumanMod.makeRelicPath;
 
 public class HumanRelic extends CustomRelic {
 
-	public static final String ID = HumanMod.makeID("HumanRelic");
+    public static final String ID = HumanMod.makeID("HumanRelic");
 
-	private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Human_relic.png"));
-	private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Human_relic.png"));
+    private static final Texture IMG =
+        TextureLoader.getTexture(makeRelicPath("Human_relic.png"));
+    private static final Texture OUTLINE =
+        TextureLoader.getTexture(makeRelicOutlinePath("Human_relic.png"));
 
-	public HumanRelic() {
-		super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
-	}
+    public HumanRelic() {
+        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
+    }
 
-	@Override
-	public String getUpdatedDescription() {
-		return DESCRIPTIONS[0] + DESCRIPTIONS[1] + DESCRIPTIONS[2];
-	}
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0] + DESCRIPTIONS[1] + DESCRIPTIONS[2];
+    }
 
-	@Override
-	public void onEquip() {
-	}
+    @Override
+    public void onEquip() {
+    }
 
-	@Override
-	public void onUnequip() {
-	}
+    @Override
+    public void onUnequip() {
+    }
 
-	@Override
-	public void atBattleStartPreDraw() {
-		flash();
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HealthinessPower(AbstractDungeon.player, AbstractDungeon.player, 5)));
-		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, 5));
-	}
+    @Override
+    public void atBattleStartPreDraw() {
+        flash();
+        AbstractDungeon.actionManager.addToBottom(
+            new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                                 new HealthinessPower(AbstractDungeon.player,
+                                                      AbstractDungeon.player,
+                                                      5)));
+        AbstractDungeon.actionManager.addToBottom(
+            new GainBlockAction(AbstractDungeon.player, 5));
+    }
 
-	@Override
-	public int changeNumberOfCardsInReward(int numberOfCards) {
-		return 4;
-	}
+    @Override
+    public int changeNumberOfCardsInReward(int numberOfCards) {
+        return 4;
+    }
 
 }

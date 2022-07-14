@@ -30,6 +30,12 @@ public class CustomSparksEffect extends AbstractGameEffect {
         }
     }
 
+    public void render(SpriteBatch sb) {
+    }
+
+    public void dispose() {
+    }
+
     private void clank(float x, float y) {
         if (!Settings.DISABLE_EFFECTS) {
             for (int i = 0; i < 30; ++i) {
@@ -39,11 +45,5 @@ public class CustomSparksEffect extends AbstractGameEffect {
                         y + MathUtils.random(-10.0F, 10.0F) * Settings.scale));
             }
         }
-    }
-
-    public void render(SpriteBatch sb) {
-    }
-
-    public void dispose() {
     }
 }

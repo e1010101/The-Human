@@ -12,14 +12,15 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class CustomSmallLaserEffect extends AbstractGameEffect {
+    private static TextureAtlas.AtlasRegion img;
     private final float sX;
     private final float sY;
     private final float dX;
     private final float dY;
     private final float dst;
-    private static TextureAtlas.AtlasRegion img;
 
-    public CustomSmallLaserEffect(float sX, float sY, float dX, float dY) {
+    public CustomSmallLaserEffect(float sX, float sY, float dX, float dY,
+                                  Color color) {
         if (img == null) {
             img = ImageMaster.vfxAtlas.findRegion("combat/laserThin");
         }
@@ -30,7 +31,7 @@ public class CustomSmallLaserEffect extends AbstractGameEffect {
         this.dY = dY;
         this.dst =
             Vector2.dst(this.sX, this.sY, this.dX, this.dY) / Settings.scale;
-        this.color = Color.RED.cpy();
+        this.color = color;
         this.duration = 0.5F;
         this.startingDuration = 0.5F;
         this.rotation = MathUtils.atan2(dX - sX, dY - sY);

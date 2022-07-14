@@ -1,6 +1,8 @@
 package theHuman.cards.guns;
 
 import basemod.helpers.TooltipInfo;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -15,6 +17,7 @@ import theHuman.actions.FireGunAction;
 import theHuman.cards.AbstractShootWeaponCard;
 import theHuman.cards.tokens.EmptyCartridge;
 import theHuman.characters.TheHuman;
+import theHuman.effects.CustomSmallLaserEffect;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,11 +32,16 @@ public class Glock17 extends AbstractShootWeaponCard {
         HumanMod.makeID(Glock17.class.getSimpleName());
     public static final CardStrings cardStrings =
         CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final UIStrings uiStrings =
-        CardCrawlGame.languagePack.getUIString(getModID() + ":MasteryWords");
     public static final String DESCRIPTION = cardStrings.NAME;
+    private static final String MASTERED_NAME =
+        cardStrings.EXTENDED_DESCRIPTION[0];
     public static final String IMG = makeCardPath("Glock17.png");
     public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
+    // Credit to poceviciusgabrielius for image, https://3dexport.com/3dmodel-futuristic-pistol-341422.htm
+    public static final String MASTERED_IMG =
+        makeCardPath("Glock17_Mastered" + ".png");
+    private static final UIStrings uiStrings =
+        CardCrawlGame.languagePack.getUIString(getModID() + ":MasteryWords");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
@@ -43,12 +51,7 @@ public class Glock17 extends AbstractShootWeaponCard {
     private static final int SECOND_MAGIC_NUMBER = 15;
     private static final int UPGRADE_PLUS_DMG = 3;
     private static final int UPGRADE_PLUS_SECOND_MAGIC = 2;
-    private static final String MASTERED_NAME =
-        cardStrings.EXTENDED_DESCRIPTION[0];
-    private static final int MASTERY_LEVEL = 9;
-    // Credit to poceviciusgabrielius for image, https://3dexport.com/3dmodel-futuristic-pistol-341422.htm
-    public static final String MASTERED_IMG =
-        makeCardPath("Glock17_Mastered" + ".png");
+    private static final int MASTERY_LEVEL = 8;
     private static final String MASTERED_SMALL =
         getModID() + "Resources/images/cards/bonus/hexagon.png";
     private static final String MASTERED_LARGE =
@@ -77,7 +80,7 @@ public class Glock17 extends AbstractShootWeaponCard {
         timesUpgraded++;
         upgradeDamage(UPGRADE_PLUS_DMG);
         if (defaultSecondMagicNumber + UPGRADE_PLUS_SECOND_MAGIC > 100) {
-            defaultSecondMagicNumber = 100;
+            upgradeDefaultSecondMagicNumber(100 - defaultSecondMagicNumber);
         } else {
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC);
         }
@@ -117,10 +120,16 @@ public class Glock17 extends AbstractShootWeaponCard {
     @Override
     public void masteryEffect() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            AbstractPlayer p = AbstractDungeon.player;
             for (int i = 0; i < 3; i++) {
-                this.addToBot(
-                    new FireGunAction(AbstractDungeon.getRandomMonster(), 10,
-                                      100, 1, DamageInfo.DamageType.HP_LOSS));
+                AbstractMonster mo =
+                    AbstractDungeon.getCurrRoom().monsters.getRandomMonster(
+                        true);
+                this.addToBot(new VFXAction(
+                    new CustomSmallLaserEffect(mo.hb.cX, mo.hb.cY, p.hb.cX,
+                                               p.hb.cY, Color.VIOLET.cpy())));
+                this.addToBot(new FireGunAction(mo, 10, 100, 1,
+                                                DamageInfo.DamageType.HP_LOSS));
             }
         }
     }

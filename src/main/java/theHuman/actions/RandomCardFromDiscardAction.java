@@ -8,41 +8,41 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class RandomCardFromDiscardAction extends AbstractGameAction {
 
-	private final int amount;
-	private final AbstractPlayer p = AbstractDungeon.player;
-	private boolean done = false;
+    private final int amount;
+    private final AbstractPlayer p = AbstractDungeon.player;
+    private boolean done = false;
 
-	public RandomCardFromDiscardAction(int numberOfCards) {
-		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
-		this.amount = numberOfCards;
-	}
+    public RandomCardFromDiscardAction(int numberOfCards) {
+        this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
+        this.amount = numberOfCards;
+    }
 
-	@Override
-	public void update() {
-		if (!done) {
-			CardGroup pile = p.discardPile;
-			CardGroup hand = p.hand;
-			for (int i = 0; i < this.amount; i++) {
-				if (10 == hand.size()) {
-					this.p.createHandIsFullDialog();
-					break;
-				}
-				if (!pile.isEmpty()) {
-					AbstractCard c = getRandomSalvage(pile);
-					hand.addToHand(c);
-					pile.removeCard(c);
-					c.lighten(false);
-					c.unhover();
-					c.applyPowers();
-					this.p.hand.refreshHandLayout();
-				}
-			}
-			done = true;
-			this.tickDuration();
-		}
-	}
+    @Override
+    public void update() {
+        if (!done) {
+            CardGroup pile = p.discardPile;
+            CardGroup hand = p.hand;
+            for (int i = 0; i < this.amount; i++) {
+                if (10 == hand.size()) {
+                    this.p.createHandIsFullDialog();
+                    break;
+                }
+                if (!pile.isEmpty()) {
+                    AbstractCard c = getRandomSalvage(pile);
+                    hand.addToHand(c);
+                    pile.removeCard(c);
+                    c.lighten(false);
+                    c.unhover();
+                    c.applyPowers();
+                    this.p.hand.refreshHandLayout();
+                }
+            }
+            done = true;
+            this.tickDuration();
+        }
+    }
 
-	private AbstractCard getRandomSalvage(CardGroup pile) {
-		return pile.getRandomCard(true);
-	}
+    private AbstractCard getRandomSalvage(CardGroup pile) {
+        return pile.getRandomCard(true);
+    }
 }

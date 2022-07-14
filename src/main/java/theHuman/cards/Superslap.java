@@ -49,7 +49,8 @@ public class Superslap extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
 
-            AbstractMonster targetMonster = AbstractDungeon.getRandomMonster();
+            AbstractMonster targetMonster =
+                AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
 
             AbstractCard tmp = new Slap();
             AbstractDungeon.player.limbo.addToBottom(tmp);

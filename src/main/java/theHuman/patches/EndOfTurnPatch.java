@@ -16,29 +16,35 @@ import java.util.Iterator;
 @SuppressWarnings("unused")
 public class EndOfTurnPatch {
 
-	@SpirePatch(clz = AbstractRoom.class, method = "endTurn")
-	public static class EndTurn {
+    @SpirePatch(clz = AbstractRoom.class, method = "endTurn")
+    public static class EndTurn {
 
-		@SpirePrefixPatch
-		public static void Prefix(AbstractRoom __instance) {
+        @SpirePrefixPatch
+        public static void Prefix(AbstractRoom __instance) {
 
-			if (AbstractDungeon.getMonsters() != null) {
+            if (AbstractDungeon.getMonsters() != null) {
 
-				AbstractPlayer p = AbstractDungeon.player;
+                AbstractPlayer p = AbstractDungeon.player;
 
-				for (CardGroup cardGroup : Arrays.asList(p.hand, p.drawPile, p.discardPile)) {
-					Iterator<AbstractCard> iterator = cardGroup.group.iterator();
-					while (iterator.hasNext()) {
-						AbstractCard c = iterator.next();
+                for (CardGroup cardGroup : Arrays.asList(p.hand, p.drawPile,
+                                                         p.discardPile)) {
+                    Iterator<AbstractCard> iterator =
+                        cardGroup.group.iterator();
+                    while (iterator.hasNext()) {
+                        AbstractCard c = iterator.next();
 
-						if (UncoveredField.uncovered.get(c)) {
-							iterator.remove();
-							AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) Settings.WIDTH / 2, (float) Settings.HEIGHT / 2));
-							cardGroup.removeCard(c);
-						}
-					}
-				}
-			}
-		}
-	}
+                        if (UncoveredField.uncovered.get(c)) {
+                            iterator.remove();
+                            AbstractDungeon.topLevelEffects.add(
+                                new PurgeCardEffect(c,
+                                                    (float) Settings.WIDTH / 2,
+                                                    (float) Settings.HEIGHT /
+                                                    2));
+                            cardGroup.removeCard(c);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

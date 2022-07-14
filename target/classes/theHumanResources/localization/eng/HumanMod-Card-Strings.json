@@ -316,7 +316,7 @@
     "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Next turn, deal 10 damage to the same enemy. NL [#c20000]Mastery 11. NL thehuman:Inventory.",
     "EXTENDED_DESCRIPTION": [
       "Codename: \"Purity\"",
-      "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Next turn, deal 10 damage to the same enemy. NL Remove ALL *Buffs from ALL enemies. NL thehuman:Inventory."
+      "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Next turn, deal 10 damage to the same enemy. NL Remove ALL *Powers from ALL enemies. NL thehuman:Inventory."
     ]
   },
   "theHuman:LegalAction": {

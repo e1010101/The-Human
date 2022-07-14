@@ -16,7 +16,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import theHuman.HumanMod;
 import theHuman.actions.FireGunAction;
@@ -38,8 +37,6 @@ public class AWP extends AbstractShootWeaponCard {
     public static final String ID = HumanMod.makeID(AWP.class.getSimpleName());
     public static final CardStrings cardStrings =
         CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final UIStrings uiStrings =
-        CardCrawlGame.languagePack.getUIString(getModID() + ":MasteryWords");
     public static final String DESCRIPTION = cardStrings.NAME;
     public static final String UPGRADE_DESCRIPTION =
         cardStrings.UPGRADE_DESCRIPTION;
@@ -49,6 +46,8 @@ public class AWP extends AbstractShootWeaponCard {
     public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
     public static final String MASTERED_IMG =
         makeCardPath("AWP_Mastered" + ".png");
+    private static final UIStrings uiStrings =
+        CardCrawlGame.languagePack.getUIString(getModID() + ":MasteryWords");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
@@ -56,7 +55,7 @@ public class AWP extends AbstractShootWeaponCard {
     private static final int DAMAGE = 40;
     private static final int UPGRADE_PLUS_DMG = 4;
     private static final int UPGRADE_PLUS_SECOND_MAGIC = 3;
-    private static final int MASTERY_LEVEL = 11;
+    private static final int MASTERY_LEVEL = 10;
     private static final String MASTERED_SMALL =
         getModID() + "Resources/images/cards/bonus/grunge.png";
     private static final String MASTERED_LARGE =
@@ -84,7 +83,7 @@ public class AWP extends AbstractShootWeaponCard {
         timesUpgraded++;
         upgradeDamage(UPGRADE_PLUS_DMG);
         if (defaultSecondMagicNumber + UPGRADE_PLUS_SECOND_MAGIC > 100) {
-            defaultSecondMagicNumber = 100;
+            upgradeDefaultSecondMagicNumber(100 - defaultSecondMagicNumber);
         } else {
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC);
         }
@@ -109,12 +108,11 @@ public class AWP extends AbstractShootWeaponCard {
         CardCrawlGame.sound.playAV("AWP", 1.0F, 3.5F);
         if (timesUpgraded >= MASTERY_LEVEL) {
             this.addToBot(new VFXAction(
-                new CustomSmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY),
-                0.0F));
+                new CustomSmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY,
+                                           Color.RED.cpy())));
         } else {
             this.addToBot(new VFXAction(
-                new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY),
-                0.0F));
+                new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY)));
         }
         this.addToBot(new FireGunAction(m, damage, defaultSecondMagicNumber,
                                         magicNumber));
@@ -154,9 +152,7 @@ public class AWP extends AbstractShootWeaponCard {
                 }
             }
             for (AbstractPower pow : m.powers) {
-                if (pow.type == AbstractPower.PowerType.BUFF) {
-                    this.addToBot(new RemoveSpecificPowerAction(m, m, pow));
-                }
+                this.addToBot(new RemoveSpecificPowerAction(m, m, pow));
             }
         }
     }

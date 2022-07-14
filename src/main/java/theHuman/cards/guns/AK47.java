@@ -1,7 +1,6 @@
 package theHuman.cards.guns;
 
 import basemod.helpers.TooltipInfo;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,7 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import theHuman.HumanMod;
 import theHuman.actions.FireGunAction;
 import theHuman.cards.AbstractShootWeaponCard;
@@ -31,8 +29,6 @@ public class AK47 extends AbstractShootWeaponCard {
     public static final String ID = HumanMod.makeID(AK47.class.getSimpleName());
     public static final CardStrings cardStrings =
         CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final UIStrings uiStrings =
-        CardCrawlGame.languagePack.getUIString(getModID() + ":MasteryWords");
     public static final String DESCRIPTION = cardStrings.NAME;
     private static final String MASTERED_NAME =
         cardStrings.EXTENDED_DESCRIPTION[0];
@@ -40,6 +36,8 @@ public class AK47 extends AbstractShootWeaponCard {
     public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
     public static final String MASTERED_IMG =
         makeCardPath("AK47_Mastered" + ".png");
+    private static final UIStrings uiStrings =
+        CardCrawlGame.languagePack.getUIString(getModID() + ":MasteryWords");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
@@ -47,7 +45,7 @@ public class AK47 extends AbstractShootWeaponCard {
     private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 1;
     private static final int UPGRADE_PLUS_SECOND_MAGIC = 1;
-    private static final int MASTERY_LEVEL = 13;
+    private static final int MASTERY_LEVEL = 12;
     private static final String MASTERED_SMALL =
         getModID() + "Resources/images/cards/bonus/camo.png";
     private static final String MASTERED_LARGE =
@@ -75,7 +73,7 @@ public class AK47 extends AbstractShootWeaponCard {
         timesUpgraded++;
         upgradeDamage(UPGRADE_PLUS_DMG);
         if (defaultSecondMagicNumber + UPGRADE_PLUS_SECOND_MAGIC > 100) {
-            defaultSecondMagicNumber = 100;
+            upgradeDefaultSecondMagicNumber(100 - defaultSecondMagicNumber);
         } else {
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC);
         }

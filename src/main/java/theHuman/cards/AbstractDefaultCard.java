@@ -13,9 +13,9 @@ public abstract class AbstractDefaultCard extends CustomCard {
     public int defaultBaseSecondMagicNumber;
     public boolean upgradedDefaultSecondMagicNumber;
     public boolean isDefaultSecondMagicNumberModified;
+    protected List<AbstractCard> cardsToPreviewList = new ArrayList<>();
     private float rotationTimer = 0;
     private int previewIndex;
-    protected List<AbstractCard> cardsToPreviewList = new ArrayList<>();
 
     public AbstractDefaultCard(final String id, final String name,
                                final String img, final int cost,
@@ -41,16 +41,6 @@ public abstract class AbstractDefaultCard extends CustomCard {
         }
     }
 
-    protected void upgradeCardToPreview() {
-        for (AbstractCard q : cardsToPreviewList) {
-            q.upgrade();
-        }
-    }
-
-    protected float getRotationTimeNeeded() {
-        return 2f;
-    }
-
     @Override
     public void update() {
         super.update();
@@ -69,6 +59,16 @@ public abstract class AbstractDefaultCard extends CustomCard {
                 }
             }
         }
+    }
+
+    protected void upgradeCardToPreview() {
+        for (AbstractCard q : cardsToPreviewList) {
+            q.upgrade();
+        }
+    }
+
+    protected float getRotationTimeNeeded() {
+        return 2f;
     }
 
     public void upgradeDefaultSecondMagicNumber(int amount) {

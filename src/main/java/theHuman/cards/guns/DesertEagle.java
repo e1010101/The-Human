@@ -33,8 +33,6 @@ public class DesertEagle extends AbstractShootWeaponCard {
         HumanMod.makeID(DesertEagle.class.getSimpleName());
     public static final CardStrings cardStrings =
         CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final UIStrings uiStrings =
-        CardCrawlGame.languagePack.getUIString(getModID() + ":MasteryWords");
     public static final String DESCRIPTION = cardStrings.NAME;
     public static final String UPGRADE_DESCRIPTION =
         cardStrings.UPGRADE_DESCRIPTION;
@@ -45,6 +43,8 @@ public class DesertEagle extends AbstractShootWeaponCard {
     // Credit to Alexander Yartsev for image, https://www.artstation.com/artwork/v1Y12A
     public static final String MASTERED_IMG =
         makeCardPath("DesertEagle_Mastered" + ".png");
+    private static final UIStrings uiStrings =
+        CardCrawlGame.languagePack.getUIString(getModID() + ":MasteryWords");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
@@ -52,7 +52,7 @@ public class DesertEagle extends AbstractShootWeaponCard {
     private static final int DAMAGE = 12;
     private static final int UPGRADE_PLUS_DMG = 4;
     private static final int UPGRADE_PLUS_SECOND_MAGIC = 4;
-    private static final int MASTERY_LEVEL = 10;
+    private static final int MASTERY_LEVEL = 9;
     private static final String MASTERED_SMALL =
         getModID() + "Resources/images/cards/bonus/circuit.png";
     private static final String MASTERED_LARGE =
@@ -80,7 +80,7 @@ public class DesertEagle extends AbstractShootWeaponCard {
         timesUpgraded++;
         upgradeDamage(UPGRADE_PLUS_DMG);
         if (defaultSecondMagicNumber + UPGRADE_PLUS_SECOND_MAGIC > 100) {
-            defaultSecondMagicNumber = 100;
+            upgradeDefaultSecondMagicNumber(100 - defaultSecondMagicNumber);
         } else {
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC);
         }
@@ -129,10 +129,8 @@ public class DesertEagle extends AbstractShootWeaponCard {
                                                             true));
             }
         }
-        AbstractMonster m = AbstractDungeon.getRandomMonster();
-        while (m.isDying || m.isDead) {
-            m = AbstractDungeon.getRandomMonster();
-        }
+        AbstractMonster m =
+            AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
         this.addToBot(new StunMonsterAction(m, AbstractDungeon.player, 1));
     }
 

@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import theHuman.HumanMod;
 import theHuman.actions.FireGunAction;
 import theHuman.cards.AbstractShootWeaponCard;
@@ -33,10 +32,6 @@ public class Berreta92 extends AbstractShootWeaponCard {
         HumanMod.makeID(Berreta92.class.getSimpleName());
     public static final CardStrings cardStrings =
         CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final UIStrings uiStrings =
-        CardCrawlGame.languagePack.getUIString(getModID() + ":MasteryWords");
-    private static final UIStrings uiStrings2 =
-        CardCrawlGame.languagePack.getUIString(getModID() + ":Berreta92Words");
     public static final String DESCRIPTION = cardStrings.NAME;
     public static final String UPGRADE_DESCRIPTION =
         cardStrings.UPGRADE_DESCRIPTION;
@@ -46,6 +41,10 @@ public class Berreta92 extends AbstractShootWeaponCard {
     public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
     public static final String MASTERED_IMG =
         makeCardPath("Berreta92_Mastered" + ".png");
+    private static final UIStrings uiStrings =
+        CardCrawlGame.languagePack.getUIString(getModID() + ":MasteryWords");
+    private static final UIStrings uiStrings2 =
+        CardCrawlGame.languagePack.getUIString(getModID() + ":Berreta92Words");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
@@ -85,7 +84,7 @@ public class Berreta92 extends AbstractShootWeaponCard {
         timesUpgraded++;
         upgradeDamage(UPGRADE_PLUS_DMG);
         if (defaultSecondMagicNumber + UPGRADE_PLUS_SECOND_MAGIC > 100) {
-            defaultSecondMagicNumber = 100;
+            upgradeDefaultSecondMagicNumber(100 - defaultSecondMagicNumber);
         } else {
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC);
         }

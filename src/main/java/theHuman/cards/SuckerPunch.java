@@ -30,11 +30,11 @@ public class SuckerPunch extends AbstractDynamicCard {
         HumanMod.makeID(SuckerPunch.class.getSimpleName());
     public static final CardStrings cardStrings =
         CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final UIStrings uiStrings =
-        CardCrawlGame.languagePack.getUIString(getModID() + ":TechniqueWords");
     public static final String DESCRIPTION = cardStrings.NAME;
     public static final String IMG = makeCardPath("SuckerPunch.png");
     public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
+    private static final UIStrings uiStrings =
+        CardCrawlGame.languagePack.getUIString(getModID() + ":TechniqueWords");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardType TYPE = CardType.ATTACK;

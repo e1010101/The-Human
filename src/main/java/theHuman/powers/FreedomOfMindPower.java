@@ -48,20 +48,20 @@ public class FreedomOfMindPower extends AbstractPower
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
-        this.flash();
-        if (this.owner == AbstractDungeon.player) {
-            AbstractPlayer p = (AbstractPlayer) this.owner;
-            this.addToBot(new FetchAction(p.drawPile));
-        }
-    }
-
-    @Override
     public void updateDescription() {
         if (amount == 1) {
             description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
         } else {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+        }
+    }
+
+    @Override
+    public void atStartOfTurnPostDraw() {
+        this.flash();
+        if (this.owner == AbstractDungeon.player) {
+            AbstractPlayer p = (AbstractPlayer) this.owner;
+            this.addToBot(new FetchAction(p.drawPile));
         }
     }
 

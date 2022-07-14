@@ -18,7 +18,6 @@ import theHuman.powers.PeacefulPower;
 import theHuman.util.HumanUtils;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static theHuman.HumanMod.getModID;

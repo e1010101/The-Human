@@ -16,48 +16,51 @@ import java.util.Arrays;
 
 @SuppressWarnings("unused")
 public class ShufflePatch {
-	@SpirePatch(clz = EmptyDeckShuffleAction.class, method = "<ctor>")
-	public static class EmptyDeckShuffleAction0 {
-		@SpirePostfixPatch
-		public static void Postfix(EmptyDeckShuffleAction _inst) {
-			AbstractPlayer p = AbstractDungeon.player;
-			for (CardGroup cardGroup : Arrays.asList(p.hand, p.drawPile, p.discardPile)) {
-				for (AbstractCard card : cardGroup.group) {
-					if (card instanceof OnShuffleSubscriber) {
-						((OnShuffleSubscriber) card).onShuffle();
-					}
-				}
-			}
-		}
-	}
+    @SpirePatch(clz = EmptyDeckShuffleAction.class, method = "<ctor>")
+    public static class EmptyDeckShuffleAction0 {
+        @SpirePostfixPatch
+        public static void Postfix(EmptyDeckShuffleAction _inst) {
+            AbstractPlayer p = AbstractDungeon.player;
+            for (CardGroup cardGroup : Arrays.asList(p.hand, p.drawPile,
+                                                     p.discardPile)) {
+                for (AbstractCard card : cardGroup.group) {
+                    if (card instanceof OnShuffleSubscriber) {
+                        ((OnShuffleSubscriber) card).onShuffle();
+                    }
+                }
+            }
+        }
+    }
 
-	@SpirePatch(clz = ShuffleAllAction.class, method = "<ctor>")
-	public static class ShuffleAllAction0 {
-		@SpirePostfixPatch
-		public static void Postfix(ShuffleAllAction _inst) {
-			AbstractPlayer p = AbstractDungeon.player;
-			for (CardGroup cardGroup : Arrays.asList(p.hand, p.drawPile, p.discardPile)) {
-				for (AbstractCard card : cardGroup.group) {
-					if (card instanceof OnShuffleSubscriber) {
-						((OnShuffleSubscriber) card).onShuffle();
-					}
-				}
-			}
-		}
-	}
+    @SpirePatch(clz = ShuffleAllAction.class, method = "<ctor>")
+    public static class ShuffleAllAction0 {
+        @SpirePostfixPatch
+        public static void Postfix(ShuffleAllAction _inst) {
+            AbstractPlayer p = AbstractDungeon.player;
+            for (CardGroup cardGroup : Arrays.asList(p.hand, p.drawPile,
+                                                     p.discardPile)) {
+                for (AbstractCard card : cardGroup.group) {
+                    if (card instanceof OnShuffleSubscriber) {
+                        ((OnShuffleSubscriber) card).onShuffle();
+                    }
+                }
+            }
+        }
+    }
 
-	@SpirePatch(clz = ShuffleAction.class, method = "update")
-	public static class update {
-		@SpireInsertPatch(rloc = 0)
-		public static void Insert(ShuffleAction _inst) {
-			AbstractPlayer p = AbstractDungeon.player;
-			for (CardGroup cardGroup : Arrays.asList(p.hand, p.drawPile, p.discardPile)) {
-				for (AbstractCard card : cardGroup.group) {
-					if (card instanceof OnShuffleSubscriber) {
-						((OnShuffleSubscriber) card).onShuffle();
-					}
-				}
-			}
-		}
-	}
+    @SpirePatch(clz = ShuffleAction.class, method = "update")
+    public static class update {
+        @SpireInsertPatch(rloc = 0)
+        public static void Insert(ShuffleAction _inst) {
+            AbstractPlayer p = AbstractDungeon.player;
+            for (CardGroup cardGroup : Arrays.asList(p.hand, p.drawPile,
+                                                     p.discardPile)) {
+                for (AbstractCard card : cardGroup.group) {
+                    if (card instanceof OnShuffleSubscriber) {
+                        ((OnShuffleSubscriber) card).onShuffle();
+                    }
+                }
+            }
+        }
+    }
 }
