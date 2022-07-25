@@ -35,6 +35,7 @@ public class FuriousSlap extends AbstractDynamicCard {
 
     public FuriousSlap() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.exhaust = true;
         damage = baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = 1;
         this.tags.add(HumanMod.HumanCardTags.SLAP_HUMAN);
@@ -44,6 +45,7 @@ public class FuriousSlap extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.exhaust = false;
             upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }

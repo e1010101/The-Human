@@ -2,8 +2,10 @@ package theHuman.cards.guns;
 
 import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
+import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -120,22 +122,22 @@ public class DesertEagle extends AbstractShootWeaponCard {
 
     @Override
     public void masteryEffect() {
-        this.addToBot(new VFXAction(
-            new ShowCardBrieflyEffect(this.makeStatEquivalentCopy())));
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+        AbstractPlayer p = AbstractDungeon.player;
+        for (AbstractCard c : p.hand.group) {
             if (!Objects.equals(c.cardID, this.cardID)) {
-                this.addToBot(new ExhaustSpecificCardAction(c,
-                                                            AbstractDungeon.player.hand,
-                                                            true));
+                this.addToBot(new ExhaustSpecificCardAction(c, p.hand, true));
             }
         }
-        AbstractMonster m =
-            AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-        this.addToBot(new StunMonsterAction(m, AbstractDungeon.player, 1));
+        this.addToBot(new HealAction(p, p, 1000));
     }
 
     @Override
     public AbstractCard makeCopy() {
         return new DesertEagle();
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        return timesUpgraded >= MASTERY_LEVEL ? 20.0F : 27.0F;
     }
 }

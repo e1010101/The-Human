@@ -45,7 +45,7 @@ public class GroceryShopping extends AbstractDynamicCard
 
     public GroceryShopping() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET, customTooltips);
-        magicNumber = baseMagicNumber = 5;
+        magicNumber = baseMagicNumber = 3;
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 1;
     }
 
@@ -69,7 +69,6 @@ public class GroceryShopping extends AbstractDynamicCard
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ScryAction(magicNumber));
         this.addToBot(new DrawCardWithTypeAction(CardType.ATTACK,
                                                  defaultSecondMagicNumber));
         this.addToBot(new DrawCardWithTypeAction(CardType.SKILL,

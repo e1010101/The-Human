@@ -4,8 +4,6 @@ import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.math.MathUtils;
-import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -65,18 +63,13 @@ public class TheHuman extends CustomPlayer {
 
     public TheHuman(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-              "theHumanResources/images/char/humanCharacter/orb/vfx.png", null,
-              new SpriterAnimation(
-                  "theHumanResources/images/char/humanCharacter/Spriter/human.scml"));
+              getModID() + "Resources/images/char/humanCharacter/orb/vfx.png",
+              null, new SpriterAnimation(getModID() + "Resources/images/char" +
+                                         "/humanCharacter/Human.scml"));
 
         initializeClass(null, THE_DEFAULT_SHOULDER_2, THE_DEFAULT_SHOULDER_1,
-                        THE_DEFAULT_CORPSE, getLoadout(), 20.0F, -10.0F, 220.0F,
-                        290.0F, new EnergyManager(ENERGY_PER_TURN));
-
-        loadAnimation(THE_DEFAULT_SKELETON_ATLAS, THE_DEFAULT_SKELETON_JSON,
-                      1.0f);
-        AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
-        e.setTime(e.getEndTime() * MathUtils.random());
+                        THE_DEFAULT_CORPSE, getLoadout(), 20.0F, -10.0F, 166.0F,
+                        327.0F, new EnergyManager(ENERGY_PER_TURN));
 
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 220.0F * Settings.scale);

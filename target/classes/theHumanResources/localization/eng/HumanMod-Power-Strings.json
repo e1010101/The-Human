@@ -142,8 +142,8 @@
   "theHuman:FreedomOfMindPower": {
     "NAME": "Freedom Of Mind",
     "DESCRIPTIONS": [
-      "At the start of your turn, ",
-      " a card.",
+      "At the start of your turn, #yFetch ",
+      "a card.",
       " cards."
     ]
   },

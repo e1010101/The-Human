@@ -1,0 +1,195 @@
+{
+  "theHuman:FocusedPower": {
+    "NAME": "집중",
+    "DESCRIPTIONS": [
+      "턴 시작시, 카드를 ",
+      " 장 뽑고 방어도를 ",
+      " 장 뽑고 방어도를 ",
+      " 얻습니다."
+    ]
+  },
+  "theHuman:HealthinessPower": {
+    "NAME": "건강",
+    "DESCRIPTIONS": [
+      "당신은 #y건강합니다.",
+      "당신은 매우 #y건강합니다.",
+      "당신은 정말 #y엄청 #y건강합니다!",
+      " NL NL 매 턴 시작시 다음의 효과 중 무작위로 하나가 발동됩니다: NL 카드 1장 뽑기, #y에너지 1 획득, #y방어도 5 얻음, 체력 3 #y회복.",
+      " NL NL 매 턴 시작시 다음의 효과 중 무작위로 하나가 발동됩니다: NL #y방어도 3 얻음, 체력 2 #y회복.",
+      " NL NL 매 턴 시작시 다음의 효과 중 무작위로 하나가 발동됩니다: NL #y방어도 2 얻음, 체력 1 #y회복.",
+      " NL NL 쓰레기 카드를 제외한 카드를 사용할 때 다음의 효과 중 무작위로 하나가 발동됩니다: NL 무작위 적에게 피해를 ",
+      " 입힘, #y방어도를 ",
+      " 얻음.",
+      " NL NL 또한 다음 효과 중 하나가 발동됩니다: NL 체력을 2 #y회복, 66% 확률로 카드 1장 뽑기.",
+      " NL NL 쓰레기 카드를 제외한 카드를 사용할 때 다음의 효과 중 무작위로 하나가 발동됩니다: NL 무작위 적에게 1 피해 입힘, #y방어도 2 얻음, 체력을 1 #y회복, 50% 확률로 카드 1장 뽑기.",
+      " NL NL 쓰레기 카드를 제외한 카드를 사용할 때 다음의 효과 중 무작위로 하나가 발동됩니다: NL #y방어도를 1 얻음, 50% 확률로 체력을 1 #y회복."
+    ]
+  },
+  "theHuman:CarPower": {
+    "NAME": "자동차의 기동성",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, 카드를 ",
+      " 장 뽑고 #y에너지를 ",
+      " 장 뽑고 #y에너지를",
+      " 얻습니다."
+    ]
+  },
+  "theHuman:GarbageCollectorPower": {
+    "NAME": "쓰레기 수집",
+    "DESCRIPTIONS": [
+      "#y쓰레기 카드를 사용할 때마다 카드 ",
+      " 장을 #y개봉 합니다.",
+      " 장을 #y개봉 합니다."
+    ]
+  },
+  "theHuman:ReadingPower": {
+    "NAME": "독서",
+    "DESCRIPTIONS": [
+      "비용이 2 또는 그 이상인 카드를 사용할 때마다, ",
+      " 장의 #y깊은 #y생각을 얻습니다.",
+      " 장의 #y깊은 #y생각을 얻습니다.",
+      " 장의 #y빅 #y브레인을 얻습니다.",
+      " 장의 #y빅 #y브레인을 얻습니다."
+    ]
+  },
+  "theHuman:InjuredPower": {
+    "NAME": "부상당함",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, 부상당함 수치 1당 #y체력을 1~4 중에서 무작위로 잃습니다."
+    ]
+  },
+  "theHuman:CommunityServicePower": {
+    "NAME": "지역 봉사 활동",
+    "DESCRIPTIONS": [
+      "#y공격 카드를 사용할 때마다, ",
+      " 장의 #y쓰레기 카드를 얻습니다."
+    ]
+  },
+  "theHuman:AggressivenessPower": {
+    "NAME": "공격적 태세",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, 힘을 ",
+      " 얻고 카드를 ",
+      " 장 버립니다.",
+      " 장 버립니다."
+    ]
+  },
+  "theHuman:DualWieldingPower": {
+    "NAME": "아킴보",
+    "DESCRIPTIONS": [
+      "#y무기로 #y사격 할 때마다, 무작위 적에게 #y사격 ( 10 x ",
+      ", 15 % ) 합니다."
+    ]
+  },
+  "theHuman:RisktakerPower": {
+    "NAME": "하이 리스크, 하이 리턴",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, 카드를 ",
+      " 장 #y개봉 합니다.",
+      " 장 #y개봉 합니다."
+    ]
+  },
+  "theHuman:RenewableContractPower": {
+    "NAME": "계약 갱신",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, 버린 카드 더미에 있는 ",
+      " 장의 카드를 선택해 손으로 가져옵니다.",
+      " 장의 카드를 선택해 손으로 가져옵니다."
+    ]
+  },
+  "theHuman:TargetedPower": {
+    "NAME": "조준됨",
+    "DESCRIPTIONS": [
+      "턴 시작시, #y체력을 ",
+      " 잃습니다."
+    ]
+  },
+  "theHuman:ExtraShotsPower": {
+    "NAME": "추가 사격",
+    "DESCRIPTIONS": [
+      "무기로 사격할 때마다, 동일한 대상에게 ",
+      " 번 더 사격합니다.",
+      " 번 더 사격합니다."
+    ]
+  },
+  "theHuman:TechniquePower": {
+    "NAME": "테크닉",
+    "DESCRIPTIONS": [
+      "다음에 사용하는 카드가 [#a83277]테크닉[] 카드라면, 그 카드의 [#a83277]테크닉[] 효과를 발동합니다."
+    ]
+  },
+  "theHuman:AgeingPower": {
+    "NAME": "노화",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, 노화 수치가 12 이상일 경우, 즉사합니다. NL 보유한 노화 수치 1당 공격의 피해량이 4% 감소합니다. NL 턴 종료시, 노화를 1 얻습니다."
+    ]
+  },
+  "theHuman:PeacefulPower": {
+    "NAME": "평온함",
+    "DESCRIPTIONS": [
+      "받는 피해를 ",
+      " 만큼 무효화 시킵니다."
+    ]
+  },
+  "theHuman:SleepPower": {
+    "NAME": "수면중",
+    "DESCRIPTIONS": [
+      "이 생물은 ",
+      " 턴 후에 잠에서 깨어납니다.",
+      " 턴 후에 잠에서 깨어납니다."
+    ]
+  },
+  "theHuman:FreedomOfMindPower": {
+    "NAME": "마음의 자유",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, 뽑을 카드 더미의 카드 ",
+      " 장을 #y회수 합니다",
+      " 장을 #y회수 합니다"
+    ]
+  },
+  "theHuman:ArsenalPower": {
+    "NAME": "무기고",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, 무작위 #y사격 #y무기 1장을 얻습니다. NL 해당 카드는 소멸과 파괴 효과가 부여되어있습니다.",
+      "매 턴 시작시, ",
+      " 장의 무작위 사격 무기를 얻습니다. NL 해당 카드는 소멸과 파괴 효과가 부여되어있습니다."
+    ]
+  },
+  "theHuman:StoicismPower": {
+    "NAME": "금욕",
+    "DESCRIPTIONS": [
+      "카드를 버릴때마다, ",
+      " #y평온함 을 얻습니다.",
+      " #y평온함과 #y건강 을 얻습니다."
+    ]
+  },
+  "theHuman:TrashMonsterPower": {
+    "NAME": "쓰레기 흡수",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, #y쓰레기 ",
+      " 장을 얻습니다. NL #y쓰레기 카드 ",
+      " 장을 사용할 때마다, 무작위 적에게 피해를 ",
+      " 주고 #y힘과 #y민첩을 ",
+      " 얻습니다."
+    ]
+  },
+  "theHuman:FumingPower": {
+    "NAME": "약오름",
+    "DESCRIPTIONS": [
+      "이름에 \"따귀\" 가 들어간 카드를 사용할 때마다, 그 카드를",
+      " 무작위 적에게 다시 사용합니다.",
+      " 무작위 적에게 다시 사용하고 카드를 1장 뽑습니다.",
+      "  ",
+      " 번 무작위 적에게 다시 사용합니다.",
+      " 번 무작위 적에게 다시 사용하고 카드를",
+      " 장 뽑습니다."
+    ]
+  },
+  "theHuman:SilverGenerationPower": {
+    "NAME": "더욱 늙는중",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, 모든 적에게 #y노화 를 ",
+      " 부여합니다."
+    ]
+  }
+}

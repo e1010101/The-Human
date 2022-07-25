@@ -50,10 +50,6 @@ public class HumanMod
         "theHumanResources/images/char/humanCharacter/corpse.png";
     public static final String BADGE_IMAGE =
         "theHumanResources/images/Badge.png";
-    public static final String THE_DEFAULT_SKELETON_ATLAS =
-        "theHumanResources/images/char/humanCharacter/skeleton.atlas";
-    public static final String THE_DEFAULT_SKELETON_JSON =
-        "theHumanResources/images/char/humanCharacter/skeleton.json";
     public static final String ATTACK_DEFAULT_SKIN =
         "theHumanResources/images/512/bg_attack_default_skin.png";
     public static final String SKILL_DEFAULT_SKIN =
@@ -130,10 +126,6 @@ public class HumanMod
 
     public static String makePowerPath(String resourcePath) {
         return getModID() + "Resources/images/powers/" + resourcePath;
-    }
-
-    public static String getLanguage() {
-        return "eng";
     }
 
     public static String getModID() {
@@ -231,36 +223,36 @@ public class HumanMod
         logger.info("Beginning to edit strings for mod with ID: " + getModID());
         BaseMod.loadCustomStringsFile(CardStrings.class,
                                       getModID() + "Resources/localization/" +
-                                      getLanguage() +
-                                      "/HumanMod-Card-Strings.json");
+                                      loadLocalizationIfAvailable(
+                                          "/HumanMod-Card-Strings.json"));
         BaseMod.loadCustomStringsFile(PowerStrings.class,
                                       getModID() + "Resources/localization/" +
-                                      getLanguage() +
-                                      "/HumanMod-Power-Strings.json");
+                                      loadLocalizationIfAvailable(
+                                          "/HumanMod-Power-Strings.json"));
         BaseMod.loadCustomStringsFile(RelicStrings.class,
                                       getModID() + "Resources/localization/" +
-                                      getLanguage() +
-                                      "/HumanMod-Relic-Strings.json");
+                                      loadLocalizationIfAvailable(
+                                          "/HumanMod-Relic-Strings.json"));
         BaseMod.loadCustomStringsFile(EventStrings.class,
                                       getModID() + "Resources/localization/" +
-                                      getLanguage() +
-                                      "/HumanMod-Event-Strings.json");
+                                      loadLocalizationIfAvailable(
+                                          "/HumanMod-Event-Strings.json"));
         BaseMod.loadCustomStringsFile(PotionStrings.class,
                                       getModID() + "Resources/localization/" +
-                                      getLanguage() +
-                                      "/HumanMod-Potion-Strings.json");
+                                      loadLocalizationIfAvailable(
+                                          "/HumanMod-Potion-Strings.json"));
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
                                       getModID() + "Resources/localization/" +
-                                      getLanguage() +
-                                      "/HumanMod-Character-Strings.json");
+                                      loadLocalizationIfAvailable(
+                                          "/HumanMod-Character-Strings.json"));
         BaseMod.loadCustomStringsFile(OrbStrings.class,
                                       getModID() + "Resources/localization/" +
-                                      getLanguage() +
-                                      "/HumanMod-Orb-Strings.json");
+                                      loadLocalizationIfAvailable(
+                                          "/HumanMod-Orb-Strings.json"));
         BaseMod.loadCustomStringsFile(UIStrings.class,
                                       getModID() + "Resources/localization/" +
-                                      getLanguage() +
-                                      "/HumanMod-UI-Strings.json");
+                                      loadLocalizationIfAvailable(
+                                          "/HumanMod-UI-Strings.json"));
         logger.info("Done editing strings");
     }
 
@@ -268,9 +260,10 @@ public class HumanMod
     public void receiveEditKeywords() {
         Gson gson = new Gson();
         String json = Gdx.files.internal(
-            getModID() + "Resources/localization/" + getLanguage() +
-            "/HumanMod-Keyword-Strings.json").readString(
-            String.valueOf(StandardCharsets.UTF_8));
+                             getModID() + "Resources/localization/" +
+                             loadLocalizationIfAvailable("/HumanMod-Keyword-Strings.json"))
+                               .readString(
+                                   String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords =
             gson.fromJson(json,
                           com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
@@ -280,6 +273,22 @@ public class HumanMod
                                    keyword.PROPER_NAME, keyword.NAMES,
                                    keyword.DESCRIPTION);
             }
+        }
+    }
+
+    private String loadLocalizationIfAvailable(String fileName) {
+        if (!Gdx.files.internal(getModID() + "Resources/localization/" +
+                                Settings.language.toString().toLowerCase() +
+                                "/" + fileName).exists()) {
+            logger.info(
+                "Language: " + Settings.language.toString().toLowerCase() +
+                ", not currently supported for " + fileName + ".");
+            return "eng" + "/" + fileName;
+        } else {
+            logger.info("Loaded Language: " +
+                        Settings.language.toString().toLowerCase() + ", for " +
+                        fileName + ".");
+            return Settings.language.toString().toLowerCase() + "/" + fileName;
         }
     }
 

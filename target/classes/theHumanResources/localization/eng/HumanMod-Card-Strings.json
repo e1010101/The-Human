@@ -238,8 +238,8 @@
     "NAME": "Desert Eagle",
     "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL [#c20000]Mastery 10. NL thehuman:Inventory.",
     "EXTENDED_DESCRIPTION": [
-      "Codename: \"Unholy\"",
-      "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Exhaust ALL other cards in your hand. NL *Stun a random enemy. NL thehuman:Inventory."
+      "Codename: \"Guardian\"",
+      "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Exhaust ALL other cards in your hand. NL Restore 1000 *Health. NL thehuman:Inventory."
     ]
   },
   "theHuman:DualWielding": {
@@ -459,8 +459,8 @@
   },
   "theHuman:GroceryShopping": {
     "NAME": "Grocery Shopping",
-    "DESCRIPTION": "Scry !M!. NL Draw !theHuman:SecondMagic! *Attack, *Skill and *Power. NL [#2000a7]Lifestyle[]: Draw a card.",
-    "UPGRADE_DESCRIPTION": "Scry !M!. NL Draw !theHuman:SecondMagic! *Attack, *Skill and *Power. NL [#2000a7]Lifestyle[]: Scry !M!."
+    "DESCRIPTION": "Draw !theHuman:SecondMagic! *Attack, *Skill and *Power. NL [#2000a7]Lifestyle[]: Draw a card.",
+    "UPGRADE_DESCRIPTION": "Draw !theHuman:SecondMagic! *Attack, *Skill and *Power. NL [#2000a7]Lifestyle[]: Scry !M!."
   },
   "theHuman:ImpulsePurchase": {
     "NAME": "Impulse Purchase",

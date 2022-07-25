@@ -157,4 +157,9 @@ public class Berreta92 extends AbstractShootWeaponCard {
     public AbstractCard makeCopy() {
         return new Berreta92();
     }
+
+    @Override
+    public float getTitleFontSize() {
+        return timesUpgraded >= MASTERY_LEVEL ? 20.0F : 27.0F;
+    }
 }

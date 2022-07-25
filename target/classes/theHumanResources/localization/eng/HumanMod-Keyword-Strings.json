@@ -37,21 +37,6 @@
     "DESCRIPTION": "Shooting is a form of damage applied by certain ranged weapons. The damage per shot (A) is multiplied by the number of shots (B) with a Critical chance (C) and is displayed in (A x B, C) form. NL NL After each shot, shuffle an Empty Cartridge into your draw pile."
   },
   {
-    "PROPER_NAME": "[#a83277]Technique",
-    "NAMES": [
-      "technique",
-      "techniques"
-    ],
-    "DESCRIPTION": "Whenever you use a [#a83277]Technique, if the last card you played was also a [#a83277]Technique, perform an additional effect."
-  },
-  {
-    "PROPER_NAME": "[#34eb52]Pacifist",
-    "NAMES": [
-      "pacifist"
-    ],
-    "DESCRIPTION": "If your hand has no Attacks, perform an additional effect."
-  },
-  {
     "NAMES": [
       "peaceful"
     ],
@@ -62,13 +47,6 @@
       "inventory"
     ],
     "DESCRIPTION": "Return this card to your hand whenever it is played. NL NL This card retains if it was not used this turn. NL NL The cost of this card cannot be reduced below 1."
-  },
-  {
-    "PROPER_NAME": "[#8A2BE2]Lifestyle",
-    "NAMES": [
-      "lifestyle"
-    ],
-    "DESCRIPTION": "Whenever you shuffle your draw pile, perform an additional effect."
   },
   {
     "NAMES": [

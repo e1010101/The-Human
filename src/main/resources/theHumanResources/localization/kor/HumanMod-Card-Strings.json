@@ -1,0 +1,481 @@
+{
+  "theHuman:Slap": {
+    "NAME": "따귀",
+    "DESCRIPTION": "피해를 !D! 줍니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL thehuman:부상당함 을 1 부여합니다."
+  },
+  "theHuman:Defend": {
+    "NAME": "수비",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL [#34eb52]평화주의[]: 대신 thehuman:평온함 을 !B! 얻습니다."
+  },
+  "theHuman:KungFu": {
+    "NAME": "쿵푸!",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL thehuman:건강 을 1 얻습니다. NL [#a83277]테크닉[]: 적 전체에게 피해를 !D! 줍니다."
+  },
+  "theHuman:Focused": {
+    "NAME": "집중하기",
+    "DESCRIPTION": "매 턴 시작시, 방어도를 3 얻고 카드를 1장 추가로 뽑습니다. NL thehuman:평온함 을 5 얻습니다."
+  },
+  "theHuman:Confused": {
+    "NAME": "혼란",
+    "DESCRIPTION": "카드를 !M! 장 버립니다. NL 손에 있는 무작위 카드 1장의 비용을 이번 턴 동안 0으로 만듭니다."
+  },
+  "theHuman:Scuffle": {
+    "NAME": "실랑이",
+    "DESCRIPTION": "무작위 적에게 !D! 피해를 3번 줍니다. NL 보유한 thehuman:건강 수치 8당 이 카드의 공격 횟수가 1 증가합니다. NL 무작위 카드 1장을 버립니다."
+  },
+  "theHuman:NineToFive": {
+    "NAME": "근무 시간",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 주고 중독을 5 부여하고 약화를 2 부여합니다. NL *피로함 1장을 생성하여 뽑을 카드 더미에 넣습니다. NL [#2000a7]라이프스타일[]: 가시를 1 얻습니다."
+  },
+  "theHuman:Tired": {
+    "NAME": "피로함",
+    "DESCRIPTION": "이 카드가 뽑히면, 손 안에 있는 무작위 카드 1장을 소멸시킵니다."
+  },
+  "theHuman:BackhandSlap": {
+    "NAME": "손등 따귀",
+    "DESCRIPTION": "피해를 !D! 주고 thehuman:부상당함 을 !M! 부여합니다. NL 이 카드가 버려지면, 적 전체에게 피해를 !D! 줍니다."
+  },
+  "theHuman:DumpsterDiving": {
+    "NAME": "쓰레기통 뒤지기",
+    "DESCRIPTION": "thehuman:쓰레기 !M! 장을 얻습니다. NL 카드를 1장 thehuman:개봉 합니다."
+  },
+  "theHuman:BirthdayCake": {
+    "NAME": "생일 케이크",
+    "DESCRIPTION": "*생일 *선물 !M! 장을 얻습니다."
+  },
+  "theHuman:BirthdayPresent": {
+    "NAME": "생일 선물",
+    "DESCRIPTION": "카드 2장을 thehuman:개봉 합니다."
+  },
+  "theHuman:KeepingFit": {
+    "NAME": "건강 유지",
+    "DESCRIPTION": "thehuman:건강 을 !M! 얻고 thehuman:평온함 을 !theHuman:SecondMagic! 얻습니다. NL 카드를 1장 뽑습니다."
+  },
+  "theHuman:Car": {
+    "NAME": "자동차",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 매 턴 시작시, 카드 1장을 추가로 더 뽑고 에너지를 1 얻습니다."
+  },
+  "theHuman:SmallRock": {
+    "NAME": "작은 돌",
+    "DESCRIPTION": "방어도를 !B! 얻습니다."
+  },
+  "theHuman:Dandelion": {
+    "NAME": "민들레",
+    "DESCRIPTION": "카드를 1장 뽑습니다."
+  },
+  "theHuman:SodaCan": {
+    "NAME": "소다 캔",
+    "DESCRIPTION": "에너지를 1 얻습니다."
+  },
+  "theHuman:OldShoes": {
+    "NAME": "낡은 신발",
+    "DESCRIPTION": "골드를 !M! 얻습니다."
+  },
+  "theHuman:PlasticBottle": {
+    "NAME": "플라스틱 병",
+    "DESCRIPTION": "손 안에 있는 카드 1장을 선택해 버립니다. NL 이 효과로 카드를 버리면, 체력을 3 회복합니다."
+  },
+  "theHuman:PaperBag": {
+    "NAME": "종이 가방",
+    "DESCRIPTION": "카드 1장을 thehuman:개봉 합니다."
+  },
+  "theHuman:MorningWalk": {
+    "NAME": "아침 산책",
+    "DESCRIPTION": "thehuman:건강 을 !M! 얻습니다.  thehuman:쓰레기 를 !M! 얻습니다."
+  },
+  "theHuman:SuckerPunch": {
+    "NAME": "기습 선빵",
+    "DESCRIPTION": "이 카드가 뽑히면, 무작위 적에게 피해를 !M! 줍니다. NL 비용이 0인 *따귀 카드 2장을 얻지만, 그 카드는 사용하거나 턴 종료시 파괴 됩니다. NL [#a83277]테크닉[]: 무작위 적에게 피해를 !D! 줍니다."
+  },
+  "theHuman:Hobbyist": {
+    "NAME": "취미 생활자",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 만약 손 안에 중복된 카드가 없다면, 이 카드의 드로우 수량이 3배 증가합니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 만약 손 안에 중복된 카드가 없다면, 이 카드의 드로우 수량이 3배 증가하고 에너지를 1 얻습니다."
+  },
+  "theHuman:GarbageCollector": {
+    "NAME": "쓰레기 수집가",
+    "DESCRIPTION": "thehuman:쓰레기 카드를 사용할 때마다, 카드를 1장 thehuman:개봉 합니다."
+  },
+  "theHuman:Consequences": {
+    "NAME": "결과",
+    "DESCRIPTION": "사용불가. NL 이 카드를 뽑으면, 뽑을 카드 더미에 *수치, *의심, *후회 저주를 넣습니다."
+  },
+  "theHuman:Prank": {
+    "NAME": "장난치기",
+    "DESCRIPTION": "피해를 !D! 주고 대상을 *기절 시킵니다. NL 뽑을 카드 더미에 *결과 1장을 넣습니다."
+  },
+  "theHuman:Reading": {
+    "NAME": "독서",
+    "DESCRIPTION": "thehuman:건강 을 2 얻습니다. NL 비용이 2 또는 그 이상인 카드를 사용할 때마다, *깊은 *생각 1장을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "thehuman:건강 을 2 얻습니다. NL 비용이 2 또는 그 이상인 카드를 사용할 때마다, *빅 *브레인 1장을 얻습니다."
+  },
+  "theHuman:DeepThought": {
+    "NAME": "깊은 생각",
+    "DESCRIPTION": "방어도를 !B! 얻습니다 NL 카드를 !M! 장 뽑습니다."
+  },
+  "theHuman:BigBrain": {
+    "NAME": "빅 브레인",
+    "DESCRIPTION": "무작위 카드 1장의 비용을 이번 턴 동안 0으로 줄입니다."
+  },
+  "theHuman:Exercise": {
+    "NAME": "건강 체조",
+    "DESCRIPTION": "카드를 원하는만큼 선택해 소멸시킵니다. 이 효과로 카드를 소멸시킬때마다, 에너지를 !M! 얻습니다. NL [#34eb52]평화주의[]: 체력을 10 회복합니다."
+  },
+  "theHuman:Revolver": {
+    "NAME": "리볼버",
+    "DESCRIPTION": "무작위 대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic!% ) 합니다. NL thehuman:인벤토리 "
+  },
+  "theHuman:GlassShard": {
+    "NAME": "유리 조각",
+    "DESCRIPTION": "피해를 !D! 주고 thehuman:부상당함 을 !M! 부여합니다."
+  },
+  "theHuman:KnuckleDuster": {
+    "NAME": "브라스 너클",
+    "DESCRIPTION": "피해를 !D! 줍니다."
+  },
+  "theHuman:Brick": {
+    "NAME": "벽돌",
+    "DESCRIPTION": "피해를 !D! 주고 대상을 기절 시킵니다. NL 뽑을 카드 더미에 *상처 1장을 넣습니다."
+  },
+  "theHuman:PepperSpray": {
+    "NAME": "페퍼 스프레이",
+    "DESCRIPTION": "피해를 !D! 주고 약화, 취약, 중독을 !M! 부여합니다. "
+  },
+  "theHuman:LugerPistol": {
+    "NAME": "루거 권총",
+    "DESCRIPTION": "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL thehuman:인벤토리 "
+  },
+  "theHuman:MK3A2Grenade": {
+    "NAME": "MK3A2 수류탄",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다."
+  },
+  "theHuman:OnTheStreets": {
+    "NAME": "길거리에서",
+    "DESCRIPTION": "이 카드가 봅히면, 무작위 적에게 피해를 !D! 줍니다 NL  thehuman:무기 1장과 thehuman:쓰레기 !M! 장을 얻습니다. NL 카드 1장을 thehuman:개봉 합니다."
+  },
+  "theHuman:FuriousSlap": {
+    "NAME": "분노의 따귀",
+    "DESCRIPTION": "힘을 1 얻습니다. NL 피해를 !D! 주고 thehuman:부상당함 을 !M! 부여합니다. "
+  },
+  "theHuman:Slaptacular": {
+    "NAME": "개싸대기 따귀",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적 전체에게 thehuman:부상당함 을 !M! 부여합니다. NL 이번 전투에서 사용한 *따귀 카드를 무작위 적에게 재사용합니다."
+  },
+  "theHuman:TrashToTreasure": {
+    "NAME": "쓰레기를 보물로",
+    "DESCRIPTION": "손 안에 있는 모든 thehuman:쓰레기 카드를 소멸시킵니다. NL 이 효과로 thehuman:쓰레기 를 소멸시킬때마다, 카드 1장을 thehuman:개봉 합니다."
+  },
+  "theHuman:Recycle": {
+    "NAME": "재활용",
+    "DESCRIPTION": "무작위 thehuman:쓰레기 !M! 장을 뽑을 카드 더미에 넣습니다. NL 손의 카드를 전부 뽑을 카드 더미에 넣습니다. NL 그 수만큼 카드를 뽑습니다."
+  },
+  "theHuman:FollowUpSlap": {
+    "NAME": "연속 따귀",
+    "DESCRIPTION": "!D! 피해를 2번 줍니다. NL 이번 전투동안 모든 *따귀 카드의 피해량이 3 증가합니다."
+  },
+  "theHuman:CommunityService": {
+    "NAME": "지역 봉사 활동",
+    "DESCRIPTION": "공격 카드를 사용할 때마다, thehuman:쓰레기 1장을 얻습니다."
+  },
+  "theHuman:SelfDefense": {
+    "NAME": "자기방어",
+    "DESCRIPTION": "*리볼버, *페퍼 *스프레이, *쿵푸!, *수비 1장을 얻습니다."
+  },
+  "theHuman:Backpack": {
+    "NAME": "가방",
+    "DESCRIPTION": "카드 !M! 장을 thehuman:개봉 합니다."
+  },
+  "theHuman:Aggressiveness": {
+    "NAME": "공격적 태세",
+    "DESCRIPTION": "매 턴 시작시, 힘을 !M! 얻고 카드를 !M! 장 버립니다."
+  },
+  "theHuman:Jab": {
+    "NAME": "잽",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL [#a83277]테크닉[]: 추가로 피해를 !D! 줍니다."
+  },
+  "theHuman:Teatime": {
+    "NAME": "티타임",
+    "DESCRIPTION": "thehuman:건강 을 !M! 얻습니다 NL 카드를 2장 뽑습니다."
+  },
+  "theHuman:Tinker": {
+    "NAME": "땜장이",
+    "DESCRIPTION": "thehuman:쓰레기 를 !M! 장 얻습니다."
+  },
+  "theHuman:AK47": {
+    "NAME": "AK-47",
+    "DESCRIPTION": "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL [#c20000]마스터리 13. NL thehuman:인벤토리 ",
+    "EXTENDED_DESCRIPTION": [
+      "코드명: \"뱀\"",
+      "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL *휴대용 *권총 과 *섬광탄 1장을 얻습니다. NL thehuman:인벤토리 "
+    ]
+  },
+  "theHuman:Flashbang": {
+    "NAME": "섬광탄",
+    "DESCRIPTION": "대상을 기절 시킵니다."
+  },
+  "theHuman:EmptyCartridge": {
+    "NAME": "빈 탄약",
+    "DESCRIPTION": "사용불가."
+  },
+  "theHuman:SpringCleaning": {
+    "NAME": "대청소",
+    "DESCRIPTION": "버린 카드 더미에 있는 카드를 전부 소멸시킵니다. NL 이 효과로 카드를 소멸시킬때마다, 적 전체에게 피해를 !D! 줍니다. NL [#2000a7]라이프스타일[]: 무작위 적에게 피해를 11 줍니다."
+  },
+  "theHuman:InThePark": {
+    "NAME": "공원 안에서",
+    "DESCRIPTION": "thehuman:건강 과 *재생을 !M! 얻습니다 NL 카드를 1장 뽑습니다. NL [#2000a7]라이프스타일[]: thehuman:쓰레기 를 !theHuman:SecondMagic! 장 얻습니다."
+  },
+  "theHuman:FrontKick": {
+    "NAME": "앞차기",
+    "DESCRIPTION": "피해를 !D! 주고 약화를 !M! 부여합니다. NL 방어도를 !B! 얻습니다. NL 카드를 1장 뽑습니다. NL [#a83277]테크닉[]: 1 에너지를 얻습니다."
+  },
+  "theHuman:Detoxification": {
+    "NAME": "알코올 중독 치료",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL thehuman:건강 을 !M! 얻습니다 NL 뽑을 카드 더미, 버린 카드 더미, 손 안에 있는 모든 상태이상 카드와 저주 카드를 전부 소멸시킵니다."
+  },
+  "theHuman:DesertEagle": {
+    "NAME": "데저트 이글",
+    "DESCRIPTION": "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL [#c20000]마스터리 10. NL thehuman:인벤토리 ",
+    "EXTENDED_DESCRIPTION": [
+      "코드명: \"불결\"",
+      "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL 이 카드를 제외한 손 안에 있는 모든 카드를 소멸시킵니다. NL 무작위 대상을 *기절 시킵니다. NL thehuman:인벤토리 "
+    ]
+  },
+  "theHuman:DualWielding": {
+    "NAME": "아킴보",
+    "DESCRIPTION": "thehuman:무기 카드로 thehuman:사격 할때마다, 무작위 적에게 thehuman:사격 ( 10 x 1, 15% ) 합니다. "
+  },
+  "theHuman:Uppercut": {
+    "NAME": "어퍼컷",
+    "DESCRIPTION": "이 카드를 뽑으면, 무작위 적에게 피해를 !D! 줍니다. NL 피해를 !D! 줍니다. NL [#a83277]테크닉[]: 힘을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "이 카드를 뽑으면, 무작위 적에게 피해를 !D! 줍니다. NL 피해를 !D! 주고 이 카드를 뽑을 카드 더미에 넣습니다. NL [#a83277]테크닉[]: 힘을 1 얻습니다."
+  },
+  "theHuman:PettyTheft": {
+    "NAME": "사소한 절도",
+    "DESCRIPTION": "thehuman:쓰레기 !M! 장을 얻습니다. NL 골드를 !theHuman:SecondMagic! 얻습니다."
+  },
+  "theHuman:DoItYourself": {
+    "NAME": "나 스스로 해내기",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손 안에 thehuman:쓰레기 카드가 있다면, 에너지를 !M! 얻고 카드를 !M! 장 뽑습니다."
+  },
+  "theHuman:PocketPistol": {
+    "NAME": "휴대용 권총",
+    "DESCRIPTION": "무작위 대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL 피해를 입힐때마다 50% 확률로 thehuman:부상당함 을 1 부여합니다. NL 이 카드는 *빈 *탄약 을 생성하지 않습니다. "
+  },
+  "theHuman:ConcealedCarry": {
+    "NAME": "숨겨놓은 물건",
+    "DESCRIPTION": "*휴대용 *권총 1장을 얻습니다."
+  },
+  "theHuman:Disposal": {
+    "NAME": "처리",
+    "DESCRIPTION": "원하는만큼 카드를 선택해 버립니다. 버린 카드 1장당, thehuman:쓰레기 를 1장 얻습니다."
+  },
+  "theHuman:Survivalist": {
+    "NAME": "생존주의자",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 주고 방어도를 !B! 얻습니다. NL 손 안에 있는 thehuman:쓰레기 카드 1장당 이 효과를 반복합니다."
+  },
+  "theHuman:Risktaker": {
+    "NAME": "위험을 즐기는 자",
+    "DESCRIPTION": "매 턴 시작시, 카드 1장을 thehuman:개봉 합니다."
+  },
+  "theHuman:Salvage": {
+    "NAME": "샐비지",
+    "DESCRIPTION": "손의 카드를 전부 뽑을 카드 더미에 넣습니다. NL 뽑을 카드 더미에 넣은 카드 1장당, 버린 카드 더미에 있는 무작위 카드 1장을 손으로 가져옵니다."
+  },
+  "theHuman:RenewableContract": {
+    "NAME": "계약 갱신",
+    "DESCRIPTION": "매 턴 시작시, 버린 카드 더미에서 카드 !M! 장을 손으로 가져옵니다."
+  },
+  "theHuman:Sanitation": {
+    "NAME": "위생 관리",
+    "DESCRIPTION": "이번 전투에서 소멸시킨 모든 카드를 재사용합니다."
+  },
+  "theHuman:Happiness": {
+    "NAME": "행복함",
+    "DESCRIPTION": "thehuman:건강 과 재생을 !M! 얻습니다."
+  },
+  "theHuman:Preparation": {
+    "NAME": "준비",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴에 방어도를 !M! 얻고 카드를 !theHuman:SecondMagic! 장 뽑습니다. NL [#2000a7]라이프스타일[]: 재생을 1 얻습니다."
+  },
+  "theHuman:Refresh": {
+    "NAME": "상쾌함",
+    "DESCRIPTION": "카드를 1장 뽑습니다. NL 이 카드가 버려지면, 카드를 !M! 장 뽑고 체력을 !M! 회복합니다."
+  },
+  "theHuman:CautiousBlow": {
+    "NAME": "신중한 일격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL [#a83277]테크닉[]: 방어도를 5 얻습니다."
+  },
+  "theHuman:HeelKick": {
+    "NAME": "힐 킥",
+    "DESCRIPTION": "!D! 피해를 2번 줍니다. NL [#a83277]테크닉[]: 무작위 적에게 !D! 피해를 2번 줍니다."
+  },
+  "theHuman:AWP": {
+    "NAME": "AWP",
+    "DESCRIPTION": "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL 다음 턴에, 동일한 적에게 피해를 10 줍니다. NL [#c20000]마스터리 11. NL thehuman:인벤토리 ",
+    "EXTENDED_DESCRIPTION": [
+      "코드명: \"정화\"",
+      "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL 다음 턴에, 동일한 적에게 피해를 10 줍니다. NL 모든 적의 *파워 효과를 제거합니다. NL thehuman:인벤토리 "
+    ]
+  },
+  "theHuman:LegalAction": {
+    "NAME": "소송",
+    "DESCRIPTION": "대상 적을 1턴 동안 기절 시킵니다. NL 방어도를 !B! 얻습니다. NL 빈곤 1장을 생성하여 뽑을 카드 더미에 넣습니다."
+  },
+  "theHuman:Poverty": {
+    "NAME": "빈곤",
+    "DESCRIPTION": "사용불가. NL 이 카드를 뽑으면, 체력을 3 잃습니다."
+  },
+  "theHuman:Angst": {
+    "NAME": "불안함",
+    "DESCRIPTION": "원하는 만큼 카드를 선택해 버립니다. NL 버린 카드 1장당, *임시 힘을 1 얻습니다."
+  },
+  "theHuman:TurboSlap": {
+    "NAME": "터보 따귀",
+    "DESCRIPTION": "이 카드를 뽑으면, 무작위 적에게 피해를 4 줍니다. NL thehuman:방어불능 피해를 !D! 줍니다. NL 카드를 1장 뽑습니다."
+  },
+  "theHuman:LivingItUp": {
+    "NAME": "인생을 즐기자",
+    "DESCRIPTION": "카드를 !M! 장 thehuman:개봉 합니다. NL [#2000a7]라이프스타일[]: 카드 1장을 개봉 합니다."
+  },
+  "theHuman:Berreta92": {
+    "NAME": "베레타 92",
+    "DESCRIPTION": "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL [#c20000]마스터리 7. NL thehuman:인벤토리 ",
+    "EXTENDED_DESCRIPTION": [
+      "코드명: \"용기\"",
+      "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL 무작위 *이로운 *효과 를 2번 얻습니다. NL thehuman:인벤토리 "
+    ]
+  },
+  "theHuman:Glock17": {
+    "NAME": "글록 17",
+    "DESCRIPTION": "대상 적에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL [#c20000]마스터리 9. NL thehuman:인벤토리 ",
+    "EXTENDED_DESCRIPTION": [
+      "코드명: \"유령\"",
+      "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL 무작위 적 3명에게 *방어불능 thehuman:사격 ( 10 x 1, 100 % ) 을 가합니다. NL thehuman:인벤토리 "
+    ]
+  },
+  "theHuman:QuickDraw": {
+    "NAME": "빨리 뽑기",
+    "DESCRIPTION": "thehuman:무기 1장을 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "thehuman:무기 1장을 뽑습니다. NL 무작위 적에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic!% ) 합니다."
+  },
+  "theHuman:DoubleTap": {
+    "NAME": "더블 탭",
+    "DESCRIPTION": "다음에 적에게 thehuman:사격 하면, 동일한 thehuman:무기 로 대상에게 thehuman:사격 합니다.",
+    "UPGRADE_DESCRIPTION": "다음에 적에게 thehuman:사격 하면, 동일한 thehuman:무기 로 대상에게 2번 thehuman:사격 합니다."
+  },
+  "theHuman:Physiotherapy": {
+    "NAME": "물리 치료",
+    "DESCRIPTION": "카드를 5장 소멸시킵니다. NL 방어도를 !B! 얻습니다. NL thehuman:건강 을 !M! 얻습니다."
+  },
+  "theHuman:FitAsAFiddle": {
+    "NAME": "아주 좋은 컨디션",
+    "DESCRIPTION": "보유한 thehuman:건강 이 !M! 이상이라면, 이번 턴 후에 내 턴을 추가로 진행합니다. NL 카드를 1장 뽑습니다. NL 소멸성 2."
+  },
+  "theHuman:Party": {
+    "NAME": "파티",
+    "DESCRIPTION": "사용불가. NL 이 카드가 버려지면, 에너지를 !M! 얻고 카드를 !theHuman:SecondMagic! 장 뽑습니다."
+  },
+  "theHuman:Superslap": {
+    "NAME": "슈퍼 따귀",
+    "DESCRIPTION": "무작위 대상에게 따귀 !M! 장을 사용합니다."
+  },
+  "theHuman:Arcade": {
+    "NAME": "오락실",
+    "DESCRIPTION": "보유한 에너지 1당, 무작위 적에게 피해를 !D! 주고 카드를 1장 thehuman:개봉 합니다."
+  },
+  "theHuman:Ageing": {
+    "NAME": "노화",
+    "DESCRIPTION": "적 전체에게 *노화 1을 부여합니다. NL [#34eb52]평화주의[]: 방어도를 10 얻습니다."
+  },
+  "theHuman:Ignore": {
+    "NAME": "무시",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL [#34eb52]평화주의[]: thehuman:평온함 을 12 얻습니다. NL [#2000a7]라이프스타일[]: thehuman:평온함 을 1 얻습니다."
+  },
+  "theHuman:LayDownArms": {
+    "NAME": "무기 내려놓기",
+    "DESCRIPTION": "모든 *공격 카드와 이 카드를 덱에서 영구적으로 제거합니다. NL 카드를 1장 뽑습니다. NL [#34eb52]평화주의[]: 대신 카드를 5장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "모든 *공격 카드와 이 카드를 덱에서 영구적으로 제거합니다. 민첩과 재생을 !M! 얻습니다. NL 카드를 1장 뽑습니다. NL [#34eb52]평화주의[]: 대신 카드를 5장 뽑습니다."
+  },
+  "theHuman:MidlifeCrisis": {
+    "NAME": "중년의 위기감",
+    "DESCRIPTION": "*약화, *손상, *취약을 !M! 부여합니다. NL [#34eb52]평화주의[]: 대신 *약화, *손상, *취약을 !theHuman:SecondMagic! 부여합니다."
+  },
+  "theHuman:Nap": {
+    "NAME": "낮잠",
+    "DESCRIPTION": "대상 적을 !M! 턴 동안 수면 상태로 만듭니다. NL [#34eb52]평화주의[]: 체력을 5 회복합니다."
+  },
+  "theHuman:Discourage": {
+    "NAME": "좌절시키기",
+    "DESCRIPTION": "대상 적에게 약화를 3 부여합니다. NL [#34eb52]평화주의[]: 대상의 모든 버프를 제거합니다."
+  },
+  "theHuman:Speedloader": {
+    "NAME": "스피드 로더",
+    "DESCRIPTION": "이 카드가 손에 있을때, thehuman:무기 로 thehuman:사격 할때마다, 무작위 적에게 thehuman:사격 (4 x 2, 10% ) 합니다. NL 뽑을 카드 더미에 있는 *빈 *탄약 카드르 전부 소멸시킵니다."
+  },
+  "theHuman:FreedomOfMind": {
+    "NAME": "마음의 자유",
+    "DESCRIPTION": "매 턴 시작시, *회수 를 1 합니다."
+  },
+  "theHuman:Arsenal": {
+    "NAME": "무기고",
+    "DESCRIPTION": "매 턴 시작시, 무작위 thehuman:무기 1장을 얻습니다. NL 턴 종료시 해당 카드는 *파괴 됩니다."
+  },
+  "theHuman:PrepareHand": {
+    "NAME": "준비된 손",
+    "DESCRIPTION": "이름에 \"따귀\" 가 붙은 카드 !M! 장을 뽑습니다."
+  },
+  "theHuman:Dieting": {
+    "NAME": "다이어트 운동",
+    "DESCRIPTION": "thehuman:건강 을 !M! 얻습니다."
+  },
+  "theHuman:CrescentKick": {
+    "NAME": "반달차기",
+    "DESCRIPTION": "이번 전투에서 사용된 카드 1장당, 피해를 !D! 줍니다. NL [#a83277]테크닉[]: 대신 적 전체에게 피해를 줍니다."
+  },
+  "theHuman:Stoicism": {
+    "NAME": "금욕",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 버릴때마다, thehuman:평온함 을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 버릴때마다, thehuman:평온함 과 thehuman:건강 을 !M! 얻습니다."
+  },
+  "theHuman:TheTrashMonster": {
+    "NAME": "쓰레기 괴물",
+    "DESCRIPTION": "매 턴 시작시, thehuman:쓰레기 1장을 얻습니다. NL thehuman:쓰레기 카드를 !M! 장 사용할때마다, 무작위 적에게 피해를 5 주고 힘과 민첩을 1 얻습니다."
+  },
+  "theHuman:Renovation": {
+    "NAME": "수리",
+    "DESCRIPTION": "카드를 전부 버립니다. NL 카드를 !M! 장 뽑습니다. NL 카드를 전부 버립니다. NL 카드를 !theHuman:SecondMagic! 장 뽑습니다."
+  },
+  "theHuman:Fuming": {
+    "NAME": "약오름",
+    "DESCRIPTION": "이름에 *\"따귀\" 가 들어간 카드를 사용하면, 그 카드를 무작위 적에게 다시 사용합니다.",
+    "UPGRADE_DESCRIPTION": "이름에 *\"따귀\" 가 들어간 카드를 1장 뽑습니다. NL 이름에 *\"따귀\" 가 들어간 카드를 사용하면, 그 카드를 무작위 적에게 다시 사용합니다."
+  },
+  "theHuman:FreshlyBrewedCoffee": {
+    "NAME": "갓 만들어낸 커피",
+    "DESCRIPTION": "민첩을 !M! 얻습니다. NL 체력을 !theHuman:SecondMagic! 회복합니다. NL [#2000a7]라이프스타일[]: 다음 턴에 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "재생과 민첩을 !M! 얻습니다. NL 체력을 !theHuman:SecondMagic! 회복합니다. NL [#2000a7]라이프스타일[]: 다음 턴에 카드를 1장 뽑습니다."
+  },
+  "theHuman:GroceryShopping": {
+    "NAME": "식료품 장보기",
+    "DESCRIPTION": "예지 !M!. NL 공격, 스킬, 파워 카드를 !theHuman:SecondMagic! 장 뽑습니다. NL [#2000a7]라이프스타일[]: 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "예지 !M!. NL 공격, 스킬, 파워 카드를 !theHuman:SecondMagic! 장 뽑습니다. NL [#2000a7]라이프스타일[]: 예지 !M!."
+  },
+  "theHuman:ImpulsePurchase": {
+    "NAME": "충동구매",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL thehuman:쓰레기 를 !M! 장 얻습니다."
+  },
+  "theHuman:BackPain": {
+    "NAME": "요통",
+    "DESCRIPTION": "적 전체에게 *노화 를 1 부여하고 thehuman:부상당함 을 2 부여합니다."
+  },
+  "theHuman:SilverGeneration": {
+    "NAME": "고령화 시대",
+    "DESCRIPTION": "매 턴 시작시, 적 전체에게 *노화 1을 부여합니다. NL  thehuman:평온함 을 !B! 얻습니다."
+  },
+  "theHuman:ManOfTomorrow": {
+    "NAME": "내일의 사나이",
+    "DESCRIPTION": "뽑을 카드 더미에 있는 카드 1장을 회수 합니다. NL 이번 턴 동안 모든 카드의 비용을 0으로 만듭니다."
+  }
+}

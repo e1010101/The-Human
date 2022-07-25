@@ -125,4 +125,9 @@ public class AK47 extends AbstractShootWeaponCard {
     public AbstractCard makeCopy() {
         return new AK47();
     }
+
+    @Override
+    public float getTitleFontSize() {
+        return timesUpgraded >= MASTERY_LEVEL ? 20.0F : 27.0F;
+    }
 }
