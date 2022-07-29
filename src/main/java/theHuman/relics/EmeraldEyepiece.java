@@ -3,7 +3,6 @@ package theHuman.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHuman.HumanMod;
 import theHuman.util.TextureLoader;
@@ -30,12 +29,11 @@ public class EmeraldEyepiece extends CustomRelic {
     }
 
     @Override
-    public void atTurnStartPostDraw() {
-        flash();
-        if (!AbstractDungeon.player.drawPile.isEmpty()) {
-            AbstractCard c = AbstractDungeon.player.drawPile.getTopCard();
-            AbstractDungeon.actionManager.addToBottom(
-                new GainGoldAction(c.cost * 5));
+    public void onSpendGold() {
+        if (AbstractDungeon.player.gold > 200) {
+            AbstractDungeon.actionManager.addToBottom(new GainGoldAction(20));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new GainGoldAction(30));
         }
     }
 }

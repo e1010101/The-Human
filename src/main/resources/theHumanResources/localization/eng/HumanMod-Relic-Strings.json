@@ -24,9 +24,9 @@
   },
   "theHuman:EmeraldEyepiece": {
     "NAME": "Emerald Eyepiece",
-    "FLAVOR": "The connoisseur's signature.",
+    "FLAVOR": "Cashback!",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #yGold equal to the cost of the top card of your draw pile, multiplied by #b5."
+      "Whenever you spend #yGold, if you have more than #b200 #yGold, gain #b20 #yGold. NL Otherwise, gain #b30 #yGold."
     ]
   },
   "theHuman:FireArms": {
