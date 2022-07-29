@@ -24,7 +24,7 @@ public class DualWielding extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     public DualWielding() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

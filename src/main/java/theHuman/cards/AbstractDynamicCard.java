@@ -23,6 +23,17 @@ public abstract class AbstractDynamicCard extends AbstractDefaultCard {
     }
 
     public AbstractDynamicCard(final String id, final String img,
+                               final int cost, final String desc, final CardType type,
+                               final CardColor color, final CardRarity rarity,
+                               final CardTarget target) {
+
+        super(id, languagePack.getCardStrings(id).NAME, img, cost,
+              desc, type, color, rarity,
+              target);
+        CommonKeywordIconsField.useIcons.set(this, Boolean.TRUE);
+    }
+
+    public AbstractDynamicCard(final String id, final String img,
                                final int cost, final CardType type,
                                final CardColor color, final CardRarity rarity,
                                final CardTarget target,

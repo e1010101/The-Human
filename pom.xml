@@ -4,7 +4,7 @@
     <groupId>humanmod</groupId>
     <artifactId>HumanMod</artifactId>
     <name>The Human</name>
-    <version>2.1.2</version>
+    <version>3.0.1</version>
     <description>Adds Harold the Human as a playable character.</description>
 
     <properties>

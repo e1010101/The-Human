@@ -27,6 +27,14 @@ public class UncoverAction extends AbstractGameAction {
         if (!this.cardsAdded) {
             while (amount > 0) {
                 ArrayList<AbstractCard> library = CardLibrary.getAllCards();
+                library.removeIf(c -> (c.color != AbstractCard.CardColor.RED &&
+                                       c.color !=
+                                       AbstractCard.CardColor.GREEN &&
+                                       c.color != AbstractCard.CardColor.BLUE &&
+                                       c.color !=
+                                       AbstractCard.CardColor.PURPLE &&
+                                       c.color !=
+                                       AbstractCard.CardColor.COLORLESS));
                 library.removeIf(c -> c.type == AbstractCard.CardType.CURSE ||
                                       c.type == AbstractCard.CardType.STATUS ||
                                       c.rarity ==

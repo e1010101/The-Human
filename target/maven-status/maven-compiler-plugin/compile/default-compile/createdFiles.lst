@@ -1,6 +1,7 @@
 theHuman\cards\LayDownArms.class
 theHuman\relics\HumanRelic.class
 theHuman\powers\TargetedPower.class
+theHuman\relics\EmeraldEyepiece.class
 theHuman\powers\DualWieldingPower.class
 theHuman\cards\FreshlyBrewedCoffee.class
 theHuman\cards\tokens\Dandelion.class
@@ -72,6 +73,7 @@ theHuman\patches\RoomUpdatePatch$Update$Locator.class
 theHuman\actions\GiveTemporaryCopyOfCardAction.class
 theHuman\cards\Dieting.class
 theHuman\powers\AggressivenessPower.class
+theHuman\cards\tokens\StabbyStabby.class
 theHuman\powers\FumingPower.class
 theHuman\util\TextureLoader.class
 theHuman\actions\LayDownArmsAction.class
@@ -143,6 +145,7 @@ theHuman\powers\SilverGenerationPower.class
 theHuman\cards\Fuming.class
 theHuman\cards\SilverGeneration.class
 theHuman\cards\Uppercut.class
+theHuman\relics\Environmentalist.class
 theHuman\powers\SleepPower.class
 theHuman\patches\SoundMasterPlayPatch$Play.class
 theHuman\cards\RenewableContract.class
@@ -183,14 +186,17 @@ theHuman\cards\tokens\SmallRock.class
 theHuman\cards\tokens\PlasticBottle.class
 theHuman\actions\UpgradeSlapsAction.class
 theHuman\cards\PettyTheft.class
+theHuman\relics\FireArms.class
 theHuman\patches\subscribers\OnShuffleSubscriber.class
 theHuman\cards\Superslap.class
 theHuman\actions\DiscardForTempStrengthAction.class
 theHuman\cards\tokens\Revolver.class
 theHuman\cards\Aggressiveness.class
 theHuman\cards\OnTheStreets.class
+theHuman\powers\BurningPower.class
 theHuman\patches\ManualDiscardPatch$onManualDiscard.class
 theHuman\powers\PeacefulPower.class
+theHuman\relics\SecretTraining.class
 theHuman\powers\RisktakerPower.class
 theHuman\patches\SleepPatch$GetNextAction$1.class
 theHuman\actions\SingleShuffleAction.class

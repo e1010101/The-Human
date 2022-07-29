@@ -3,6 +3,7 @@ package theHuman.characters;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,8 +12,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -27,6 +30,7 @@ import theHuman.cards.Slap;
 import theHuman.relics.HumanRelic;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static theHuman.HumanMod.*;
 import static theHuman.characters.TheHuman.Enums.COLOR_SKIN;
@@ -73,14 +77,11 @@ public class TheHuman extends CustomPlayer {
 
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 220.0F * Settings.scale);
-
-
     }
 
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        logger.info("Begin loading starter Deck Strings");
         for (int i = 0; i < 5; i++) {
             retVal.add(Slap.ID);
         }
@@ -178,8 +179,8 @@ public class TheHuman extends CustomPlayer {
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
         return new AbstractGameAction.AttackEffect[]{
             AbstractGameAction.AttackEffect.BLUNT_HEAVY,
-            AbstractGameAction.AttackEffect.BLUNT_HEAVY,
-            AbstractGameAction.AttackEffect.BLUNT_HEAVY};
+            AbstractGameAction.AttackEffect.SMASH,
+            AbstractGameAction.AttackEffect.SLASH_DIAGONAL};
     }
 
     @Override
@@ -187,13 +188,26 @@ public class TheHuman extends CustomPlayer {
         return TEXT[2];
     }
 
+    @Override
+    public Texture getCutsceneBg() {
+        return ImageMaster.loadImage(makeScenePath("background.png"));
+    }
+
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList<>();
+        panels.add(new CutscenePanel(makeScenePath("background1.png"),
+                                     "ATTACK_HEAVY"));
+        panels.add(new CutscenePanel(makeScenePath("background2.png")));
+        panels.add(new CutscenePanel(makeScenePath("background3.png")));
+        return panels;
+    }
+
     public static class Enums {
-        @SpireEnum
-        public static AbstractPlayer.PlayerClass THE_HUMAN;
-        @SpireEnum(name = "HUMAN_COLOR")
-        public static AbstractCard.CardColor COLOR_SKIN;
-        @SpireEnum(name = "HUMAN_COLOR")
-        @SuppressWarnings("unused")
+        @SpireEnum public static AbstractPlayer.PlayerClass THE_HUMAN;
+        @SpireEnum(name = "HUMAN_COLOR") public static AbstractCard.CardColor
+            COLOR_SKIN;
+        @SpireEnum(name = "HUMAN_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR_SKIN;
     }
 

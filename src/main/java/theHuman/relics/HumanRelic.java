@@ -18,8 +18,8 @@ public class HumanRelic extends CustomRelic {
 
     private static final Texture IMG =
         TextureLoader.getTexture(makeRelicPath("Human_relic.png"));
-    private static final Texture OUTLINE =
-        TextureLoader.getTexture(makeRelicOutlinePath("Human_relic.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(
+        makeRelicOutlinePath("Human_relic_Outline.png"));
 
     public HumanRelic() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);

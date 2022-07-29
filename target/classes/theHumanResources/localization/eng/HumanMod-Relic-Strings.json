@@ -4,8 +4,36 @@
     "FLAVOR": "Hide the pain, Harold!",
     "DESCRIPTIONS": [
       "At the start of each combat, gain #b5 #yHealthiness and #b5 #yBlock.",
-      " NL NL Card Rewards have 4 choices instead of 3.",
-      " NL NL There are 4 levels of healthiness: Healthy ( 0 - 10 ), Very Healthy ( 11 - 18 ) and Extremely Healthy ( > 18 )."
+      " NL NL There are 4 levels of healthiness: Healthy ( 0 - 10 ), Very Healthy ( 11 - 18 ) and Extremely Healthy ( > 18 ).",
+      " NL NL Card Rewards have 4 choices instead of 3."
+    ]
+  },
+  "theHuman:Environmentalist": {
+    "NAME": "Environmentalist",
+    "FLAVOR": "\"Cleanup Crew\"",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random #yJunk to your hand."
+    ]
+  },
+  "theHuman:SecretTraining": {
+    "NAME": "Secret Training",
+    "FLAVOR": "The best way to avoid detection is to...be a ninja?",
+    "DESCRIPTIONS": [
+      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]combat. NL NL Draw 3 cards and add a #yStabby #yStabby to your hand."
+    ]
+  },
+  "theHuman:EmeraldEyepiece": {
+    "NAME": "Emerald Eyepiece",
+    "FLAVOR": "The connoisseur's signature.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #yGold equal to the cost of the top card of your draw pile, multiplied by #b5."
+    ]
+  },
+  "theHuman:FireArms": {
+    "NAME": "Fire Arms",
+    "FLAVOR": "A revolutionary step backward in peacemaking efforts.",
+    "DESCRIPTIONS": [
+      "Whenever you #yShoot a #yWeapon, also apply #b1 #yBurning to the target."
     ]
   }
 }

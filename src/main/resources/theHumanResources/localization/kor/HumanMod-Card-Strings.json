@@ -238,8 +238,8 @@
     "NAME": "데저트 이글",
     "DESCRIPTION": "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL [#c20000]마스터리 10. NL thehuman:인벤토리 ",
     "EXTENDED_DESCRIPTION": [
-      "코드명: \"불결\"",
-      "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL 이 카드를 제외한 손 안에 있는 모든 카드를 소멸시킵니다. NL 무작위 대상을 *기절 시킵니다. NL thehuman:인벤토리 "
+      "코드명: \"수호자\"",
+      "대상에게 thehuman:사격 ( !D! x !M!, !theHuman:SecondMagic! % ) 합니다. NL 이 카드를 제외한 손 안에 있는 모든 카드를 소멸시킵니다. NL *체력 을 1000 회복합니다. NL thehuman:인벤토리 "
     ]
   },
   "theHuman:DualWielding": {
@@ -459,8 +459,8 @@
   },
   "theHuman:GroceryShopping": {
     "NAME": "식료품 장보기",
-    "DESCRIPTION": "예지 !M!. NL 공격, 스킬, 파워 카드를 !theHuman:SecondMagic! 장 뽑습니다. NL [#2000a7]라이프스타일[]: 카드를 1장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "예지 !M!. NL 공격, 스킬, 파워 카드를 !theHuman:SecondMagic! 장 뽑습니다. NL [#2000a7]라이프스타일[]: 예지 !M!."
+    "DESCRIPTION": "공격, 스킬, 파워 카드를 !theHuman:SecondMagic! 장 뽑습니다. NL [#2000a7]라이프스타일[]: 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "공격, 스킬, 파워 카드를 !theHuman:SecondMagic! 장 뽑습니다. NL [#2000a7]라이프스타일[]: 예지 !M!."
   },
   "theHuman:ImpulsePurchase": {
     "NAME": "충동구매",

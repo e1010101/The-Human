@@ -50,7 +50,7 @@ public class TrashMonsterPower extends TwoAmountPower
         this.amount2 = amount2;
         this.source = source;
 
-        this.limit = limit;
+        this.limit = Math.max(6 - limit, 1);
 
         type = PowerType.BUFF;
         isTurnBased = false;

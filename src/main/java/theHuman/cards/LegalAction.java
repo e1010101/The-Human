@@ -1,10 +1,11 @@
 package theHuman.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -29,14 +30,16 @@ public class LegalAction extends AbstractDynamicCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     private static final int COST = 2;
+    private static final int DAMAGE = 25;
+    private static final int UPGRADE_PLUS_DAMAGE = 10;
 
-    private static final int BLOCK = 6;
-    private static final int UPGRADE_PLUS_BLOCK = 4;
+    private static final int BLOCK = 25;
+    private static final int UPGRADE_PLUS_BLOCK = 10;
 
     public LegalAction() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        damage = baseDamage = DAMAGE;
         block = baseBlock = BLOCK;
-        magicNumber = baseMagicNumber = 1;
         cardsToPreview = new Poverty();
         ExhaustiveVariable.setBaseValue(this, 2);
     }
@@ -45,6 +48,7 @@ public class LegalAction extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeDamage(UPGRADE_PLUS_DAMAGE);
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             initializeDescription();
         }
@@ -53,7 +57,8 @@ public class LegalAction extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(
-            new ApplyPowerAction(m, m, new StunMonsterPower(m, magicNumber)));
+            new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                             AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         this.addToBot(new GainBlockAction(p, p, block));
         this.addToBot(
             new MakeTempCardInDrawPileAction(new Poverty(), 1, true, true));

@@ -77,8 +77,9 @@
   "theHuman:DualWieldingPower": {
     "NAME": "Dual Wielding",
     "DESCRIPTIONS": [
-      "Whenever you #yShoot a #yWeapon, #yShoot ( 10 x ",
-      ", 15 % ) a random enemy."
+      "Whenever you #yShoot a #yWeapon, #yShoot another random #yWeapon in your draw pile.",
+      "Whenever you #yShoot a #yWeapon, #yShoot another ",
+      " random #yWeapons in your draw pile."
     ]
   },
   "theHuman:RisktakerPower": {
@@ -190,6 +191,12 @@
     "DESCRIPTIONS": [
       "At the start of your turn, apply ",
       " #yAgeing to ALL enemies."
+    ]
+  },
+  "theHuman:BurningPower": {
+    "NAME": "Burning",
+    "DESCRIPTIONS": [
+      "At the start and end of a turn, and whenever a card is played, lose between #b2 to #b5 #yHealth randomly. NL NL Whenever #yHealth is lost this way, reduce stacks of #yBurning by 1."
     ]
   }
 }

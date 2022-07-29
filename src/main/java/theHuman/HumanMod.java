@@ -4,6 +4,7 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
+import basemod.abstracts.CustomRelic;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -128,6 +129,10 @@ public class HumanMod
         return getModID() + "Resources/images/powers/" + resourcePath;
     }
 
+    public static String makeScenePath(String resourcePath) {
+        return getModID() + "Resources/images/scenes/" + resourcePath;
+    }
+
     public static String getModID() {
         return modID;
     }
@@ -200,9 +205,14 @@ public class HumanMod
     @Override
     public void receiveEditRelics() {
         logger.info("Adding relics");
-        BaseMod.addRelicToCustomPool(new HumanRelic(),
-                                     TheHuman.Enums.COLOR_SKIN);
-        UnlockTracker.markRelicAsSeen(HumanRelic.ID);
+        new AutoAdd(modID).packageFilter(HumanRelic.class)
+                          .any(CustomRelic.class, (info, relic) -> {
+                              BaseMod.addRelicToCustomPool(relic,
+                                                           TheHuman.Enums.COLOR_SKIN);
+                              if (!info.seen) {
+                                  UnlockTracker.markRelicAsSeen(relic.relicId);
+                              }
+                          });
         logger.info("Done adding relics!");
     }
 
@@ -293,22 +303,22 @@ public class HumanMod
     }
 
     public static class HumanCardTags {
-        @SpireEnum(name = "SLAP_HUMAN")
-        public static AbstractCard.CardTags SLAP_HUMAN;
+        @SpireEnum(name = "SLAP_HUMAN") public static AbstractCard.CardTags
+            SLAP_HUMAN;
 
-        @SpireEnum(name = "JUNK_HUMAN")
-        public static AbstractCard.CardTags JUNK_HUMAN;
+        @SpireEnum(name = "JUNK_HUMAN") public static AbstractCard.CardTags
+            JUNK_HUMAN;
 
-        @SpireEnum(name = "WEAPON_HUMAN")
-        public static AbstractCard.CardTags WEAPON_HUMAN;
+        @SpireEnum(name = "WEAPON_HUMAN") public static AbstractCard.CardTags
+            WEAPON_HUMAN;
 
-        @SpireEnum(name = "SHOOTER_HUMAN")
-        public static AbstractCard.CardTags SHOOTER_HUMAN;
+        @SpireEnum(name = "SHOOTER_HUMAN") public static AbstractCard.CardTags
+            SHOOTER_HUMAN;
 
-        @SpireEnum(name = "TECHNIQUE_HUMAN")
-        public static AbstractCard.CardTags TECHNIQUE_HUMAN;
+        @SpireEnum(name = "TECHNIQUE_HUMAN") public static AbstractCard.CardTags
+            TECHNIQUE_HUMAN;
 
-        @SpireEnum(name = "PACIFIST_HUMAN")
-        public static AbstractCard.CardTags PACIFIST_HUMAN;
+        @SpireEnum(name = "PACIFIST_HUMAN") public static AbstractCard.CardTags
+            PACIFIST_HUMAN;
     }
 }

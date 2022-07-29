@@ -18,7 +18,7 @@ public class TheTrashMonster extends AbstractDynamicCard {
         HumanMod.makeID(TheTrashMonster.class.getSimpleName());
     public static final CardStrings cardStrings =
         CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String DESCRIPTION = cardStrings.NAME;
+    public static final String[] DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     public static final String IMG = makeCardPath("TheTrashMonster.png");
     public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
     private static final CardRarity RARITY = CardRarity.RARE;
@@ -27,12 +27,15 @@ public class TheTrashMonster extends AbstractDynamicCard {
     private static final int COST = 3;
 
     private static final int BLOCK = 8;
+    private static final int MAGIC_NUMBER = 3;
     private static final int UPGRADE_PLUS_BLOCK = 4;
 
     public TheTrashMonster() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST,
+              DESCRIPTION[0] + (6 - MAGIC_NUMBER) + DESCRIPTION[1], TYPE, COLOR,
+              RARITY, TARGET);
         block = baseBlock = BLOCK;
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = MAGIC_NUMBER;
     }
 
     @Override
@@ -40,8 +43,10 @@ public class TheTrashMonster extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
-            upgradeMagicNumber(-1);
+            upgradeMagicNumber(1);
             this.isInnate = true;
+            this.rawDescription =
+                DESCRIPTION[0] + (6 - magicNumber) + DESCRIPTION[1];
             initializeDescription();
         }
     }

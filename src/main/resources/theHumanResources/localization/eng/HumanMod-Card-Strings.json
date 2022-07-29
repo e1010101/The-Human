@@ -204,7 +204,7 @@
   },
   "theHuman:AK47": {
     "NAME": "AK-47",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL [#c20000]Mastery 13. NL thehuman:Inventory.",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL [#c20000]Mastery 12. NL thehuman:Inventory.",
     "EXTENDED_DESCRIPTION": [
       "Codename: \"Serpent\"",
       "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Add a *Pocket *Pistol and a *Flashbang to your hand. NL thehuman:Inventory."
@@ -236,7 +236,7 @@
   },
   "theHuman:DesertEagle": {
     "NAME": "Desert Eagle",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL [#c20000]Mastery 10. NL thehuman:Inventory.",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL [#c20000]Mastery 9. NL thehuman:Inventory.",
     "EXTENDED_DESCRIPTION": [
       "Codename: \"Guardian\"",
       "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Exhaust ALL other cards in your hand. NL Restore 1000 *Health. NL thehuman:Inventory."
@@ -244,7 +244,7 @@
   },
   "theHuman:DualWielding": {
     "NAME": "Dual Wielding",
-    "DESCRIPTION": "Whenever you thehuman:Shoot a thehuman:Weapon, thehuman:Shoot ( 10 x 1, 15% ) a random enemy."
+    "DESCRIPTION": "Whenever you thehuman:Shoot a thehuman:Weapon, thehuman:Shoot another random thehuman:Weapon in your draw pile."
   },
   "theHuman:Uppercut": {
     "NAME": "Uppercut",
@@ -313,7 +313,7 @@
   },
   "theHuman:AWP": {
     "NAME": "AWP",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Next turn, deal 10 damage to the same enemy. NL [#c20000]Mastery 11. NL thehuman:Inventory.",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Next turn, deal 10 damage to the same enemy. NL [#c20000]Mastery 10. NL thehuman:Inventory.",
     "EXTENDED_DESCRIPTION": [
       "Codename: \"Purity\"",
       "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL Next turn, deal 10 damage to the same enemy. NL Remove ALL *Powers from ALL enemies. NL thehuman:Inventory."
@@ -321,7 +321,7 @@
   },
   "theHuman:LegalAction": {
     "NAME": "Legal Action",
-    "DESCRIPTION": "Stun an enemy. NL Gain !B! Block. NL Shuffle a *Poverty into your deck."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Shuffle a *Poverty into your draw pile."
   },
   "theHuman:Poverty": {
     "NAME": "Poverty",
@@ -349,7 +349,7 @@
   },
   "theHuman:Glock17": {
     "NAME": "Glock 17",
-    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL [#c20000]Mastery 9. NL thehuman:Inventory.",
+    "DESCRIPTION": "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL [#c20000]Mastery 8. NL thehuman:Inventory.",
     "EXTENDED_DESCRIPTION": [
       "Codename: \"Ghost\"",
       "thehuman:Shoot ( !D! x !M!, !theHuman:SecondMagic! % ) an enemy. NL thehuman:Shoot ( 10 x 1, 100 % ) 3 random enemies with *Unblockable bullets. NL thehuman:Inventory."
@@ -441,7 +441,11 @@
   },
   "theHuman:TheTrashMonster": {
     "NAME": "The Trash Monster",
-    "DESCRIPTION": "At the start of your turn, find 1 thehuman:Junk. NL Whenever you play !M! thehuman:Junk, deal 5 damage to a random enemy, and gain 1 Strength and Dexterity."
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [
+      "At the start of your turn, find 1 thehuman:Junk. NL Whenever you play ",
+      " thehuman:Junk, deal 5 damage to a random enemy, then gain 1 Strength and Dexterity."
+    ]
   },
   "theHuman:Renovation": {
     "NAME": "Renovation",
@@ -476,6 +480,10 @@
   },
   "theHuman:ManOfTomorrow": {
     "NAME": "Man Of Tomorrow",
-    "DESCRIPTION": "Fetch 1 from your draw pile. NL Reduce the cost of ALL cards to 0 this turn."
+    "DESCRIPTION": "{@@}Fetch !theHuman:SecondMagic! card{!theHuman:SecondMagic!|>1=s} from your draw pile. NL Reduce the cost of ALL cards to 0 this turn."
+  },
+  "theHuman:StabbyStabby": {
+    "NAME": "Stabby Stabby",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison."
   }
 }

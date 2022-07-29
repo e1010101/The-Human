@@ -53,32 +53,13 @@ public class FindJunkAction extends AbstractGameAction {
     private void findJunk() {
         for (AbstractCard c : cardsToShuffle) {
             c.unhover();
-            if (cardsToShuffle.size() < 6) {
-                if (AbstractDungeon.player.hand.size() <
-                    BaseMod.MAX_HAND_SIZE) {
-                    AbstractDungeon.effectList.add(
-                        new ShowCardAndAddToHandEffect(
-                            c.makeStatEquivalentCopy(),
-                            (float) Settings.WIDTH / 2.0F,
-                            (float) Settings.HEIGHT / 2.0F));
-                } else {
-                    AbstractDungeon.effectList.add(
-                        new ShowCardAndAddToDiscardEffect(
-                            c.makeStatEquivalentCopy(),
-                            (float) Settings.WIDTH / 2.0F,
-                            (float) Settings.HEIGHT / 2.0F));
-                }
+            if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
+                AbstractDungeon.effectList.add(
+                    new ShowCardAndAddToHandEffect(c.makeStatEquivalentCopy()));
             } else {
-                if (AbstractDungeon.player.hand.size() <
-                    BaseMod.MAX_HAND_SIZE) {
-                    AbstractDungeon.effectList.add(
-                        new ShowCardAndAddToHandEffect(
-                            c.makeStatEquivalentCopy()));
-                } else {
-                    AbstractDungeon.effectList.add(
-                        new ShowCardAndAddToDiscardEffect(
-                            c.makeStatEquivalentCopy()));
-                }
+                AbstractDungeon.effectList.add(
+                    new ShowCardAndAddToDiscardEffect(
+                        c.makeStatEquivalentCopy()));
             }
         }
         cardsToShuffle.clear();

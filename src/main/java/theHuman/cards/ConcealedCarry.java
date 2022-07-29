@@ -21,7 +21,7 @@ public class ConcealedCarry extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("ConcealedCarry.png");
 
     public static final CardColor COLOR = TheHuman.Enums.COLOR_SKIN;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardType TYPE = CardType.SKILL;
     private static final int COST = 1;

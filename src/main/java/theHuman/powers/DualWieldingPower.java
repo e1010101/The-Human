@@ -3,16 +3,22 @@ package theHuman.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import theHuman.HumanMod;
-import theHuman.actions.FireGunAction;
 import theHuman.util.TextureLoader;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static theHuman.HumanMod.makePowerPath;
 
@@ -50,16 +56,33 @@ public class DualWieldingPower extends AbstractPower
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (amount == 1) {
+            description = DESCRIPTIONS[0];
+        } else {
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        }
     }
 
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
         if (card.hasTag(HumanMod.HumanCardTags.SHOOTER_HUMAN)) {
             this.flash();
-            this.addToBot(new FireGunAction(
-                AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true),
-                15, 20, amount));
+            if (owner instanceof AbstractPlayer) {
+                AbstractPlayer p = (AbstractPlayer) owner;
+                List<AbstractCard> ls = new ArrayList<>();
+                for (AbstractCard c : p.drawPile.group) {
+                    if (c.hasTag(HumanMod.HumanCardTags.SHOOTER_HUMAN)) {
+                        ls.add(c);
+                    }
+                }
+                if (!ls.isEmpty()) {
+                    AbstractCard chosen =
+                        ls.get(MathUtils.random(ls.size() - 1));
+                    this.addToBot(new VFXAction(new ShowCardBrieflyEffect(
+                        chosen.makeStatEquivalentCopy())));
+                    chosen.use(p, AbstractDungeon.getRandomMonster());
+                }
+            }
         }
     }
 

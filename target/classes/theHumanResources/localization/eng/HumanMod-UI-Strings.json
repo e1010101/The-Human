@@ -32,7 +32,13 @@
   "theHuman:Berreta92Words": {
     "TEXT": [
       "Positive Effects",
-      "- Strength NL - Dexterity NL - Artifact NL - Buffer NL - Thorns"
+      "- Strength NL - Dexterity NL - Artifact NL - Buffer NL - Thorns NL - Intangible NL - Metallicize"
+    ]
+  },
+  "theHuman:BurningWords": {
+    "TEXT": [
+      "Burning",
+      "At the start and end of a turn, and whenever a card is played, creatures with #yBurning lose between #b2 to #b5 #yHealth randomly. NL NL Whenever #yHealth is lost this way, reduce stacks of #yBurning by #b1."
     ]
   }
 }

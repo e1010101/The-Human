@@ -18,7 +18,7 @@ public class ReduceCostInGroupAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        this.group.forEach(c -> c.setCostForTurn(c.cost - this.amount));
+        this.group.forEach(c -> c.setCostForTurn(this.amount - c.cost));
         this.isDone = true;
     }
 }

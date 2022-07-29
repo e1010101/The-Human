@@ -21,6 +21,7 @@ import theHuman.characters.TheHuman;
 import theHuman.effects.CustomSparksEffect;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static theHuman.HumanMod.getModID;
@@ -60,12 +61,13 @@ public class Berreta92 extends AbstractShootWeaponCard {
     private static final TooltipInfo toolTipInfo =
         new TooltipInfo("[#c20000]" + uiStrings.TEXT[0],
                         "[#c20000]" + uiStrings.TEXT[1]);
+    private static final List<TooltipInfo> tooltips =
+        Collections.singletonList(toolTipInfo);
     private static final TooltipInfo toolTipInfo2 =
         new TooltipInfo(uiStrings2.TEXT[0], uiStrings2.TEXT[1]);
-    private static final List<TooltipInfo> tooltips =
-        Arrays.asList(toolTipInfo, toolTipInfo2);
     private static final List<String> powers =
-        Arrays.asList("Strength", "Dexterity", "Artifact", "Buffer", "Thorns");
+        Arrays.asList("Strength", "Dexterity", "Artifact", "Buffer", "Thorns",
+                      "Intangible", "Metallicize");
 
     public Berreta92() {
         this(0);
@@ -148,6 +150,15 @@ public class Berreta92 extends AbstractShootWeaponCard {
                 case "Thorns":
                     this.addToBot(
                         new ApplyPowerAction(p, p, new ThornsPower(p, 1)));
+                    break;
+                case "Intangible":
+                    this.addToBot(new ApplyPowerAction(p, p,
+                                                       new IntangiblePlayerPower(
+                                                           p, 1)));
+                    break;
+                case "Metallicize":
+                    this.addToBot(
+                        new ApplyPowerAction(p, p, new MetallicizePower(p, 1)));
                     break;
             }
         }
